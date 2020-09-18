@@ -27,7 +27,8 @@
                     projects: [
                         { id: 1, title: "prj1", description: "this is a short description about prorect 1"},
                         { id: 2, title: "prj2", description: "this is a short description about project 2"},
-                        { id: 3, title: "prj3", description: "this is a short description about project 3"}
+                        { id: 3, title: "prj3", description: "this is a short description about project 3"},
+                        { id: 4, title: "prj4", description: "this is a short description about project 4"}
                     ]
                 }
             }
