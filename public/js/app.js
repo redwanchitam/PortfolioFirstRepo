@@ -1934,6 +1934,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _ProjectComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ProjectComponent */ "./resources/js/components/ProjectComponent.vue");
 //
 //
 //
@@ -1952,11 +1953,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
+
 /* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    project: _ProjectComponent__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
   mounted: function mounted() {
     console.log('Component mounted.');
   },
@@ -1965,7 +1966,7 @@ __webpack_require__.r(__webpack_exports__);
       projects: [{
         id: 1,
         title: "prj1",
-        description: "this is a short description about prorect 1"
+        description: "this is a short description about project 1"
       }, {
         id: 2,
         title: "prj2",
@@ -1974,6 +1975,18 @@ __webpack_require__.r(__webpack_exports__);
         id: 3,
         title: "prj3",
         description: "this is a short description about project 3"
+      }, {
+        id: 4,
+        title: "prj4",
+        description: "this is a short description about project 4"
+      }, {
+        id: 5,
+        title: "prj5",
+        description: "this is a short description about project 5"
+      }, {
+        id: 6,
+        title: "prj6",
+        description: "this is a short description about project 6"
       }]
     };
   }
@@ -2018,6 +2031,8 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
 //
 //
 //
@@ -37690,10 +37705,11 @@ var render = function() {
       _vm._v(" "),
       _c(
         "div",
-        { staticClass: "row justify-content-around projects" },
+        { staticClass: "row justify-content-between projects" },
         _vm._l(_vm.projects, function(project, index) {
           return _c("project", {
             key: project.id,
+            staticClass: "container",
             attrs: {
               project: project,
               title: project.title,
@@ -37770,31 +37786,32 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "d-flex col-lg-4 col-md-4 col-sm-10" }, [
-    _vm._m(0),
-    _vm._v(" "),
-    _c("div", { staticClass: "prjBody" }, [
-      _c("h5", { staticClass: "prjTitle" }, [_vm._v(_vm._s(_vm.title))]),
-      _vm._v(" "),
-      _c("p", { staticClass: "prjDescription" }, [
-        _vm._v(_vm._s(_vm.description))
+  return _c(
+    "div",
+    { staticClass: "my-3 d-flex col-lg-4 col-md-4 col-sm-10 " },
+    [
+      _c("div", { staticClass: "project" }, [
+        _c("img", {
+          staticClass: "prjImg",
+          attrs: { src: "img/project1.jpg", alt: "project1" }
+        }),
+        _vm._v(" "),
+        _c("div", { staticClass: "overlay" }, [
+          _c("div", { staticClass: "p-2 prjBody" }, [
+            _c("h5", { staticClass: "ml-2 prjTitle text" }, [
+              _vm._v(_vm._s(_vm.title))
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "prjDescription text" }, [
+              _vm._v(_vm._s(_vm.description))
+            ])
+          ])
+        ])
       ])
-    ])
-  ])
+    ]
+  )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "prjImg" }, [
-      _c("img", {
-        staticClass: "card-img-top",
-        attrs: { src: "img/project1.jpg", alt: "project1" }
-      })
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -53110,7 +53127,6 @@ var main = new Vue({
   el: '#main',
   router: router
 });
-Vue.component('project', __webpack_require__(/*! ./components/ProjectComponent.vue */ "./resources/js/components/ProjectComponent.vue")["default"]);
 
 /***/ }),
 

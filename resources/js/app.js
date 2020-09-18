@@ -36,8 +36,3 @@ const main = new Vue({
     el: '#main',
     router: router
 });
-
-Vue.component(
-    'project',
-    require('./components/ProjectComponent.vue').default
-);
