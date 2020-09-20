@@ -17,14 +17,14 @@
                     <router-link to="/whoAmI" class="nav-link">Who am i</router-link>
                 </li>
                 <li class="nav-item">
-                    <router-link to="/gallery" class="nav-link">Gallery</router-link>
+                    <router-link to="/projects" class="nav-link">projects</router-link>
                 </li>
                 <li class="nav-item">
-                    <router-link to="/contactMe" class="nav-link">Contact Me</router-link>
+                    <router-link to="/contactMe" class="nav-link">Git in touch</router-link>
                 </li>
             </ul>
         </nav>
-        <div class="container">
+        <div class="py-4 container">
             <router-view></router-view>
         </div>
      </div>

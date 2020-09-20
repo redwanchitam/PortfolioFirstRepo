@@ -9,7 +9,7 @@ Vue.use(VueRouter);
 import Home from './components/HomeComponent.vue';
 import WhoAmI from './components/WhoAmIComponent.vue';
 import ContactMe from './components/ContactMeComponent.vue';
-import Gallery from './components/GalleryComponent.vue';
+import Projects from './components/ProjectsComponent.vue';
 
 const routes = [
     {
@@ -25,8 +25,8 @@ const routes = [
         component : ContactMe
     }
     ,{
-        path : '/gallery',
-        component : Gallery
+        path : '/projects',
+        component : Projects
     }
 ] ;
 

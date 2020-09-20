@@ -10899,7 +10899,7 @@ a.text-dark:focus {
   }
 }
 
-.project {
+.prj {
   position: relative;
   width: 100%;
 }
@@ -10908,30 +10908,54 @@ a.text-dark:focus {
   display: block;
   width: 100%;
   height: auto;
-  border-radius: calc(0.25rem - 1px);
+  border-radius: calc(0.4rem - 1px);
+}
+
+.prjBody {
+  height: 100%;
+}
+
+.prjButton {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 3px 10px;
+  background-color: transparent;
+  color: white;
+  transition: 0.5s ease;
 }
 
 .overlay {
-  position: absolute;
-  bottom: 0;
-  left: 100%;
-  right: 0;
   background-color: #000;
-  opacity: 0.7;
+  transition: 0.7s ease;
+  opacity: 0;
+  position: absolute;
   overflow: hidden;
-  width: 0;
-  height: 100%;
-  transition: 0.6s ease;
-  border-radius: calc(0.25rem - 1px);
-}
-
-.project:hover .overlay {
   width: 100%;
-  left: 0;
+  height: 100%;
+  top: 0;
+  text-align: center;
+  border-radius: calc(0.4rem - 1px);
 }
 
-.text {
-  color: white;
-  overflow: hidden;
+.tagButton {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-decoration: none;
+  background-color: transparent;
+  color: #000;
+  border: none;
+}
+
+.prj:hover .overlay {
+  opacity: 0.7;
+}
+
+.prj:hover .text {
+  opacity: 1;
 }
 
