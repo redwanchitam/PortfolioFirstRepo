@@ -10,6 +10,7 @@ import Home from './components/HomeComponent.vue';
 import WhoAmI from './components/WhoAmIComponent.vue';
 import ContactMe from './components/ContactMeComponent.vue';
 import Projects from './components/ProjectsComponent.vue';
+import ProjectDetails from './components/ProjectDetailsComponent.vue';
 
 const routes = [
     {
@@ -30,9 +31,15 @@ const routes = [
     }
 ] ;
 
-const router = new VueRouter({routes});
-
+const navRouter = new VueRouter({routes});
 const main = new Vue({
     el: '#main',
-    router: router
+    router: navRouter
 });
+
+const prjRoutes =[
+    {
+        path : '/projectDetails',
+        component : ProjectDetails
+    }
+]

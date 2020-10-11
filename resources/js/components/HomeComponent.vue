@@ -3,7 +3,7 @@
         <div class="row justify-content-center">
             <h1>Welcome dear ..</h1>
             <h2>Make yourself at home.</h2>
-            <h3>do not hesitate to <router-link to="contactMe"> git in touch.</router-link></h3>
+            <h3>do not hesitate to <router-link to="contactMe"> get in touch.</router-link></h3>
             
         </div>
     </div>
