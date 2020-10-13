@@ -59,7 +59,9 @@
     text-decoration: none;
     background-color: transparent;
     color: white;
-    border: none;
+    border: 1px white solid;
+    line-height: 1;
+    border-radius: calc(0.4rem - 1px);
 }
   
 .prj:hover .overlay{
@@ -89,14 +91,15 @@
 .projectDetails{
     background-color: white;
     width: 80%;
-    height: 90%;
-    overflow-y: scroll;
+    height: 80%;
     border-radius: calc(0.4rem - 1px);
 }
 //// ProjectDetails Header
 .projectDetailsHeader{
     position:sticky;
     background-color: rgb(22, 19, 19);
+    border-top-left-radius: calc(0.4rem - 1px);
+    border-top-right-radius: calc(0.4rem - 1px);
 }
 .projectDetailsHeader .prjTitle{
     font-size: 1.5rem;
@@ -114,6 +117,11 @@
     margin-bottom: 0rem;
 }
 //// ProjectDetails Body
+.projectDetailsBody{
+    height: inherit;
+    width: 100%;
+    overflow-y: scroll;
+}
 .prjDetImg{
     overflow: hidden;
     width: 100%;
@@ -127,11 +135,16 @@
 ////// ProjectDetails Body Text
 .projectDetailsFooter{
     position:sticky;
-    height: 3rem;
+    height: fit-content;
     background-color: rgb(22, 19, 19);
+    border-bottom-left-radius: calc(0.4rem - 1px);
+    border-bottom-right-radius: calc(0.4rem - 1px);
 }
 .projectDetailsFooter span{
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: white;
     margin-bottom: 0rem;
+}
+.projectDetailsFooter .row{
+    margin: 0% !important;
 }

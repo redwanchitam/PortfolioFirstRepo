@@ -10957,7 +10957,9 @@ a.text-dark:focus {
   text-decoration: none;
   background-color: transparent;
   color: white;
-  border: none;
+  border: 1px white solid;
+  line-height: 1;
+  border-radius: calc(0.4rem - 1px);
 }
 
 .prj:hover .overlay {
@@ -10986,8 +10988,7 @@ a.text-dark:focus {
 .projectDetails {
   background-color: white;
   width: 80%;
-  height: 90%;
-  overflow-y: scroll;
+  height: 80%;
   border-radius: calc(0.4rem - 1px);
 }
 
@@ -10995,6 +10996,8 @@ a.text-dark:focus {
   position: -webkit-sticky;
   position: sticky;
   background-color: #161313;
+  border-top-left-radius: calc(0.4rem - 1px);
+  border-top-right-radius: calc(0.4rem - 1px);
 }
 
 .projectDetailsHeader .prjTitle {
@@ -11015,6 +11018,12 @@ a.text-dark:focus {
   margin-bottom: 0rem;
 }
 
+.projectDetailsBody {
+  height: inherit;
+  width: 100%;
+  overflow-y: scroll;
+}
+
 .prjDetImg {
   overflow: hidden;
   width: 100%;
@@ -11029,13 +11038,21 @@ a.text-dark:focus {
 .projectDetailsFooter {
   position: -webkit-sticky;
   position: sticky;
-  height: 3rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   background-color: #161313;
+  border-bottom-left-radius: calc(0.4rem - 1px);
+  border-bottom-right-radius: calc(0.4rem - 1px);
 }
 
 .projectDetailsFooter span {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: white;
   margin-bottom: 0rem;
+}
+
+.projectDetailsFooter .row {
+  margin: 0% !important;
 }
 

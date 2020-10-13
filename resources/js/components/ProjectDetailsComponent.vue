@@ -10,7 +10,8 @@
                 </div>
                 <button type="button" class="ml-auto close" @click="$emit('close')"> <span>&times;</span></button>
             </div>
-            <div class="p-2 justify-content-center align-items-center">
+            <!-- projectDetails Body-->
+            <div class="p-2 justify-content-center align-items-center projectDetailsBody">
                 <div class="m-3">
                     <!-- projectDetails Image-->
                     <div class="prjDetImg">
@@ -21,14 +22,14 @@
                         <!-- projectDetails Description-->
                         <div class="row ">
                             <!-- projectDetails About-->
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                                <div class="m-2 p-1 " style="">
+                            <div class="col-12 d-flex">
+                                <div class="m-2 p-1 col-xl-10 col-lg-10" style="">
                                     <h2>About Work</h2>
                                     <p>{{projectDetails[0].description}}</p>
                                 </div>
                             </div>
                             <!-- projectDetails BuiltWith-->
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                            <div class="col-12 col-xl-6 col-lg-6">
                                 <div class="m-2 p-1 " style="">
                                     <h2 class="">BuiltWith</h2>
                                     <ul class="list-group list-group-flush builtWith"
@@ -39,7 +40,7 @@
                                 </div>
                             </div>
                             <!-- projectDetails Somthing Else-->
-                            <div class="col-xl-12 col-lg-12 col-md-6 col-sm-12 d-flex justify-content-center">
+                            <div class="col-12 col-xl-6 col-lg-6">
                                 <div class="m-2 p-1" style="">
                                     <h2>Comments</h2>
                                     <div class="my-3 d-flex flex-column">
@@ -67,11 +68,21 @@
                 </div>
             </div>
             <!-- projectDetails Footer-->
-            <div class="px-3 fixed-bottom w-100 d-flex justify-content-around align-items-center projectDetailsFooter">
-                <!-- projectDetails FeedBack-->
-                <input type="range" class="tagInput">
-                <!-- projectDetails Comment-->
-                <input type="text" class="w-50 tagInput" placeholder="Leave a comment">
+            <div class="px-3 fixed-bottom w-100 d-flex align-items-around projectDetailsFooter">
+                <div class="row w-100">
+                    <!-- projectDetails FeedBack-->
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 px-1 d-flex justify-content-center">
+                        <input type="range" class="tagInput">
+                    </div>
+                    <!-- projectDetails Comment-->
+                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12 px-1 d-flex justify-content-center">
+                        <div class="d-flex justify-content-around">
+                            <!-- <input type="text" class="w-50 tagInput" placeholder="Leave a comment"> -->
+                            <textarea class="px-2 tagInput" placeholder="wanna leave a comment !" cols="auto"> </textarea>
+                            <button type="button" class="tagButton"><span>SEND</span></button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
