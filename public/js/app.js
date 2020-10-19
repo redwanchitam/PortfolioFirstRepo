@@ -2099,6 +2099,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -38009,7 +38019,8 @@ var render = function() {
     _c(
       "div",
       {
-        staticClass: "justify-content-center align-items-center projectDetails",
+        staticClass:
+          "d-flex flex-column justify-content-center align-items-center projectDetails",
         staticStyle: { position: "relative" }
       },
       [
@@ -38058,40 +38069,46 @@ var render = function() {
               _vm._m(0),
               _vm._v(" "),
               _c("div", { staticClass: "px-2" }, [
-                _c("div", { staticClass: "row " }, [
-                  _c("div", { staticClass: "col-12 d-flex" }, [
-                    _c("div", { staticClass: "m-2 p-1 col-xl-10 col-lg-10" }, [
-                      _c("h2", [_vm._v("About Work")]),
-                      _vm._v(" "),
-                      _c("p", [
-                        _vm._v(_vm._s(_vm.projectDetails[0].description))
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-12 col-xl-6 col-lg-6" }, [
-                    _c(
-                      "div",
-                      { staticClass: "m-2 p-1 " },
-                      [
-                        _c("h2", {}, [_vm._v("BuiltWith")]),
+                _c("div", { staticClass: "row justify-content-center" }, [
+                  _c("div", { staticClass: "row w-100 align-items-center" }, [
+                    _c("div", { staticClass: "col-12 col-xl-8 col-lg-8" }, [
+                      _c("div", { staticClass: "m-2 p-3 descriptionSection" }, [
+                        _c("h2", { staticClass: "descriptionSectionTitle" }, [
+                          _vm._v("About Work")
+                        ]),
                         _vm._v(" "),
-                        _vm._l(_vm.projectDetails[0].builtWith, function(
-                          builtWith
-                        ) {
-                          return _c(
-                            "ul",
-                            {
-                              key: builtWith,
-                              staticClass:
-                                "list-group list-group-flush builtWith"
-                            },
-                            [_c("li", {}, [_vm._v(_vm._s(builtWith))])]
-                          )
-                        })
-                      ],
-                      2
-                    )
+                        _c("p", [
+                          _vm._v(_vm._s(_vm.projectDetails[0].description))
+                        ])
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-12 col-xl-4 col-lg-4" }, [
+                      _c(
+                        "div",
+                        { staticClass: "m-2 p-3 descriptionSection" },
+                        [
+                          _c("h2", { staticClass: "descriptionSectionTitle" }, [
+                            _vm._v("BuiltWith")
+                          ]),
+                          _vm._v(" "),
+                          _vm._l(_vm.projectDetails[0].builtWith, function(
+                            builtWith
+                          ) {
+                            return _c(
+                              "ul",
+                              {
+                                key: builtWith,
+                                staticClass:
+                                  "list-group list-group-flush builtWithList"
+                              },
+                              [_c("li", {}, [_vm._v(_vm._s(builtWith))])]
+                            )
+                          })
+                        ],
+                        2
+                      )
+                    ])
                   ]),
                   _vm._v(" "),
                   _vm._m(1)
@@ -38122,59 +38139,56 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-12 col-xl-6 col-lg-6" }, [
-      _c("div", { staticClass: "m-2 p-1" }, [
-        _c("h2", [_vm._v("Comments")]),
-        _vm._v(" "),
-        _c("div", { staticClass: "my-3 d-flex flex-column" }, [
-          _c(
-            "div",
-            {
-              staticStyle: {
-                "border-left": "black 1px solid",
-                "padding-left": "1rem"
-              }
-            },
-            [
-              _c("h4", [_vm._v("Jockovish")]),
+    return _c("div", { staticClass: "row w-100 align-items-center" }, [
+      _c("div", { staticClass: "col-12 col-xl-6 col-lg-6" }, [
+        _c("div", { staticClass: "m-2 p-3 descriptionSection" }, [
+          _c("h2", { staticClass: "descriptionSectionTitle" }, [
+            _vm._v("Comments")
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "my-3 d-flex flex-column leftLine" }, [
+            _c("h4", [_vm._v("Jockovish")]),
+            _vm._v(" "),
+            _c("p", { staticClass: "commentP" }, [
+              _vm._v(" bla bla bla, bla .. bla bla ")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "my-3 d-flex flex-column leftLine" }, [
+            _c("h4", [_vm._v("Marlin Monro")]),
+            _vm._v(" "),
+            _c("p", { staticClass: "commentP" }, [
+              _vm._v(" bla bla bla, bla .. bla bla ")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "my-3 d-flex flex-column leftLine" }, [
+            _c("h4", [_vm._v("John wick")]),
+            _vm._v(" "),
+            _c("p", { staticClass: "commentP" }, [
+              _vm._v(" bla bla bla, bla .. bla bla ")
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-12 col-xl-6 col-lg-6" }, [
+        _c("div", { staticClass: "m-2 p-3 descriptionSection" }, [
+          _c("h2", { staticClass: "descriptionSectionTitle" }, [
+            _vm._v("Rating")
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "my-3 d-flex flex-row" }, [
+            _c("div", { staticClass: "row" }, [
+              _c("span", { staticClass: "col-auto" }, [
+                _vm._v("interaction(62)")
+              ]),
               _vm._v(" "),
-              _c("p", [_vm._v(" bla bla bla, bla .. bla bla ")])
-            ]
-          )
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "my-3 d-flex flex-column" }, [
-          _c(
-            "div",
-            {
-              staticStyle: {
-                "border-left": "black 1px solid",
-                "padding-left": "1rem"
-              }
-            },
-            [
-              _c("h4", [_vm._v("Marlin Monro")]),
+              _c("h4", { staticClass: "leftLine" }, [_vm._v("80%")]),
               _vm._v(" "),
-              _c("p", [_vm._v(" bla bla bla, bla .. bla bla ")])
-            ]
-          )
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "my-3 d-flex flex-column" }, [
-          _c(
-            "div",
-            {
-              staticStyle: {
-                "border-left": "black 1px solid",
-                "padding-left": "1rem"
-              }
-            },
-            [
-              _c("h4", [_vm._v("John wick")]),
-              _vm._v(" "),
-              _c("p", [_vm._v(" bla bla bla, bla .. bla bla ")])
-            ]
-          )
+              _c("img", { attrs: { src: "img/heartBlack.png", alt: "" } })
+            ])
+          ])
         ])
       ])
     ])
@@ -38187,43 +38201,34 @@ var staticRenderFns = [
       "div",
       {
         staticClass:
-          "px-3 fixed-bottom w-100 d-flex align-items-around projectDetailsFooter"
+          "p-2 fixed-bottom w-100 d-flex align-items-around projectDetailsFooter"
       },
       [
         _c("div", { staticClass: "row w-100" }, [
-          _c(
-            "div",
-            {
-              staticClass:
-                "col-xl-3 col-lg-3 col-md-3 col-sm-12 px-1 d-flex justify-content-center"
-            },
-            [_c("input", { staticClass: "tagInput", attrs: { type: "range" } })]
-          ),
+          _c("div", { staticClass: "col-3 d-flex justify-content-center" }, [
+            _c("input", {
+              staticClass: "w-100 tagInput",
+              attrs: { type: "range" }
+            })
+          ]),
           _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass:
-                "col-xl-9 col-lg-9 col-md-9 col-sm-12 px-1 d-flex justify-content-center"
-            },
-            [
-              _c("div", { staticClass: "d-flex justify-content-around" }, [
-                _c("textarea", {
-                  staticClass: "px-2 tagInput",
-                  attrs: {
-                    placeholder: "wanna leave a comment !",
-                    cols: "auto"
-                  }
-                }),
-                _vm._v(" "),
-                _c(
-                  "button",
-                  { staticClass: "tagButton", attrs: { type: "button" } },
-                  [_c("span", [_vm._v("SEND")])]
-                )
-              ])
-            ]
-          )
+          _c("div", { staticClass: "col-9 d-flex justify-content-center" }, [
+            _c("div", { staticClass: "pl-3 d-flex w-100 align-items-center" }, [
+              _c("textarea", {
+                staticClass: "px-2 py-1 tagInput commentInput",
+                attrs: { placeholder: "Wanna leave a comment .." }
+              }),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "tagButton commentButton",
+                  attrs: { type: "button" }
+                },
+                [_c("span", [_vm._v("send")])]
+              )
+            ])
+          ])
         ])
       ]
     )

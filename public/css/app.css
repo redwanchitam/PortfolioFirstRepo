@@ -10987,8 +10987,8 @@ a.text-dark:focus {
 
 .projectDetails {
   background-color: white;
-  width: 80%;
-  height: 80%;
+  width: 65%;
+  height: 95%;
   border-radius: calc(0.4rem - 1px);
 }
 
@@ -11019,7 +11019,6 @@ a.text-dark:focus {
 }
 
 .projectDetailsBody {
-  height: inherit;
   width: 100%;
   overflow-y: scroll;
 }
@@ -11030,9 +11029,27 @@ a.text-dark:focus {
   height: 80%;
 }
 
-.builtWith {
+.descriptionSectionTitle {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-bottom: #161313 1px solid;
+  padding-bottom: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.leftLine {
+  border-left: #161313 1px solid;
+  padding-left: 1rem;
+}
+
+.builtWithList {
   text-decoration: none;
   list-style: none;
+}
+
+.commentP {
+  margin-bottom: 0px;
 }
 
 .projectDetailsFooter {
@@ -11054,5 +11071,13 @@ a.text-dark:focus {
 
 .projectDetailsFooter .row {
   margin: 0% !important;
+}
+
+.commentInput {
+  width: 80%;
+}
+
+.commentButton {
+  width: 20%;
 }
 

@@ -90,8 +90,8 @@
 } 
 .projectDetails{
     background-color: white;
-    width: 80%;
-    height: 80%;
+    width: 65%;
+    height: 95%;
     border-radius: calc(0.4rem - 1px);
 }
 //// ProjectDetails Header
@@ -118,7 +118,6 @@
 }
 //// ProjectDetails Body
 .projectDetailsBody{
-    height: inherit;
     width: 100%;
     overflow-y: scroll;
 }
@@ -127,10 +126,27 @@
     width: 100%;
     height: 80%;
 }
-////// ProjectDetails Body Text
-.builtWith{
+.descriptionSection{
+    // color: white;
+    // background-color: rgb(22, 19, 19);
+    // border-radius: calc(0.4rem - 1px);
+}
+.descriptionSectionTitle{
+    width: fit-content;
+    border-bottom: rgb(22, 19, 19) 1px solid;
+    padding-bottom: 0.5rem;
+    padding-right: 0.5rem;
+}
+.leftLine{
+    border-left:rgb(22, 19, 19) 1px solid;
+    padding-left: 1rem;
+}
+.builtWithList{
     text-decoration: none;
     list-style: none;
+}
+.commentP{
+    margin-bottom: 0px ;
 }
 ////// ProjectDetails Body Text
 .projectDetailsFooter{
@@ -147,4 +163,10 @@
 }
 .projectDetailsFooter .row{
     margin: 0% !important;
+}
+.commentInput{
+    width: 80%;
+}
+.commentButton{
+    width: 20%;
 }
