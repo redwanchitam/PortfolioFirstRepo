@@ -2122,27 +2122,48 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+// import { set } from 'vue/types/umd';
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
   },
-  props: ['project-details', 'builtWith']
+  props: ['project-details', 'builtWith'],
+  methods: {
+    turnTheWheel: function turnTheWheel(leftValue) {
+      var round;
+      var currentRound;
+      var shouldBreak;
+
+      function affectLeftDigit(l) {
+        currentRound = 0;
+        shouldBreak = false;
+
+        do {
+          round = Math.floor(Math.random() * 10);
+        } while (round < 3);
+
+        do {
+          var index = 0;
+
+          do {
+            $("#leftDigit").html(index);
+
+            if (currentRound == round + 1) {
+              if (index === l) {
+                shouldBreak = true;
+              }
+            }
+
+            index++;
+          } while (index != 10 && !shouldBreak);
+
+          currentRound++;
+        } while (currentRound != round + 2 && !shouldBreak);
+      }
+
+      affectLeftDigit(leftValue); // setTimeout(function(){ $("#leftDigit").html(3); }, 1000);
+    }
+  }
 });
 
 /***/ }),
@@ -2158,6 +2179,19 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ProjectComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ProjectComponent */ "./resources/js/components/ProjectComponent.vue");
 /* harmony import */ var _ProjectDetailsComponent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ProjectDetailsComponent */ "./resources/js/components/ProjectDetailsComponent.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -38144,7 +38178,49 @@ var render = function() {
           ]
         ),
         _vm._v(" "),
-        _vm._m(2)
+        _c(
+          "div",
+          {
+            staticClass:
+              "p-2 fixed-bottom w-100 d-flex align-items-around projectDetailsFooter"
+          },
+          [
+            _c("div", { staticClass: "row w-100" }, [
+              _vm._m(2),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "col-9 d-flex justify-content-center" },
+                [
+                  _c(
+                    "div",
+                    { staticClass: "pl-3 d-flex w-100 align-items-center" },
+                    [
+                      _c("textarea", {
+                        staticClass: "px-2 py-1 tagInput commentInput",
+                        attrs: { placeholder: "Wanna leave a comment .." }
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          staticClass: "tagButton commentButton",
+                          attrs: { type: "button" },
+                          on: {
+                            click: function($event) {
+                              return _vm.turnTheWheel(7)
+                            }
+                          }
+                        },
+                        [_c("span", [_vm._v("send")])]
+                      )
+                    ]
+                  )
+                ]
+              )
+            ])
+          ]
+        )
       ]
     )
   ])
@@ -38223,13 +38299,19 @@ var staticRenderFns = [
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "col-6 leftLine" }, [
-              _c("div", { staticClass: "box" }, [
-                _c("div", { staticClass: "ratingSlot" }, [
-                  _c("div", [_c("span", [_vm._v("0")])]),
+              _c("div", { staticClass: "d-flex box" }, [
+                _c("div", { staticClass: "d-flex ratingSlot" }, [
+                  _c("div", { staticClass: "d-flex slotChild isNumber" }, [
+                    _c("h3", { attrs: { id: "leftDigit" } }, [_vm._v("0")])
+                  ]),
                   _vm._v(" "),
-                  _c("div", [_c("span", [_vm._v(".")])]),
+                  _c("div", { staticClass: "d-flex slotChild isNotNumber" }, [
+                    _c("h3", {}, [_vm._v(".")])
+                  ]),
                   _vm._v(" "),
-                  _c("div", [_c("span", [_vm._v("0")])])
+                  _c("div", { staticClass: "d-flex slotChild isNumber" }, [
+                    _c("h3", { attrs: { id: "rightDigit" } }, [_vm._v("0")])
+                  ])
                 ])
               ])
             ])
@@ -38242,41 +38324,9 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "p-2 fixed-bottom w-100 d-flex align-items-around projectDetailsFooter"
-      },
-      [
-        _c("div", { staticClass: "row w-100" }, [
-          _c("div", { staticClass: "col-3 d-flex justify-content-center" }, [
-            _c("input", {
-              staticClass: "w-100 tagInput",
-              attrs: { type: "range" }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-9 d-flex justify-content-center" }, [
-            _c("div", { staticClass: "pl-3 d-flex w-100 align-items-center" }, [
-              _c("textarea", {
-                staticClass: "px-2 py-1 tagInput commentInput",
-                attrs: { placeholder: "Wanna leave a comment .." }
-              }),
-              _vm._v(" "),
-              _c(
-                "button",
-                {
-                  staticClass: "tagButton commentButton",
-                  attrs: { type: "button" }
-                },
-                [_c("span", [_vm._v("send")])]
-              )
-            ])
-          ])
-        ])
-      ]
-    )
+    return _c("div", { staticClass: "col-3 d-flex justify-content-center" }, [
+      _c("input", { staticClass: "w-100 tagInput", attrs: { type: "range" } })
+    ])
   }
 ]
 render._withStripped = true
@@ -38310,6 +38360,8 @@ var render = function() {
         [
           _c("button", { on: { click: _vm.getModal } }, [_vm._v("Show Modal")]),
           _vm._v(" "),
+          _vm._m(0),
+          _vm._v(" "),
           _vm.showModal
             ? _c("projectDetails", {
                 staticClass:
@@ -38342,7 +38394,28 @@ var render = function() {
     ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "d-flex box" }, [
+      _c("div", { staticClass: "d-flex ratingSlot" }, [
+        _c("div", { staticClass: "d-flex slotChild isNumber" }, [
+          _c("h3", {}, [_vm._v("0")])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "d-flex slotChild isNotNumber" }, [
+          _c("h3", {}, [_vm._v(".")])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "d-flex slotChild isNumber" }, [
+          _c("h3", {}, [_vm._v("0")])
+        ])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -53664,6 +53737,31 @@ var prjRoutes = [{
   path: '/projectDetails',
   component: _components_ProjectDetailsComponent_vue__WEBPACK_IMPORTED_MODULE_5__["default"]
 }];
+
+function slotNumber() {
+  $(".slotChild.isNumber h3").animate({
+    top: '-35px',
+    color: 'rgb(22, 19, 19)',
+    opacity: '0.5'
+  }, "slow");
+  $(".slotChild.isNumber h3").animate({
+    top: '0px',
+    color: 'white',
+    opacity: '1'
+  }, "slow");
+  $(".slotChild.isNumber h3").animate({
+    top: '35px',
+    color: 'rgb(22, 19, 19)',
+    opacity: '0.5'
+  }, "slow");
+  $(".slotChild.isNumber h3").animate({
+    top: '70px',
+    color: 'rgb(22, 19, 19)',
+    opacity: '0'
+  }, "slow");
+}
+
+; // slotNumber();
 
 /***/ }),
 

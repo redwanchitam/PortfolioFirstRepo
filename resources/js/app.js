@@ -43,3 +43,14 @@ const prjRoutes =[
         component : ProjectDetails
     }
 ]
+
+
+function slotNumber(){
+    $(".slotChild.isNumber h3").animate({top: '-35px',color: 'rgb(22, 19, 19)', opacity : '0.5'}, "slow");
+    $(".slotChild.isNumber h3").animate({top: '0px',color: 'white', opacity : '1'}, "slow");
+    $(".slotChild.isNumber h3").animate({top: '35px',color: 'rgb(22, 19, 19)', opacity : '0.5'}, "slow");
+    $(".slotChild.isNumber h3").animate({top: '70px',color: 'rgb(22, 19, 19)', opacity : '0'}, "slow");
+};
+
+
+// slotNumber();

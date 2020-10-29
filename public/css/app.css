@@ -10908,7 +10908,7 @@ a.text-dark:focus {
   display: block;
   width: 100%;
   height: auto;
-  border-radius: calc(0.4rem - 1px);
+  border-radius: calc(0.7rem - 1px);
 }
 
 .prjBody {
@@ -10935,7 +10935,7 @@ a.text-dark:focus {
   height: 100%;
   top: 0;
   text-align: center;
-  border-radius: calc(0.4rem - 1px);
+  border-radius: calc(0.7rem - 1px);
 }
 
 .tagButton {
@@ -10959,7 +10959,7 @@ a.text-dark:focus {
   color: white;
   border: 1px white solid;
   line-height: 1;
-  border-radius: calc(0.4rem - 1px);
+  border-radius: calc(0.7rem - 1px);
 }
 
 .prj:hover .overlay {
@@ -10989,15 +10989,15 @@ a.text-dark:focus {
   background-color: white;
   width: 65%;
   height: 95%;
-  border-radius: calc(0.4rem - 1px);
+  border-radius: calc(0.7rem - 1px);
 }
 
 .projectDetailsHeader {
   position: -webkit-sticky;
   position: sticky;
   background-color: #161313;
-  border-top-left-radius: calc(0.4rem - 1px);
-  border-top-right-radius: calc(0.4rem - 1px);
+  border-top-left-radius: calc(0.7rem - 1px);
+  border-top-right-radius: calc(0.7rem - 1px);
 }
 
 .projectDetailsHeader .prjTitle {
@@ -11059,8 +11059,8 @@ a.text-dark:focus {
   height: -moz-fit-content;
   height: fit-content;
   background-color: #161313;
-  border-bottom-left-radius: calc(0.4rem - 1px);
-  border-bottom-right-radius: calc(0.4rem - 1px);
+  border-bottom-left-radius: calc(0.7rem - 1px);
+  border-bottom-right-radius: calc(0.7rem - 1px);
 }
 
 .projectDetailsFooter span {
@@ -11082,85 +11082,117 @@ a.text-dark:focus {
 }
 
 .box {
+  border: 2px #161313 solid;
+  border-radius: calc(0.7rem - 1px);
   position: relative;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.box .percent {
-  position: relative;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-
-.box .percent svg {
-  position: relative;
-  width: 3rem;
+  width: 5rem;
   height: 3rem;
-}
-
-.box .percent .number {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
   justify-content: center;
   align-items: center;
-  color: #161313;
 }
 
-.box .percent .number h5 {
-  margin-bottom: 0%;
+.ratingSlot {
+  position: relative;
+  width: 4.25rem;
+  height: 2.25rem;
+  justify-content: center;
+  align-items: center;
 }
 
-#pieChart {
-  -webkit-animation: load 2s ease infinite;
-          animation: load 2s ease infinite;
-  transform-origin: center;
+.slotChild {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  border-radius: calc(0.7rem - 1px);
+}
+
+.slotChild.isNumber {
+  width: 1.75rem;
+  height: 2.25rem;
+  border-radius: calc(0.7rem - 1px);
+  background-color: #161313;
+}
+
+.slotChild.isNumber h3 {
+  position: absolute;
+  color: white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0%;
 }
 
 @-webkit-keyframes load {
-  from {
-    transform: rotateZ(0deg);
+  0% {
+    top: -30px;
+    color: #161313;
+    opacity: 0;
   }
 
-  to {
-    transform: rotateZ(720deg);
+  25% {
+    top: 0px;
+    color: white;
+    opacity: 1;
+  }
+
+  50% {
+    top: 30px;
+    color: #161313;
+    opacity: 0;
+  }
+
+  75% {
+    top: -30px;
+    color: #161313;
+    opacity: 0;
+  }
+
+  100% {
+    top: 0px;
+    color: white;
+    opacity: 1;
   }
 }
 
 @keyframes load {
-  from {
-    transform: rotateZ(0deg);
+  0% {
+    top: -30px;
+    color: #161313;
+    opacity: 0;
   }
 
-  to {
-    transform: rotateZ(720deg);
+  25% {
+    top: 0px;
+    color: white;
+    opacity: 1;
+  }
+
+  50% {
+    top: 30px;
+    color: #161313;
+    opacity: 0;
+  }
+
+  75% {
+    top: -30px;
+    color: #161313;
+    opacity: 0;
+  }
+
+  100% {
+    top: 0px;
+    color: white;
+    opacity: 1;
   }
 }
 
-.ratingSlot {
-  border-radius: calc(0.4rem - 1px);
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  grid-template-columns: 3fr 1fr 3fr;
+.slotChild.isNotNumber {
+  width: 0.75rem;
+  height: 2.25rem;
+  background-color: white;
+}
+
+.slotChild.isNotNumber span {
+  color: #161313;
 }
 

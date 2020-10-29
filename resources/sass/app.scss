@@ -15,7 +15,7 @@
     display: block;
     width: 100%;
     height: auto;
-    border-radius: calc(0.4rem - 1px);
+    border-radius: calc(0.7rem - 1px);
   }
 .prjTitle{
 }
@@ -42,7 +42,7 @@
     height: 100%;
     top: 0;
     text-align: center;
-    border-radius: calc(0.4rem - 1px);
+    border-radius: calc(0.7rem - 1px);
 }
 
 .tagButton{
@@ -61,7 +61,7 @@
     color: white;
     border: 1px white solid;
     line-height: 1;
-    border-radius: calc(0.4rem - 1px);
+    border-radius: calc(0.7rem - 1px);
 }
   
 .prj:hover .overlay{
@@ -92,14 +92,14 @@
     background-color: white;
     width: 65%;
     height: 95%;
-    border-radius: calc(0.4rem - 1px);
+    border-radius: calc(0.7rem - 1px);
 }
 //// ProjectDetails Header
 .projectDetailsHeader{
     position:sticky;
     background-color: rgb(22, 19, 19);
-    border-top-left-radius: calc(0.4rem - 1px);
-    border-top-right-radius: calc(0.4rem - 1px);
+    border-top-left-radius: calc(0.7rem - 1px);
+    border-top-right-radius: calc(0.7rem - 1px);
 }
 .projectDetailsHeader .prjTitle{
     font-size: 1.5rem;
@@ -129,7 +129,7 @@
 .descriptionSection{
     // color: white;
     // background-color: rgb(22, 19, 19);
-    // border-radius: calc(0.4rem - 1px);
+    // border-radius: calc(0.7rem - 1px);
 }
 .descriptionSectionTitle{
     width: fit-content;
@@ -153,8 +153,8 @@
     position:sticky;
     height: fit-content;
     background-color: rgb(22, 19, 19);
-    border-bottom-left-radius: calc(0.4rem - 1px);
-    border-bottom-right-radius: calc(0.4rem - 1px);
+    border-bottom-left-radius: calc(0.7rem - 1px);
+    border-bottom-right-radius: calc(0.7rem - 1px);
 }
 .projectDetailsFooter span{
     font-size: 1rem;
@@ -173,55 +173,53 @@
 
 ////////////////////
 .box{
+    border:2px rgb(22, 19, 19) solid;
+    border-radius: calc(0.7rem - 1px);
     position:relative;
-    width: fit-content;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.box .percent{
-    position: relative;
-    width: fit-content;
-    height: fit-content;
-}
-.box .percent svg{
-    position: relative;
-    width: 3rem;
+    width: 5rem;
     height: 3rem;
-}
-.box .percent .number{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
     justify-content: center;
     align-items: center;
-    color:  rgb(22, 19, 19);
 }
-.box .percent .number h5{
-    margin-bottom: 0%;
+.ratingSlot{
+    position:relative;
+    width: 4.25rem;
+    height: 2.25rem;
+    justify-content: center;
+    align-items: center;
 }
-
-#pieChart{
-    animation: load 2s ease infinite ;
-    transform-origin: center;
+.slotChild{
+    position:relative;
+    justify-content: center;
+    align-items: center;
+    border-radius: calc(0.7rem - 1px);
+}
+.slotChild.isNumber{
+    width: 1.75rem ;
+    height: 2.25rem;
+    border-radius: calc(0.7rem - 1px);
+    background-color: rgb(22, 19, 19);
+}
+.slotChild.isNumber h3{
+    position: absolute;
+    color: white;
+    width: fit-content;
+    margin: 0%;
+    // animation: load 500ms ease infinite ;
+    // transform-origin: top;
 }
 @keyframes load {
-    from{
-        transform: rotateZ(0deg);
-    }
-    to{
-        transform: rotateZ(720deg);
-    }
+    0%{top: -30px;color: rgb(22, 19, 19);opacity: 0;}
+    25%{top: 0px;color: white;opacity: 1;}
+    50%{top: 30px;color : rgb(22, 19, 19);opacity: 0;}
+    75%{top: -30px;color: rgb(22, 19, 19);opacity: 0;}
+    100%{top: 0px;color: white;opacity: 1;}
 }
-
-.ratingSlot{
-    border-radius: calc(0.4rem - 1px);
-    width: fit-content;
-    height: fit-content;
-    grid-template-columns:3fr 1fr 3fr;
+.slotChild.isNotNumber{
+    width:0.75rem ;
+    height: 2.25rem;
+    background-color: white;
+}
+.slotChild.isNotNumber span{
+    color: rgb(22, 19, 19);
 }

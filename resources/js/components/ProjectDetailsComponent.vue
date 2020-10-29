@@ -69,32 +69,16 @@
                                                 <h5 class="">interaction(62)</h5>
                                             </div>
                                             <div class="col-6 leftLine">
-                                                <div class="box">
-                                                    <!-- <div class="percent">
-                                                        <svg viewBox="0 0 176 176" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <g id="undraw_all_the_data_h4ki 1">
-                                                                <g id="pieChart">
-                                                                    <g id="full">
-                                                                        <path id="full1" d="M87.9993 0V22C101.053 22 113.814 25.8708 124.667 33.123C135.521 40.3751 143.98 50.6829 148.976 62.7428C153.971 74.8028 155.278 88.0732 152.732 100.876C150.185 113.679 143.899 125.439 134.669 134.669L150.225 150.225C162.532 137.918 170.914 122.238 174.309 105.168C177.705 88.0976 175.962 70.4037 169.301 54.3238C162.641 38.2439 151.362 24.5002 136.89 14.8307C122.418 5.16109 105.404 -1.28779e-06 87.9993 0V0Z" fill="#161313"/>
-                                                                        <path id="full2" d="M150.226 150.225L134.67 134.669C123.386 145.955 108.394 152.769 92.4711 153.849C76.5482 154.928 60.7735 150.2 48.0695 140.541L34.7536 158.061C51.6952 170.938 72.7289 177.239 93.9595 175.798C115.19 174.357 135.18 165.272 150.226 150.225Z" fill="#161313"/>
-                                                                    </g>
-                                                                    <path id="empty" d="M22.0001 88C22.0001 70.4957 28.9537 53.7083 41.3312 41.331C53.7087 28.9536 70.4962 22 88.0006 22V4.16088e-09C69.5786 -0.000179087 51.6212 5.78093 36.6594 16.5285C21.6976 27.276 10.4859 42.448 4.60484 59.9058C-1.27627 77.3636 -1.53027 96.2269 3.87862 113.837C9.28752 131.447 20.0865 146.915 34.7535 158.061L48.0694 140.541C39.9617 134.391 33.3886 126.447 28.8657 117.331C24.3427 108.216 21.9928 98.1761 22.0001 88V88Z" fill="white"/>
-                                                                </g>
-                                                            </g>
-                                                        </svg>
-                                                        <div class="number">
-                                                            <h5 class="">8</h5>
+                                                <div class="d-flex box">
+                                                    <div class="d-flex ratingSlot">
+                                                        <div class="d-flex slotChild isNumber">
+                                                            <h3 id="leftDigit" class="">0</h3>
                                                         </div>
-                                                    </div> -->
-                                                    <div class="ratingSlot">
-                                                        <div>
-                                                            <span>0</span>
+                                                        <div class="d-flex slotChild isNotNumber">
+                                                            <h3 class="">.</h3>
                                                         </div>
-                                                        <div>
-                                                            <span>.</span>
-                                                        </div>
-                                                        <div>
-                                                            <span>0</span>
+                                                        <div class="d-flex slotChild isNumber">
+                                                            <h3 id="rightDigit" class="">0</h3>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -118,7 +102,7 @@
                     <div class="col-9 d-flex justify-content-center">
                         <div class="pl-3 d-flex w-100 align-items-center" >
                             <textarea class="px-2 py-1 tagInput commentInput" placeholder="Wanna leave a comment .."> </textarea>
-                            <button type="button" class="tagButton commentButton"><span>send</span></button>
+                            <button type="button" v-on:click="turnTheWheel(7)" class="tagButton commentButton"><span>send</span></button>
                         </div>
                     </div>
                 </div>
@@ -128,10 +112,41 @@
 </template>
 
 <script>
+// import { set } from 'vue/types/umd';
     export default {
         mounted() {
             console.log('Component mounted.')
         },
-        props: ['project-details','builtWith']
+        props: ['project-details','builtWith'],
+        methods: {
+            turnTheWheel : function(leftValue){
+                let tours;
+                let currentTour;
+                let shouldBreak;
+
+                function affectLeftDigit(l){
+                    currentTour=0;
+                    shouldBreak=false;
+                    do {
+                    tours=Math.floor(Math.random()*10);
+                    } while (tours<3);
+                    do {
+                        let index=0;
+                        do {
+                            $("#leftDigit").html(index);
+                            if(currentTour==tours+1){
+                                if(index===l){
+                                    shouldBreak=true;
+                                }
+                            }
+                            index++;
+                        } while (index!=10 && !shouldBreak);
+                        currentTour++;
+                    } while (currentTour!=Tour+2 && !shouldBreak);
+                }
+                affectLeftDigit(leftValue);
+                // setTimeout(function(){ $("#leftDigit").html(3); }, 1000);
+            }
+        }
     }
 </script>
