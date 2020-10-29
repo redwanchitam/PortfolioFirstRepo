@@ -5,6 +5,19 @@
             <!-- projectsDetails Pop Up -->
             <div id="modalPD">
                 <button @click="getModal">Show Modal</button>
+                <!-- <div class="d-flex box">
+                                                    <div class="d-flex ratingSlot">
+                                                        <div class="d-flex slotChild isNumber">
+                                                            <h3 id="leftDigit" class="">0</h3>
+                                                        </div>
+                                                        <div class="d-flex slotChild isNotNumber">
+                                                            <h3 class="">.</h3>
+                                                        </div>
+                                                        <div class="d-flex slotChild isNumber">
+                                                            <h3 id="rightDigit" class="">0</h3>
+                                                        </div>
+                                                    </div>
+                                                </div> -->
                 <!-- use the modal component, pass in the prop -->
                 <projectDetails 
                         v-if="showModal"
