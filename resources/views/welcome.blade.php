@@ -10,18 +10,18 @@
     <body class="antialiased">
     <div id="main">
         <nav class="sticky-top navbar navbar-expand-sm navbar-dark">
-            <ul class="w-100 d-flex navbar-nav">
+            <ul class="w-100 d-flex navbar-nav align-items-center">
                 <li class="nav-item mr-auto">
-                    <router-link class="logo" to="/" class="nav-link">Redwan CHITAM</router-link>
+                    <router-link to="/" class="logo navLink">Redwan CHITAM</router-link>
                 </li>
                 <li class="nav-item ">
-                    <router-link to="/whoAmI" class="nav-link">Who am i</router-link>
+                    <router-link to="/whoAmI" class="navLink">Who am i</router-link>
                 </li>
                 <li class="nav-item">
-                    <router-link to="/projects" class="nav-link">projects</router-link>
+                    <router-link to="/projects" class="navLink">projects</router-link>
                 </li>
                 <li class="nav-item">
-                    <router-link to="/contactMe" class="nav-link">Get in touch</router-link>
+                    <router-link to="/contactMe" class="navLink">Get in touch</router-link>
                 </li>
             </ul>
         </nav>

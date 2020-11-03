@@ -1964,6 +1964,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -38810,12 +38811,12 @@ var render = function() {
           _c("div", { staticClass: "row align-items-center" }, [
             _c("h1", [_vm._v("Welcome dear ..")]),
             _vm._v(" "),
-            _c("p", [_vm._v("Make yourself at home.")]),
+            _vm._m(0),
             _vm._v(" "),
             _c(
               "h5",
               [
-                _vm._v("do not hesitate to "),
+                _vm._v("feel free to "),
                 _c(
                   "router-link",
                   { staticClass: "twinkle", attrs: { to: "contactMe" } },
@@ -38830,7 +38831,22 @@ var render = function() {
     )
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", [
+      _vm._v(
+        "i'm Redwan, a fullstack web developer, with an innate attraction for therms of art and simplicity.\n                    "
+      ),
+      _c("br"),
+      _vm._v(
+        "i'm interested in building responsive apps and design illustrations"
+      )
+    ])
+  }
+]
 render._withStripped = true
 
 
