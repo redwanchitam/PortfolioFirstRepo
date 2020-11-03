@@ -1,41 +1,25 @@
 <template>
-    <div>
-        <div class="">
-            <h3>A bref look at some of my current projects :</h3>
-            <!-- projectsDetails Pop Up -->
-            <div id="modalPD">
-                <button @click="getModal">Show Modal</button>
-                <!-- <div class="d-flex box">
-                                                    <div class="d-flex ratingSlot">
-                                                        <div class="d-flex slotChild isNumber">
-                                                            <h3 id="leftDigit" class="">0</h3>
-                                                        </div>
-                                                        <div class="d-flex slotChild isNotNumber">
-                                                            <h3 class="">.</h3>
-                                                        </div>
-                                                        <div class="d-flex slotChild isNumber">
-                                                            <h3 id="rightDigit" class="">0</h3>
-                                                        </div>
-                                                    </div>
-                                                </div> -->
-                <!-- use the modal component, pass in the prop -->
-                <projectDetails 
-                        v-if="showModal"
-                        :project-details="projectDetails"
-                        @close="killModal"
-                        class="d-flex projectDetailsBg justify-content-center align-items-center" >
-                </projectDetails>
-            </div>
-            <div class="row justify-content-between projects">
-                <project v-for="(project, index) in projects"
-                        v-bind:project="project"
-                        v-bind:title="project.title"
-                        v-bind:category="project.category"
-                        v-bind:index="index"
-                        v-bind:key="project.id" 
-                        class="container">
-                </project>
-            </div>
+    <div class="">
+        <h3>A bref look at some of my current projects :</h3>
+        <!-- projectsDetails Pop Up -->
+        <div id="modalPD">
+            <button class="tagButton mainButton" @click="getModal">Show Modal</button>
+            <projectDetails 
+                    v-if="showModal"
+                    :project-details="projectDetails"
+                    @close="killModal"
+                    class="d-flex projectDetailsBg justify-content-center align-items-center" >
+            </projectDetails>
+        </div>
+        <div class="row justify-content-between projects">
+            <project v-for="(project, index) in projects"
+                    v-bind:project="project"
+                    v-bind:title="project.title"
+                    v-bind:category="project.category"
+                    v-bind:index="index"
+                    v-bind:key="project.id" 
+                    class="container">
+            </project>
         </div>
     </div>
 </template>
@@ -73,11 +57,9 @@
                 this.showModal = true;
                 this.iniScrollTop = $("html").scrollTop();
                 $("html").scrollTop(0);
-                $("body").css("overflow", "hidden");
             },
             killModal: function() {
                 this.showModal = false;
-                $("body").css("overflow", "scroll");
                 $("html").scrollTop(this.iniScrollTop);
             }
         }

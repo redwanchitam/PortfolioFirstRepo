@@ -102,7 +102,7 @@
                     <div class="col-9 d-flex justify-content-center">
                         <div class="pl-3 d-flex w-100 align-items-center" >
                             <textarea class="px-2 py-1 tagInput commentInput" placeholder="Wanna leave a comment .."> </textarea>
-                            <button type="button" v-on:click="turnTheWheel(8,9,250)" class="tagButton commentButton"><span>send</span></button>
+                            <button type="button" v-on:click="turnTheWheel(8,3,400)" class="tagButton commentButton"><span>send</span></button>
                         </div>
                     </div>
                 </div>
@@ -112,74 +112,82 @@
 </template>
 
 <script>
-// import func from '../../../vue-temp/vue-editor-bridge';
-// import { set } from 'vue/types/umd';
     export default {
         mounted() {
             console.log('Component mounted.')
         },
         props: ['project-details','builtWith'],
         methods: {
+            
+            wait(x,delay) { 
+                return new Promise(resolve => {
+                    setTimeout(() => {
+                    resolve(x);
+                    }, delay);
+                });
+            },
+                
+            glish(x) { 
+                return new Promise(resolve => {
+                    setTimeout(() => {
+                    resolve(x);
+                    }, 100);
+                });
+            },
 
             affect: async function (value,leftORright,delay) {
-                    let tours=0;
-                    let currentTour;
-                    let shouldBreak;
-                    currentTour=0;
-                    shouldBreak=false;
-                    // do {
-                    // tours=Math.floor(Math.random()*10);
-                    // } while (tours>1);
+                let tours=0;
+                let currentTour;
+                let shouldBreak;
+                currentTour=0;
+                shouldBreak=false;
+                // do {
+                // tours=Math.floor(Math.random()*10);
+                // } while (tours>1);
+                do {
+                    let index=0;
                     do {
-                        let index=0;
-                        do {
-                            var x = await this.wait(index,delay);
-                            switch (leftORright) {
-                                case "l":
-                                    $("#leftDigit").addClass("slotNumberAnimate");
-                                    $("#leftDigit").html(x);
-                                    if(currentTour==tours+1){
-                                        if(index===value){
-                                            $("#leftDigit").removeClass("slotNumberAnimate");
-                                            shouldBreak=true;
-                                        }
+                        var x = await this.wait(index,delay);
+                        switch (leftORright) {
+                            case "l":
+                                $("#leftDigit").html(x);
+                                $("#leftDigit").addClass("slotNumberAnimate");
+                                if(currentTour==tours+1){
+                                    if(index===value){
+                                        $("#leftDigit").removeClass("slotNumberAnimate");
+                                        shouldBreak=true;
                                     }
-                                    break;
-                                case "r":
-                                    $("#rightDigit").addClass("slotNumberAnimate");
-                                    $("#rightDigit").html(x);
-                                    if(currentTour==tours+1){
-                                        if(index===value){
-                                            $("#rightDigit").removeClass("slotNumberAnimate");
-                                            shouldBreak=true;
-                                        }
+                                }
+                                break;
+                            case "r":
+                                $("#rightDigit").html(x);
+                                $("#rightDigit").addClass("slotNumberAnimate");
+                                if(currentTour==tours+1){
+                                    if(index===value){
+                                        $("#rightDigit").removeClass("slotNumberAnimate");
+                                        shouldBreak=true;
                                     }
-                                    break;
-                            }
-                            index++;
-                        } while (index!=10 && !shouldBreak);
-                        currentTour++;
-                    } while (currentTour!=tours+2 && !shouldBreak);
-                },
-            wait(x,delay) { 
-                    return new Promise(resolve => {
-                        setTimeout(() => {
-                        resolve(x);
-                        }, delay);
-                    });
-                },
+                                }
+                                break;
+                        }
+                        index++;
+                    } while (index!=10 && !shouldBreak);
+                    currentTour++;
+                } while (currentTour!=tours+2 && !shouldBreak);
+            },
+
             affectRightDigit(value,delay){
-                    this.affect(value,"r",delay);
-                },
+                this.affect(value,"r",delay)
+            },
+
             affectLeftDigit(value,delay){
-                    this.affect(value,"l",delay);
-                },
+                this.affect(value,"l",delay);
+            },
             
             turnTheWheel : function(leftValue,rightValue,delay){
                 let leftORright="";
-                // turn them both;
-                this.affectRightDigit(rightValue,delay);
-                this.affectLeftDigit(leftValue,delay);
+                this.affectLeftDigit(Math.floor(Math.random()*10),delay);
+                setTimeout(this.affectRightDigit(Math.floor(Math.random()*10),delay), 100);
                 
             }
         }

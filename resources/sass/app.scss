@@ -1,5 +1,17 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+////light
+// $text:#1a1816 ;
+// $bg: #dedcd7;
+// $transBg: rgba(222, 220, 215,0.7);
+// $shadow: #433E38;
+
+////dark
+$text: #dedcd7;
+$bg:#1a1816;
+$transBg: rgba(26, 24, 22,0.7);
+$shadow: grey;
 
 // Variables
 @import 'variables';
@@ -7,6 +19,44 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+body{
+    font-family: 'Cinzel Decorative';
+    color: $text;
+    background-color: $bg;
+    overflow: hidden !important;
+}
+a{
+    color: $shadow ;
+    transition: ease 500ms;
+    text-decoration: none !important;
+}
+a:hover{
+    color: $text;
+}
+.twinkle{
+    animation: twinkle 3000ms linear infinite !important;
+}
+.twinkle:hover{
+    transition: ease 500ms!important;
+    text-decoration-line: underline !important;
+}
+@keyframes twinkle{
+    0%{color: $shadow;}
+    50%{color: $text;}
+    100%{color: $shadow;}
+}
+////COVER PAGE
+.coverPage{
+height: 100vh;
+overflow: hidden !important;
+} 
+////logo
+.logo{
+    font-size: 1.5rem;
+    font-weight: bold;;
+}
+
+//projects
 .prj{
     position: relative;
     width: 100%;
@@ -28,12 +78,12 @@
     width: fit-content;
     padding: 3px 10px;
     background-color: transparent;
-    color: white;
+    color: $text;
     transition: .5s ease;
 }
 
-.overlay {
-    background-color: #000;
+.overlay{
+    background-color: $bg;
     transition: .7s ease;
     opacity: 0;
     position: absolute;
@@ -44,26 +94,34 @@
     text-align: center;
     border-radius: calc(0.7rem - 1px);
 }
-
 .tagButton{
     width: fit-content;
     height: fit-content;
     text-decoration: none;
-    background-color: transparent;
-    color: #000;
+    background-color: $bg;
+    color: $text;
     border: none;
+    transition: ease 500ms;
 }
 .tagInput {
     width: auto;
     height: auto;
     text-decoration: none;
-    background-color: transparent;
-    color: white;
-    border: 1px white solid;
+    background-color: $bg;
+    color: $text;
+    border: 1px $text solid;
     line-height: 1;
     border-radius: calc(0.7rem - 1px);
 }
-  
+.mainButton{
+    border: 1px $text solid;
+    border-radius: calc(0.7rem - 1px);
+    transition: ease 500ms;
+}
+.mainButton:hover{
+    background-color: $text !important;
+    color: $bg !important;
+}
 .prj:hover .overlay{
     opacity: 0.7;
 }
@@ -80,7 +138,7 @@
 // ProjectDetails PopUp
 .projectDetailsBg{
     z-index: 9998;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color:$transBg;
     transition: all 0.3s ease;
     position: absolute;
     top: 0;
@@ -89,7 +147,7 @@
     width: 100%;
 } 
 .projectDetails{
-    background-color: white;
+    background-color: $bg;
     width: 65%;
     height: 95%;
     border-radius: calc(0.7rem - 1px);
@@ -97,23 +155,23 @@
 //// ProjectDetails Header
 .projectDetailsHeader{
     position:sticky;
-    background-color: rgb(22, 19, 19);
+    background-color: $text;
     border-top-left-radius: calc(0.7rem - 1px);
     border-top-right-radius: calc(0.7rem - 1px);
 }
 .projectDetailsHeader .prjTitle{
     font-size: 1.5rem;
-    color: white;
+    color: $bg;
     margin-bottom: 0rem;
 }
 .projectDetailsHeader .prjCateg{
     font-size: 1rem;
-    color: white;
+    color: $bg;
     margin-bottom: 0rem;
 }
 .projectDetailsHeader span{
     font-size: 1rem;
-    color: white;
+    color: $bg;
     margin-bottom: 0rem;
 }
 //// ProjectDetails Body
@@ -127,18 +185,18 @@
     height: 80%;
 }
 .descriptionSection{
-    // color: white;
-    // background-color: rgb(22, 19, 19);
+    // color: $text;
+    // background-color: $bg;
     // border-radius: calc(0.7rem - 1px);
 }
 .descriptionSectionTitle{
     width: fit-content;
-    border-bottom: rgb(22, 19, 19) 1px solid;
+    border-bottom: $text 1px solid;
     padding-bottom: 0.5rem;
     padding-right: 0.5rem;
 }
 .leftLine{
-    border-left:rgb(22, 19, 19) 1px solid;
+    border-left:$text 1px solid;
     padding-left: 1rem;
 }
 .builtWithList{
@@ -152,17 +210,25 @@
 .projectDetailsFooter{
     position:sticky;
     height: fit-content;
-    background-color: rgb(22, 19, 19);
+    background-color: $text;
     border-bottom-left-radius: calc(0.7rem - 1px);
     border-bottom-right-radius: calc(0.7rem - 1px);
 }
+.projectDetailsFooter .tagButton{
+    background-color: $text;
+}
 .projectDetailsFooter span{
     font-size: 1rem;
-    color: white;
+    color: $bg;
     margin-bottom: 0rem;
 }
 .projectDetailsFooter .row{
     margin: 0% !important;
+}
+.projectDetailsFooter .tagInput{
+    color: $bg;
+    background-color: $text;
+    border: 1px $bg solid;
 }
 .commentInput{
     width: 80%;
@@ -173,7 +239,7 @@
 
 ////////////////////
 .box{
-    border:2px rgb(22, 19, 19) solid;
+    border:2px $text solid;
     border-radius: calc(0.7rem - 1px);
     position:relative;
     width: 5rem;
@@ -194,38 +260,51 @@
     align-items: center;
     border-radius: calc(0.7rem - 1px);
 }
+.slotChild.isNotNumber{
+    width:0.75rem ;
+    height: 2.25rem;
+    color: $text;
+    background-color: $bg;
+}
+.slotChild.isNotNumber h3{
+    color: $text;
+}
 .slotChild.isNumber{
     width: 1.75rem ;
     height: 2.25rem;
     border-radius: calc(0.7rem - 1px);
-    background-color: rgb(22, 19, 19);
+    color: $bg;
+    background-color: $text;
 }
 .slotChild.isNumber h3{
     position: absolute;
-    color: white;
     width: fit-content;
     margin: 0%;
+    color: $bg;
 }
 .slotNumberAnimate{
-    animation: load 250ms ease-in infinite;
+    animation: load 400ms ease-in-out infinite;
 }
 @keyframes load {
     0%{top: -30px;opacity: 0;}
-    10%{top: -20px;opacity: 1;}
-    25%{top: -18px;opacity: 1;}
-    30%{top: -13px;opacity: 1;}
-    35%{top: -8px;opacity: 1;}
-    40%{top: -5px;opacity: 1;}
-    45%{top: -3px;opacity: 1;}
-    50%{top: -2px;opacity: 1;}
-    75%{top: 0px;opacity: 1;}
+    5%{top: -26px;opacity: 0;}
+    10%{top: -22px;opacity: 0.2;}
+    15%{top: -18px;opacity: 0.4;}
+    20%{top: -14px;opacity: 0.6;}
+    25%{top: -10px;opacity: 0.8;}
+    30%{top: -4px;opacity: 1;}
+    35%{top: -3px;opacity: 1;}
+    40%{top: -2px;opacity: 1;}
+    45%{top: 0px;opacity: 1;}
+    50%{top: 0px;opacity: 1;}
+    55%{top: 0px;opacity: 1;}
+    60%{top: 2px;opacity: 1;}
+    65%{top: 3px;opacity: 1;}
+    70%{top: 4px;opacity: 1;}
+    75%{top: 10px;opacity: 0.8;}
+    80%{top: 14px;opacity: 0.6;}
+    85%{top: 18px;opacity: 0.4;}
+    90%{top: 22px;opacity: 0.2;}
+    95%{top: 26px;opacity: 0;}
     100%{top: 30px;opacity: 0;}
-}
-.slotChild.isNotNumber{
-    width:0.75rem ;
-    height: 2.25rem;
-    background-color: white;
-}
-.slotChild.isNotNumber span{
-    color: rgb(22, 19, 19);
 }

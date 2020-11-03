@@ -1929,6 +1929,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -1946,6 +1950,9 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
 //
 //
 //
@@ -2142,14 +2149,26 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-// import func from '../../../vue-temp/vue-editor-bridge';
-// import { set } from 'vue/types/umd';
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
   },
   props: ['project-details', 'builtWith'],
   methods: {
+    wait: function wait(x, delay) {
+      return new Promise(function (resolve) {
+        setTimeout(function () {
+          resolve(x);
+        }, delay);
+      });
+    },
+    glish: function glish(x) {
+      return new Promise(function (resolve) {
+        setTimeout(function () {
+          resolve(x);
+        }, 100);
+      });
+    },
     affect: function () {
       var _affect = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(value, leftORright, delay) {
         var tours, currentTour, shouldBreak, index, x;
@@ -2177,8 +2196,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 break;
 
               case 10:
-                $("#leftDigit").addClass("slotNumberAnimate");
                 $("#leftDigit").html(x);
+                $("#leftDigit").addClass("slotNumberAnimate");
 
                 if (currentTour == tours + 1) {
                   if (index === value) {
@@ -2190,8 +2209,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 return _context.abrupt("break", 18);
 
               case 14:
-                $("#rightDigit").addClass("slotNumberAnimate");
                 $("#rightDigit").html(x);
+                $("#rightDigit").addClass("slotNumberAnimate");
 
                 if (currentTour == tours + 1) {
                   if (index === value) {
@@ -2234,13 +2253,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
       return affect;
     }(),
-    wait: function wait(x, delay) {
-      return new Promise(function (resolve) {
-        setTimeout(function () {
-          resolve(x);
-        }, delay);
-      });
-    },
     affectRightDigit: function affectRightDigit(value, delay) {
       this.affect(value, "r", delay);
     },
@@ -2248,10 +2260,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       this.affect(value, "l", delay);
     },
     turnTheWheel: function turnTheWheel(leftValue, rightValue, delay) {
-      var leftORright = ""; // turn them both;
-
-      this.affectRightDigit(rightValue, delay);
-      this.affectLeftDigit(leftValue, delay);
+      var leftORright = "";
+      this.affectLeftDigit(Math.floor(Math.random() * 10), delay);
+      setTimeout(this.affectRightDigit(Math.floor(Math.random() * 10), delay), 100);
     }
   }
 });
@@ -2269,22 +2280,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ProjectComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ProjectComponent */ "./resources/js/components/ProjectComponent.vue");
 /* harmony import */ var _ProjectDetailsComponent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ProjectDetailsComponent */ "./resources/js/components/ProjectDetailsComponent.vue");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -2376,11 +2371,9 @@ __webpack_require__.r(__webpack_exports__);
       this.showModal = true;
       this.iniScrollTop = $("html").scrollTop();
       $("html").scrollTop(0);
-      $("body").css("overflow", "hidden");
     },
     killModal: function killModal() {
       this.showModal = false;
-      $("body").css("overflow", "scroll");
       $("html").scrollTop(this.iniScrollTop);
     }
   }
@@ -2397,6 +2390,10 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
 //
 //
 //
@@ -38762,12 +38759,22 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row justify-content-center" }, [
-        _c("h1", [_vm._v("proverb")]),
-        _vm._v(" "),
-        _c("h3", [_vm._v("here will be a form to reach me ...")])
-      ])
+    return _c("div", {}, [
+      _c(
+        "div",
+        {
+          staticClass: "row justify-content-center align-items-center coverPage"
+        },
+        [
+          _c("div", { staticClass: "ml-auto col-lg-5 col-md-5 col-sm-12" }, [
+            _c("div", { staticClass: "row align-items-center" }, [
+              _c("h1", [_vm._v("proverb")]),
+              _vm._v(" "),
+              _c("h3", [_vm._v("here will be a form to reach me ...")])
+            ])
+          ])
+        ]
+      )
     ])
   }
 ]
@@ -38792,23 +38799,35 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [
-    _c("div", { staticClass: "row justify-content-center" }, [
-      _c("h1", [_vm._v("Welcome dear ..")]),
-      _vm._v(" "),
-      _c("h2", [_vm._v("Make yourself at home.")]),
-      _vm._v(" "),
-      _c(
-        "h3",
-        [
-          _vm._v("do not hesitate to "),
-          _c("router-link", { attrs: { to: "contactMe" } }, [
-            _vm._v(" get in touch.")
+  return _c("div", {}, [
+    _c(
+      "div",
+      {
+        staticClass: "row justify-content-center align-items-center coverPage"
+      },
+      [
+        _c("div", { staticClass: "ml-auto col-lg-5 col-md-5 col-sm-12" }, [
+          _c("div", { staticClass: "row align-items-center" }, [
+            _c("h1", [_vm._v("Welcome dear ..")]),
+            _vm._v(" "),
+            _c("p", [_vm._v("Make yourself at home.")]),
+            _vm._v(" "),
+            _c(
+              "h5",
+              [
+                _vm._v("do not hesitate to "),
+                _c(
+                  "router-link",
+                  { staticClass: "twinkle", attrs: { to: "contactMe" } },
+                  [_vm._v(" get in touch.")]
+                )
+              ],
+              1
+            )
           ])
-        ],
-        1
-      )
-    ])
+        ])
+      ]
+    )
   ])
 }
 var staticRenderFns = []
@@ -39057,7 +39076,7 @@ var render = function() {
                           attrs: { type: "button" },
                           on: {
                             click: function($event) {
-                              return _vm.turnTheWheel(8, 9, 250)
+                              return _vm.turnTheWheel(8, 3, 400)
                             }
                           }
                         },
@@ -39199,46 +39218,48 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("div", {}, [
-      _c("h3", [_vm._v("A bref look at some of my current projects :")]),
-      _vm._v(" "),
-      _c(
-        "div",
-        { attrs: { id: "modalPD" } },
-        [
-          _c("button", { on: { click: _vm.getModal } }, [_vm._v("Show Modal")]),
-          _vm._v(" "),
-          _vm.showModal
-            ? _c("projectDetails", {
-                staticClass:
-                  "d-flex projectDetailsBg justify-content-center align-items-center",
-                attrs: { "project-details": _vm.projectDetails },
-                on: { close: _vm.killModal }
-              })
-            : _vm._e()
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "row justify-content-between projects" },
-        _vm._l(_vm.projects, function(project, index) {
-          return _c("project", {
-            key: project.id,
-            staticClass: "container",
-            attrs: {
-              project: project,
-              title: project.title,
-              category: project.category,
-              index: index
-            }
-          })
-        }),
-        1
-      )
-    ])
+  return _c("div", {}, [
+    _c("h3", [_vm._v("A bref look at some of my current projects :")]),
+    _vm._v(" "),
+    _c(
+      "div",
+      { attrs: { id: "modalPD" } },
+      [
+        _c(
+          "button",
+          { staticClass: "tagButton mainButton", on: { click: _vm.getModal } },
+          [_vm._v("Show Modal")]
+        ),
+        _vm._v(" "),
+        _vm.showModal
+          ? _c("projectDetails", {
+              staticClass:
+                "d-flex projectDetailsBg justify-content-center align-items-center",
+              attrs: { "project-details": _vm.projectDetails },
+              on: { close: _vm.killModal }
+            })
+          : _vm._e()
+      ],
+      1
+    ),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "row justify-content-between projects" },
+      _vm._l(_vm.projects, function(project, index) {
+        return _c("project", {
+          key: project.id,
+          staticClass: "container",
+          attrs: {
+            project: project,
+            title: project.title,
+            category: project.category,
+            index: index
+          }
+        })
+      }),
+      1
+    )
   ])
 }
 var staticRenderFns = []
@@ -39270,12 +39291,22 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row justify-content-center" }, [
-        _c("h1", [_vm._v("i'm really glad that you arrived here ..")]),
-        _vm._v(" "),
-        _c("p", [_vm._v("here will be some infos about me ...")])
-      ])
+    return _c("div", {}, [
+      _c(
+        "div",
+        {
+          staticClass: "row justify-content-center align-items-center coverPage"
+        },
+        [
+          _c("div", { staticClass: "ml-auto col-lg-5 col-md-5 col-sm-12" }, [
+            _c("div", { staticClass: "row align-items-center" }, [
+              _c("h1", [_vm._v("i'm really glad that you arrived here ..")]),
+              _vm._v(" "),
+              _c("p", [_vm._v("here will be some infos about me ...")])
+            ])
+          ])
+        ]
+      )
     ])
   }
 ]
