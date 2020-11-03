@@ -5,13 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Portfolio</title>
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Open+Sans&display=swap" rel="stylesheet">
     </head>
     <body class="antialiased">
     <div id="main">
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <nav class="sticky-top navbar navbar-expand-sm navbar-dark">
             <ul class="w-100 d-flex navbar-nav">
                 <li class="nav-item mr-auto">
-                    <router-link to="/" class="nav-link">Redwan CHITAM</router-link>
+                    <router-link class="logo" to="/" class="nav-link">Redwan CHITAM</router-link>
                 </li>
                 <li class="nav-item ">
                     <router-link to="/whoAmI" class="nav-link">Who am i</router-link>
