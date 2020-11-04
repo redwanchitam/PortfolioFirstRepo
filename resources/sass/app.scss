@@ -1,17 +1,22 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+
+////font
+
 
 ////light
-$text:#1a1816 ;
-$bg: #dedcd7;
-$transBg: rgba(222, 220, 215, 0.7);
-$shadow: grey;
+// $text:#1a1816 ;
+// $bg: #dedcd7;
+// $transBg: rgba(222, 220, 215, 0.7);
+// $shadow: grey;
 
 ////dark
-// $text: #dedcd7;
-// $bg:#1a1816;
-// $transBg: rgba(26, 24, 22,0.7);
-// $shadow: grey;
+$text: #dedcd7;
+$bg:#1a1816;
+$transBg: rgba(26, 24, 22,0.7);
+$shadow: grey;
 
 // Variables
 @import 'variables';
@@ -20,13 +25,19 @@ $shadow: grey;
 @import '~bootstrap/scss/bootstrap';
 
 body{
-    font-family: 'Cinzel Decorative';
+    font-family: 'Poiret One', cursive;
     color: $text;
     background-color: $bg;
-    overflow: hidden !important;
+    // overflow: hidden !important;
 }
+p{
+    font-family: 'Poiret One', cursive;
+    font-size: 1.3rem;
+}
+
 .navLink{
     padding: 8px;
+    font-size: 1.3rem;
 }
 a{
     color: $shadow;
@@ -54,12 +65,11 @@ height: 100vh;
 overflow: hidden !important;
 } 
 .coverPage p{
-    font-size: 1.3rem;
     margin-top: 16px;
 }
 ////logo
 .logo{
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: bold;;
 }
 
@@ -69,7 +79,7 @@ overflow: hidden !important;
     width: 100%;
 }
 .prjImg {
-    display: block;
+    display: inline;
     width: 100%;
     height: auto;
     border-radius: calc(0.7rem - 1px);
@@ -167,17 +177,15 @@ overflow: hidden !important;
     border-top-right-radius: calc(0.7rem - 1px);
 }
 .projectDetailsHeader .prjTitle{
-    font-size: 1.5rem;
     color: $bg;
     margin-bottom: 0rem;
 }
 .projectDetailsHeader .prjCateg{
-    font-size: 1rem;
+    font-size: 1.3rem;
     color: $bg;
     margin-bottom: 0rem;
 }
 .projectDetailsHeader span{
-    font-size: 1rem;
     color: $bg;
     margin-bottom: 0rem;
 }
@@ -201,6 +209,7 @@ overflow: hidden !important;
     border-bottom: $text 1px solid;
     padding-bottom: 0.5rem;
     padding-right: 0.5rem;
+    font-weight: bold;
 }
 .leftLine{
     border-left:$text 1px solid;
@@ -210,10 +219,19 @@ overflow: hidden !important;
     text-decoration: none;
     list-style: none;
 }
-.commentP{
+.commentProfilName{
+    font-weight: bold;
+}
+.commentProfilP{
     margin-bottom: 0px ;
 }
-////// ProjectDetails Body Text
+.commentProfilPic{
+    max-width: 4rem;
+    height: 4rem;
+    overflow: hidden;
+    border-radius: calc(0.7rem - 1px);
+}
+////// ProjectDetails Footer
 .projectDetailsFooter{
     position:sticky;
     height: fit-content;
@@ -225,7 +243,7 @@ overflow: hidden !important;
     background-color: $text;
 }
 .projectDetailsFooter span{
-    font-size: 1rem;
+    font-size: 1.3rem;
     color: $bg;
     margin-bottom: 0rem;
 }
@@ -237,8 +255,16 @@ overflow: hidden !important;
     background-color: $text;
     border: 1px $bg solid;
 }
-.commentInput{
+.commentInputCont{
     width: 80%;
+    height: 2.5rem;
+}
+.commentInput{
+    width: 100%;
+    height: 100%;
+    text-align: justify;
+    font-size: 1.3rem;
+    line-height: initial;
 }
 .commentButton{
     width: 20%;
@@ -290,7 +316,7 @@ overflow: hidden !important;
     color: $bg;
 }
 .slotNumberAnimate{
-    animation: load 400ms ease-in-out infinite;
+    animation: load 350ms ease-in-out infinite;
 }
 @keyframes load {
     0%{top: -30px;opacity: 0;}

@@ -2150,6 +2150,32 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -2262,8 +2288,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     },
     turnTheWheel: function turnTheWheel(leftValue, rightValue, delay) {
       var leftORright = "";
-      this.affectLeftDigit(Math.floor(Math.random() * 10), delay);
-      setTimeout(this.affectRightDigit(Math.floor(Math.random() * 10), delay), 100);
+      this.affectLeftDigit(leftValue, delay);
+      this.affectRightDigit(rightValue, delay);
     }
   }
 });
@@ -39000,7 +39026,7 @@ var render = function() {
                   }
                 }
               },
-              [_c("span", [_vm._v("×")])]
+              [_c("span", [_vm._v("x")])]
             )
           ]
         ),
@@ -39080,10 +39106,7 @@ var render = function() {
                     "div",
                     { staticClass: "pl-3 d-flex w-100 align-items-center" },
                     [
-                      _c("textarea", {
-                        staticClass: "px-2 py-1 tagInput commentInput",
-                        attrs: { placeholder: "Wanna leave a comment .." }
-                      }),
+                      _vm._m(3),
                       _vm._v(" "),
                       _c(
                         "button",
@@ -39092,7 +39115,7 @@ var render = function() {
                           attrs: { type: "button" },
                           on: {
                             click: function($event) {
-                              return _vm.turnTheWheel(8, 3, 400)
+                              return _vm.turnTheWheel(8, 3, 350)
                             }
                           }
                         },
@@ -39116,7 +39139,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "prjDetImg" }, [
       _c("img", {
-        staticClass: "prjImg popup-img",
+        staticClass: "prjImg",
         attrs: { src: "img/project1.jpg", alt: "project1" }
       })
     ])
@@ -39132,40 +39155,60 @@ var staticRenderFns = [
             _vm._v("Comments")
           ]),
           _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass:
-                "my-3 d-flex flex-column justify-content-center leftLine"
-            },
-            [
-              _c("h4", [_vm._v("Jockovish")]),
-              _vm._v(" "),
-              _c("p", { staticClass: "commentP" }, [
-                _vm._v(
-                  " bla bla bla, bla .. bla bla . digg digg digg, digg .. digg digg"
-                )
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "my-3 d-flex flex-column leftLine" }, [
-            _c("h4", [_vm._v("Marlin Monro")]),
+          _c("div", { staticClass: "my-3 d-flex align-items-start" }, [
+            _c("div", { staticClass: "commentProfilPic" }, [
+              _c("img", {
+                staticClass: "prjImg",
+                attrs: { src: "img/lanaDelRey.jpg", alt: "" }
+              })
+            ]),
             _vm._v(" "),
-            _c("p", { staticClass: "commentP" }, [
-              _vm._v(
-                " bla bla bla, bla .. bla bla . digg digg digg, digg .. digg digg "
-              )
+            _c("div", { staticClass: "ml-3" }, [
+              _c("h4", { staticClass: "commentProfilName" }, [
+                _vm._v("Lana Del Rey")
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "commentP leftLine" }, [
+                _vm._v("heaven is a place on earth with you.")
+              ])
             ])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "my-3 d-flex flex-column leftLine" }, [
-            _c("h4", [_vm._v("John wick")]),
+          _c("div", { staticClass: "my-3 d-flex align-items-start" }, [
+            _c("div", { staticClass: "commentProfilPic" }, [
+              _c("img", {
+                staticClass: "prjImg",
+                attrs: { src: "img/jonSnow.jpg", alt: "" }
+              })
+            ]),
             _vm._v(" "),
-            _c("p", { staticClass: "commentP" }, [
-              _vm._v(
-                " bla bla bla, bla .. bla bla . digg digg digg, digg .. digg digg "
-              )
+            _c("div", { staticClass: "ml-3" }, [
+              _c("h4", { staticClass: "commentProfilName" }, [
+                _vm._v("Jon Snow")
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "commentP leftLine" }, [
+                _vm._v("winter is coming ..")
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "my-3 d-flex align-items-start" }, [
+            _c("div", { staticClass: "commentProfilPic" }, [
+              _c("img", {
+                staticClass: "prjImg",
+                attrs: { src: "img/rafiqBoubker.jpg", alt: "" }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "ml-3" }, [
+              _c("h4", { staticClass: "commentProfilName" }, [
+                _vm._v("Rafiq Boubker")
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "commentP leftLine" }, [
+                _vm._v("hi, i'm Rafiq Boubker and you know ..")
+              ])
             ])
           ])
         ])
@@ -39210,6 +39253,17 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-3 d-flex justify-content-center" }, [
       _c("input", { staticClass: "w-100 tagInput", attrs: { type: "range" } })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "commentInputCont" }, [
+      _c("textarea", {
+        staticClass: "px-2 py-1 tagInput commentInput",
+        attrs: { placeholder: "Wanna leave a comment .." }
+      })
     ])
   }
 ]

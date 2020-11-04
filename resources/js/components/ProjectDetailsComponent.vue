@@ -8,14 +8,14 @@
                     <h1 class="prjTitle">&lt; {{ projectDetails[0].title}} &gt;</h1>
                     <h3 class="prjCateg"><span>&bull; </span>{{projectDetails[0].category}}</h3>
                 </div>
-                <button type="button" class="ml-auto close" @click="$emit('close')"> <span>&times;</span></button>
+                <button type="button" class="ml-auto close" @click="$emit('close')"> <span>x</span></button>
             </div>
             <!-- projectDetails Body-->
             <div class="p-2 justify-content-center align-items-center projectDetailsBody">
                 <div class="m-3">
                     <!-- projectDetails Image-->
                     <div class="prjDetImg">
-                        <img src="img/project1.jpg" class="prjImg popup-img" alt="project1">
+                        <img src="img/project1.jpg" class="prjImg" alt="project1">
                     </div>
                     <!-- projectDetails Text-->
                     <div class="px-2">
@@ -46,17 +46,41 @@
                                 <div class="col-12 col-xl-8 col-lg-8">
                                     <div class="m-2 p-3 descriptionSection">
                                         <h2 class="descriptionSectionTitle">Comments</h2>
-                                        <div class="my-3 d-flex flex-column justify-content-center leftLine">
-                                            <h4>Jockovish</h4>
-                                            <p class="commentP"> bla bla bla, bla .. bla bla . digg digg digg, digg .. digg digg</p>
+                                        <div class="my-3 d-flex align-items-start">
+                                            <div class="commentProfilPic">
+                                                <img src="img/lanaDelRey.jpg" class="prjImg" alt="">
+                                            </div>
+                                            <div class="ml-3">
+                                                <h4 class="commentProfilName">Lana Del Rey</h4>
+                                                <p class="commentP leftLine">heaven is a place on earth with you.</p>
+                                            </div>
                                         </div>
-                                        <div class="my-3 d-flex flex-column leftLine">
-                                            <h4>Marlin Monro</h4>
-                                            <p class="commentP"> bla bla bla, bla .. bla bla . digg digg digg, digg .. digg digg </p>
+                                        <div class="my-3 d-flex align-items-start">
+                                            <div class="commentProfilPic">
+                                                <img src="img/jonSnow.jpg" class="prjImg" alt="">
+                                            </div>
+                                            <div class="ml-3">
+                                                <h4 class="commentProfilName">Jon Snow</h4>
+                                                <p class="commentP leftLine">winter is coming ..</p>
+                                            </div>
                                         </div>
-                                        <div class="my-3 d-flex flex-column leftLine">
-                                            <h4>John wick</h4>
-                                            <p class="commentP"> bla bla bla, bla .. bla bla . digg digg digg, digg .. digg digg </p>
+                                        <!-- <div class="my-3 d-flex align-items-start">
+                                            <div class="commentProfilPic">
+                                                <img src="img/jonas.jpg" class="prjImg" alt="">
+                                            </div>
+                                            <div class="ml-3">
+                                                <h4 class="commentProfilName">Jonas Kahnwald</h4>
+                                                <p class="commentP leftLine">Sic mundus creatus est.</p>
+                                            </div>
+                                        </div> -->
+                                        <div class="my-3 d-flex align-items-start">
+                                            <div class="commentProfilPic">
+                                                <img src="img/rafiqBoubker.jpg" class="prjImg" alt="">
+                                            </div>
+                                            <div class="ml-3">
+                                                <h4 class="commentProfilName">Rafiq Boubker</h4>
+                                                <p class="commentP leftLine">hi, i'm Rafiq Boubker and you know ..</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -101,8 +125,10 @@
                     <!-- projectDetails Comment-->
                     <div class="col-9 d-flex justify-content-center">
                         <div class="pl-3 d-flex w-100 align-items-center" >
-                            <textarea class="px-2 py-1 tagInput commentInput" placeholder="Wanna leave a comment .."> </textarea>
-                            <button type="button" v-on:click="turnTheWheel(8,3,400)" class="tagButton commentButton"><span>send</span></button>
+                            <div class="commentInputCont">
+                                <textarea class="px-2 py-1 tagInput commentInput" placeholder="Wanna leave a comment .."> </textarea>
+                            </div>
+                            <button type="button" v-on:click="turnTheWheel(8,3,350)" class="tagButton commentButton"><span>send</span></button>
                         </div>
                     </div>
                 </div>
@@ -186,8 +212,8 @@
             
             turnTheWheel : function(leftValue,rightValue,delay){
                 let leftORright="";
-                this.affectLeftDigit(Math.floor(Math.random()*10),delay);
-                setTimeout(this.affectRightDigit(Math.floor(Math.random()*10),delay), 100);
+                this.affectLeftDigit(leftValue,delay);
+                this.affectRightDigit(rightValue,delay);
                 
             }
         }
