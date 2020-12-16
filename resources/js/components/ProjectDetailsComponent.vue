@@ -15,7 +15,7 @@
                 <div class="m-3">
                     <!-- projectDetails Image-->
                     <div class="prjDetImg">
-                        <img src="img/project1.jpg" class="prjImg" alt="project1">
+                        <img v-bind:src="'img/' + projectDetails[0].imgPath" class="prjImg" alt="project1">
                     </div>
                     <!-- projectDetails Text-->
                     <div class="px-2">
@@ -25,18 +25,18 @@
                                 <!-- projectDetails About-->
                                 <div class="col-12 col-xl-8 col-lg-8">
                                     <div class="m-2 p-3 descriptionSection">
-                                        <h2 class="descriptionSectionTitle">About Work</h2>
+                                        <h2 class="sectionTitle">About Work</h2>
                                         <p>{{projectDetails[0].description}}</p>
                                     </div>
                                 </div>
                                 <!-- projectDetails BuiltWith-->
                                 <div class="col-12 col-xl-4 col-lg-4">
                                     <div class="m-2 p-3 descriptionSection">
-                                        <h2 class="descriptionSectionTitle">BuiltWith</h2>
+                                        <h2 class="sectionTitle">BuiltWith</h2>
                                         <ul class="list-group list-group-flush builtWithList">
-                                            <li class=""
+                                            <li class="builtWithItem"
                                             v-for="builtWith in projectDetails[0].builtWith"
-                                            v-bind:key="builtWith">{{builtWith}}</li>
+                                            v-bind:key="builtWith"><span>&bull; </span>{{builtWith}}</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -45,7 +45,7 @@
                                 <!-- projectDetails Comments-->
                                 <div class="col-12 col-xl-8 col-lg-8">
                                     <div class="m-2 p-3 descriptionSection">
-                                        <h2 class="descriptionSectionTitle">Comments</h2>
+                                        <h2 class="sectionTitle">Comments</h2>
                                         <div class="my-3 d-flex align-items-start">
                                             <div class="commentProfilPic">
                                                 <img src="img/lanaDelRey.jpg" class="prjImg" alt="">
@@ -87,14 +87,14 @@
                                 <!-- projectDetails Rating-->
                                 <div class="col-12 col-xl-4 col-lg-4">
                                     <div class="m-2 p-3 descriptionSection">
-                                        <h2 class="descriptionSectionTitle">Rating</h2>
+                                        <h2 class="sectionTitle">Rating</h2>
                                         <div class="ml-0 row w-100 align-items-end">
-                                            <div class="pl-0 col-6">
+                                            <div class="pl-0 col-sm-6 col-lg-12 col-xl-12 col-md-12">
                                                 <h5 class="">interaction(62)</h5>
                                             </div>
-                                            <div class="col-6 leftLine">
+                                            <div class="pl-0 col-sm-6 col-lg-12 col-xl-12 col-md-12">
                                                 <div class="d-flex box">
-                                                    <div class="d-flex ratingSlot">
+                                                    <div id="ratingSlot" class="d-flex ratingSlot">
                                                         <div class="d-flex slotChild isNumber">
                                                             <h3 id="leftDigit" class="">0</h3>
                                                         </div>
@@ -142,7 +142,7 @@
         mounted() {
             console.log('Component mounted.')
         },
-        props: ['project-details','builtWith'],
+        props: ['project-details'],
         methods: {
             
             wait(x,delay) { 
@@ -162,14 +162,14 @@
             },
 
             affect: async function (value,leftORright,delay) {
-                let tours=0;
+                let tours=-1;
                 let currentTour;
                 let shouldBreak;
                 currentTour=0;
                 shouldBreak=false;
-                // do {
-                // tours=Math.floor(Math.random()*10);
-                // } while (tours>1);
+                do {
+                tours=Math.floor(Math.random()*10);
+                } while (tours>1);
                 do {
                     let index=0;
                     do {
@@ -209,12 +209,10 @@
             affectLeftDigit(value,delay){
                 this.affect(value,"l",delay);
             },
-            
             turnTheWheel : function(leftValue,rightValue,delay){
                 let leftORright="";
-                this.affectLeftDigit(leftValue,delay);
-                this.affectRightDigit(rightValue,delay);
-                
+                this.affectLeftDigit(Math.floor(Math.random()*10),delay);
+                this.affectRightDigit(Math.floor(Math.random()*10),delay);
             }
         }
     }

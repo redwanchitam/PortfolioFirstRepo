@@ -1964,7 +1964,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -2000,22 +1999,37 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
     projectDetails: _ProjectDetailsComponent__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
-  mounted: function mounted() {
-    console.log('Component mounted.');
-  },
-  props: ['title', 'category'],
   data: function data() {
     return {
-      showModal: false
+      projectDetails: [{
+        id: 3,
+        imgPath: "img/projectImg3.jpg",
+        title: "WORK 3",
+        category: "category 3",
+        description: "Cerasa is composed of an established team of Italian master craftsmen that produces and puts up bathrooms undisputed of exceptional  Made in Italy quality. Cerasa collections are designed to satisfy the most diverse housing styles, fit the style of the house and its inhabitants.",
+        builtWith: ["UsedTech1", "UsedTech2", "UsedTech3"]
+      }],
+      showModal: false,
+      iniScrollTop: 0
     };
-  }
+  },
+  methods: {
+    getModal: function getModal(event) {
+      this.showModal = true;
+      this.iniScrollTop = $("html").scrollTop();
+      $("html").scrollTop(0);
+    },
+    killModal: function killModal() {
+      this.showModal = false;
+      $("html").scrollTop(this.iniScrollTop);
+    }
+  },
+  props: ['title', 'category', 'imgPath']
 });
 
 /***/ }),
@@ -2180,7 +2194,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   mounted: function mounted() {
     console.log('Component mounted.');
   },
-  props: ['project-details', 'builtWith'],
+  props: ['project-details'],
   methods: {
     wait: function wait(x, delay) {
       return new Promise(function (resolve) {
@@ -2203,26 +2217,28 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                tours = 0;
+                tours = -1;
                 currentTour = 0;
-                shouldBreak = false; // do {
-                // tours=Math.floor(Math.random()*10);
-                // } while (tours>1);
+                shouldBreak = false;
 
-              case 3:
-                index = 0;
+                do {
+                  tours = Math.floor(Math.random() * 10);
+                } while (tours > 1);
 
               case 4:
-                _context.next = 6;
+                index = 0;
+
+              case 5:
+                _context.next = 7;
                 return this.wait(index, delay);
 
-              case 6:
+              case 7:
                 x = _context.sent;
                 _context.t0 = leftORright;
-                _context.next = _context.t0 === "l" ? 10 : _context.t0 === "r" ? 14 : 18;
+                _context.next = _context.t0 === "l" ? 11 : _context.t0 === "r" ? 15 : 19;
                 break;
 
-              case 10:
+              case 11:
                 $("#leftDigit").html(x);
                 $("#leftDigit").addClass("slotNumberAnimate");
 
@@ -2233,9 +2249,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                   }
                 }
 
-                return _context.abrupt("break", 18);
+                return _context.abrupt("break", 19);
 
-              case 14:
+              case 15:
                 $("#rightDigit").html(x);
                 $("#rightDigit").addClass("slotNumberAnimate");
 
@@ -2246,27 +2262,27 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                   }
                 }
 
-                return _context.abrupt("break", 18);
-
-              case 18:
-                index++;
+                return _context.abrupt("break", 19);
 
               case 19:
+                index++;
+
+              case 20:
                 if (index != 10 && !shouldBreak) {
+                  _context.next = 5;
+                  break;
+                }
+
+              case 21:
+                currentTour++;
+
+              case 22:
+                if (currentTour != tours + 2 && !shouldBreak) {
                   _context.next = 4;
                   break;
                 }
 
-              case 20:
-                currentTour++;
-
-              case 21:
-                if (currentTour != tours + 2 && !shouldBreak) {
-                  _context.next = 3;
-                  break;
-                }
-
-              case 22:
+              case 23:
               case "end":
                 return _context.stop();
             }
@@ -2288,8 +2304,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     },
     turnTheWheel: function turnTheWheel(leftValue, rightValue, delay) {
       var leftORright = "";
-      this.affectLeftDigit(leftValue, delay);
-      this.affectRightDigit(rightValue, delay);
+      this.affectLeftDigit(Math.floor(Math.random() * 10), delay);
+      this.affectRightDigit(Math.floor(Math.random() * 10), delay);
     }
   }
 });
@@ -2333,6 +2349,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2347,45 +2368,52 @@ __webpack_require__.r(__webpack_exports__);
     return {
       projects: [{
         id: 2,
+        imgPath: "projectImg2.jpg",
         title: "WORK 2",
         category: "category 2",
-        description: "this is a short description about project 2",
-        builtWith: ["UsedTech1", "techUsed2", "UsedTech3"]
+        description: "Cerasa is composed of an established team of Italian master craftsmen that produces and puts up bathrooms undisputed of exceptional  Made in Italy quality. Cerasa collections are designed to satisfy the most diverse housing styles, fit the style of the house and its inhabitants.",
+        builtWith: ["UsedTech1", "UsedTech2", "UsedTech3"]
       }, {
         id: 1,
+        imgPath: "projectImg1.jpg",
         title: "WORK 1",
         category: "category 1",
-        description: "this is a short description about project 1",
-        builtWith: ["UsedTech1", "techUsed2", "UsedTech3"]
+        description: "Cerasa is composed of an established team of Italian master craftsmen that produces and puts up bathrooms undisputed of exceptional  Made in Italy quality. Cerasa collections are designed to satisfy the most diverse housing styles, fit the style of the house and its inhabitants.",
+        builtWith: ["UsedTech1", "UsedTech2", "UsedTech3"]
       }, {
         id: 3,
+        imgPath: "projectImg3.jpg",
         title: "WORK 3",
         category: "category 3",
-        description: "this is a short description about project 3",
-        builtWith: ["UsedTech1", "techUsed2", "UsedTech3"]
+        description: "Cerasa is composed of an established team of Italian master craftsmen that produces and puts up bathrooms undisputed of exceptional  Made in Italy quality. Cerasa collections are designed to satisfy the most diverse housing styles, fit the style of the house and its inhabitants.",
+        builtWith: ["UsedTech1", "UsedTech2", "UsedTech3"]
       }, {
         id: 4,
+        imgPath: "projectImg4.jpg",
         title: "WORK 4",
         category: "category 4",
-        description: "this is a short description about project 4",
-        builtWith: ["UsedTech1", "techUsed2", "UsedTech3"]
+        description: "Cerasa is composed of an established team of Italian master craftsmen that produces and puts up bathrooms undisputed of exceptional  Made in Italy quality. Cerasa collections are designed to satisfy the most diverse housing styles, fit the style of the house and its inhabitants.",
+        builtWith: ["UsedTech1", "UsedTech2", "UsedTech3"]
       }, {
         id: 5,
+        imgPath: "projectImg5.jpg",
         title: "WORK 5",
         category: "category 5",
-        description: "this is a short description about project 5",
-        builtWith: ["UsedTech1", "techUsed2", "UsedTech3"]
+        description: "Cerasa is composed of an established team of Italian master craftsmen that produces and puts up bathrooms undisputed of exceptional  Made in Italy quality. Cerasa collections are designed to satisfy the most diverse housing styles, fit the style of the house and its inhabitants.",
+        builtWith: ["UsedTech1", "UsedTech2", "UsedTech3"]
       }, {
         id: 6,
+        imgPath: "projectImg6.jpg",
         title: "WORK 6",
         category: "category 6",
-        description: "this is a short description about project 6",
+        description: "Cerasa is composed of an established team of Italian master craftsmen that produces and puts up bathrooms undisputed of exceptional  Made in Italy quality. Cerasa collections are designed to satisfy the most diverse housing styles, fit the style of the house and its inhabitants.",
         builtWith: ["UsedTech1", "techUsed2", "UsedTech3"]
       }],
       projectDetails: [{
-        id: 3,
-        title: "WORK 3",
-        category: "category 3",
+        id: 2,
+        imgPath: "projectImg2.jpg",
+        title: "WORK 2",
+        category: "category 2",
         description: "Cerasa is composed of an established team of Italian master craftsmen that produces and puts up bathrooms undisputed of exceptional  Made in Italy quality. Cerasa collections are designed to satisfy the most diverse housing styles, fit the style of the house and its inhabitants.",
         builtWith: ["UsedTech1", "UsedTech2", "UsedTech3"]
       }],
@@ -2397,11 +2425,17 @@ __webpack_require__.r(__webpack_exports__);
     getModal: function getModal(event) {
       this.showModal = true;
       this.iniScrollTop = $("html").scrollTop();
+      $("nav").addClass("blur");
+      $("#projectList").addClass("blur");
       $("html").scrollTop(0);
+      $("body").css("overflow", "hidden");
     },
     killModal: function killModal() {
       this.showModal = false;
       $("html").scrollTop(this.iniScrollTop);
+      $("nav").removeClass("blur");
+      $("#projectList").removeClass("blur");
+      $("body").css("overflow", "auto");
     }
   }
 });
@@ -2417,6 +2451,150 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -38786,7 +38964,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", {}, [
+    return _c("div", { staticClass: "container" }, [
       _c(
         "div",
         {
@@ -38826,23 +39004,23 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", {}, [
+  return _c("div", { staticClass: "container" }, [
     _c(
       "div",
       {
         staticClass: "row justify-content-center align-items-center coverPage"
       },
       [
-        _c("div", { staticClass: "ml-auto col-lg-5 col-md-5 col-sm-12" }, [
+        _c("div", { staticClass: "ml-auto col-lg-6 col-md-6 col-sm-12" }, [
           _c("div", { staticClass: "row align-items-center" }, [
-            _c("h1", [_vm._v("Welcome dear ..")]),
-            _vm._v(" "),
             _vm._m(0),
             _vm._v(" "),
             _c(
-              "h5",
+              "p",
               [
-                _vm._v("feel free to "),
+                _vm._v("A frontend, Backend, web developer / Designer "),
+                _c("br"),
+                _vm._v("\n                feel free to "),
                 _c(
                   "router-link",
                   { staticClass: "twinkle", attrs: { to: "contactMe" } },
@@ -38862,15 +39040,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("p", [
-      _vm._v(
-        "i'm Redwan, a fullstack web developer, with an innate attraction for therms of art and simplicity.\n                    "
-      ),
-      _c("br"),
-      _vm._v(
-        "i'm interested in building responsive apps and design illustrations"
-      )
-    ])
+    return _c("h1", [_vm._v("Hi dear, "), _c("br"), _vm._v("i'm Redwan")])
   }
 ]
 render._withStripped = true
@@ -38900,48 +39070,20 @@ var render = function() {
     [
       _c(
         "div",
-        { staticClass: " d-flex flex-column" },
+        { staticClass: " d-flex flex-column prj" },
         [
-          _c(
-            "div",
-            { staticClass: "prj" },
-            [
-              _c("router-link", { attrs: { to: "" } }, [
-                _c("img", {
-                  staticClass: "prjImg",
-                  attrs: { src: "img/project1.jpg", alt: "project1" }
-                }),
-                _vm._v(" "),
-                _c("div", { staticClass: "overlay" }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "py-2 d-flex flex-column align-items-center justify-content-center prjBody"
-                    },
-                    [
-                      _c("p", { staticClass: "prjButton" }, [
-                        _vm._v("Go on, take a look")
-                      ])
-                    ]
-                  )
-                ])
-              ])
-            ],
-            1
-          ),
+          _c("div", { attrs: { tag: "button" }, on: { click: _vm.getModal } }, [
+            _c("img", {
+              staticClass: "prjImg",
+              attrs: { src: "img/" + _vm.imgPath, alt: _vm.title }
+            }),
+            _vm._v(" "),
+            _vm._m(0)
+          ]),
           _vm._v(" "),
           _c(
             "router-link",
-            {
-              staticClass: "tagButton",
-              attrs: { to: "", tag: "button" },
-              on: {
-                click: function($event) {
-                  _vm.showModal = true
-                }
-              }
-            },
+            { staticClass: "tagButton", attrs: { to: "", tag: "button" } },
             [
               _c("h5", { staticClass: "mt-1 mb-0 prjTitle" }, [
                 _vm._v(_vm._s(_vm.title))
@@ -38966,7 +39108,23 @@ var render = function() {
     ]
   )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "overlay" }, [
+      _c(
+        "div",
+        {
+          staticClass:
+            "py-2 d-flex flex-column align-items-center justify-content-center prjBody"
+        },
+        [_c("p", { staticClass: "prjButton" }, [_vm._v("Go on, take a look")])]
+      )
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -39039,14 +39197,22 @@ var render = function() {
           },
           [
             _c("div", { staticClass: "m-3" }, [
-              _vm._m(0),
+              _c("div", { staticClass: "prjDetImg" }, [
+                _c("img", {
+                  staticClass: "prjImg",
+                  attrs: {
+                    src: "img/" + _vm.projectDetails[0].imgPath,
+                    alt: "project1"
+                  }
+                })
+              ]),
               _vm._v(" "),
               _c("div", { staticClass: "px-2" }, [
                 _c("div", { staticClass: "row justify-content-center" }, [
                   _c("div", { staticClass: "row w-100" }, [
                     _c("div", { staticClass: "col-12 col-xl-8 col-lg-8" }, [
                       _c("div", { staticClass: "m-2 p-3 descriptionSection" }, [
-                        _c("h2", { staticClass: "descriptionSectionTitle" }, [
+                        _c("h2", { staticClass: "sectionTitle" }, [
                           _vm._v("About Work")
                         ]),
                         _vm._v(" "),
@@ -39058,7 +39224,7 @@ var render = function() {
                     _vm._v(" "),
                     _c("div", { staticClass: "col-12 col-xl-4 col-lg-4" }, [
                       _c("div", { staticClass: "m-2 p-3 descriptionSection" }, [
-                        _c("h2", { staticClass: "descriptionSectionTitle" }, [
+                        _c("h2", { staticClass: "sectionTitle" }, [
                           _vm._v("BuiltWith")
                         ]),
                         _vm._v(" "),
@@ -39071,9 +39237,14 @@ var render = function() {
                           _vm._l(_vm.projectDetails[0].builtWith, function(
                             builtWith
                           ) {
-                            return _c("li", { key: builtWith }, [
-                              _vm._v(_vm._s(builtWith))
-                            ])
+                            return _c(
+                              "li",
+                              { key: builtWith, staticClass: "builtWithItem" },
+                              [
+                                _c("span", [_vm._v("• ")]),
+                                _vm._v(_vm._s(builtWith))
+                              ]
+                            )
                           }),
                           0
                         )
@@ -39081,7 +39252,7 @@ var render = function() {
                     ])
                   ]),
                   _vm._v(" "),
-                  _vm._m(1)
+                  _vm._m(0)
                 ])
               ])
             ])
@@ -39096,7 +39267,7 @@ var render = function() {
           },
           [
             _c("div", { staticClass: "row w-100" }, [
-              _vm._m(2),
+              _vm._m(1),
               _vm._v(" "),
               _c(
                 "div",
@@ -39106,7 +39277,7 @@ var render = function() {
                     "div",
                     { staticClass: "pl-3 d-flex w-100 align-items-center" },
                     [
-                      _vm._m(3),
+                      _vm._m(2),
                       _vm._v(" "),
                       _c(
                         "button",
@@ -39137,23 +39308,10 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "prjDetImg" }, [
-      _c("img", {
-        staticClass: "prjImg",
-        attrs: { src: "img/project1.jpg", alt: "project1" }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
     return _c("div", { staticClass: "row w-100" }, [
       _c("div", { staticClass: "col-12 col-xl-8 col-lg-8" }, [
         _c("div", { staticClass: "m-2 p-3 descriptionSection" }, [
-          _c("h2", { staticClass: "descriptionSectionTitle" }, [
-            _vm._v("Comments")
-          ]),
+          _c("h2", { staticClass: "sectionTitle" }, [_vm._v("Comments")]),
           _vm._v(" "),
           _c("div", { staticClass: "my-3 d-flex align-items-start" }, [
             _c("div", { staticClass: "commentProfilPic" }, [
@@ -39216,32 +39374,45 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("div", { staticClass: "col-12 col-xl-4 col-lg-4" }, [
         _c("div", { staticClass: "m-2 p-3 descriptionSection" }, [
-          _c("h2", { staticClass: "descriptionSectionTitle" }, [
-            _vm._v("Rating")
-          ]),
+          _c("h2", { staticClass: "sectionTitle" }, [_vm._v("Rating")]),
           _vm._v(" "),
           _c("div", { staticClass: "ml-0 row w-100 align-items-end" }, [
-            _c("div", { staticClass: "pl-0 col-6" }, [
-              _c("h5", {}, [_vm._v("interaction(62)")])
-            ]),
+            _c(
+              "div",
+              { staticClass: "pl-0 col-sm-6 col-lg-12 col-xl-12 col-md-12" },
+              [_c("h5", {}, [_vm._v("interaction(62)")])]
+            ),
             _vm._v(" "),
-            _c("div", { staticClass: "col-6 leftLine" }, [
-              _c("div", { staticClass: "d-flex box" }, [
-                _c("div", { staticClass: "d-flex ratingSlot" }, [
-                  _c("div", { staticClass: "d-flex slotChild isNumber" }, [
-                    _c("h3", { attrs: { id: "leftDigit" } }, [_vm._v("0")])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "d-flex slotChild isNotNumber" }, [
-                    _c("h3", {}, [_vm._v(".")])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "d-flex slotChild isNumber" }, [
-                    _c("h3", { attrs: { id: "rightDigit" } }, [_vm._v("0")])
-                  ])
+            _c(
+              "div",
+              { staticClass: "pl-0 col-sm-6 col-lg-12 col-xl-12 col-md-12" },
+              [
+                _c("div", { staticClass: "d-flex box" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "d-flex ratingSlot",
+                      attrs: { id: "ratingSlot" }
+                    },
+                    [
+                      _c("div", { staticClass: "d-flex slotChild isNumber" }, [
+                        _c("h3", { attrs: { id: "leftDigit" } }, [_vm._v("0")])
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "d-flex slotChild isNotNumber" },
+                        [_c("h3", {}, [_vm._v(".")])]
+                      ),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "d-flex slotChild isNumber" }, [
+                        _c("h3", { attrs: { id: "rightDigit" } }, [_vm._v("0")])
+                      ])
+                    ]
+                  )
                 ])
-              ])
-            ])
+              ]
+            )
           ])
         ])
       ])
@@ -39288,9 +39459,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", {}, [
-    _c("h3", [_vm._v("A bref look at some of my current projects :")]),
-    _vm._v(" "),
+  return _c("div", { staticClass: "container" }, [
     _c(
       "div",
       { attrs: { id: "modalPD" } },
@@ -39305,7 +39474,10 @@ var render = function() {
           ? _c("projectDetails", {
               staticClass:
                 "d-flex projectDetailsBg justify-content-center align-items-center",
-              attrs: { "project-details": _vm.projectDetails },
+              attrs: {
+                "project-details": _vm.projectDetails,
+                imgPath: _vm.projectDetails.imgPath
+              },
               on: { close: _vm.killModal }
             })
           : _vm._e()
@@ -39313,23 +39485,27 @@ var render = function() {
       1
     ),
     _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "row justify-content-between projects" },
-      _vm._l(_vm.projects, function(project, index) {
-        return _c("project", {
-          key: project.id,
-          staticClass: "container",
-          attrs: {
-            project: project,
-            title: project.title,
-            category: project.category,
-            index: index
-          }
-        })
-      }),
-      1
-    )
+    _c("div", { attrs: { id: "projectList" } }, [
+      _c("h3", [_vm._v("A bref look at some of my current projects :")]),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "row justify-content-between projects" },
+        _vm._l(_vm.projects, function(project, index) {
+          return _c("project", {
+            key: project.id,
+            attrs: {
+              project: project,
+              imgPath: project.imgPath,
+              title: project.title,
+              category: project.category,
+              index: index
+            }
+          })
+        }),
+        1
+      )
+    ])
   ])
 }
 var staticRenderFns = []
@@ -39361,22 +39537,264 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", {}, [
-      _c(
-        "div",
-        {
-          staticClass: "row justify-content-center align-items-center coverPage"
-        },
-        [
-          _c("div", { staticClass: "ml-auto col-lg-5 col-md-5 col-sm-12" }, [
-            _c("div", { staticClass: "row align-items-center" }, [
-              _c("h1", [_vm._v("i'm really glad that you arrived here ..")]),
-              _vm._v(" "),
-              _c("p", [_vm._v("here will be some infos about me ...")])
+    return _c("div", { staticClass: "container" }, [
+      _c("div", { staticClass: "pt-5 row" }, [
+        _c("div", { staticClass: "col-lg-6 col-md-12 col-sm-12" }, [
+          _c("div", {}, [
+            _c("h2", { staticClass: "sectionTitle mb-4" }, [
+              _vm._v("About Me :")
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "ml-2 " }, [
+              _c("p", [
+                _vm._v(
+                  "i'm Redwan, a fullstack web developer, with an innate attraction for therms of art and simplicity.\n                    "
+                ),
+                _c("br"),
+                _vm._v(
+                  "i'm interested in building responsive apps and design illustrations"
+                )
+              ])
             ])
           ])
-        ]
-      )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-lg-6 col-md-12 col-sm-12" }, [
+          _c("div", {}, [
+            _c("h2", { staticClass: "sectionTitle mb-4" }, [
+              _vm._v("Skills :")
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "d-flex" }, [
+              _c(
+                "div",
+                { staticClass: "ml-2 w-100 row justify-content-around" },
+                [
+                  _c(
+                    "div",
+                    { staticClass: "px-0 col-lg-6 col-md-6 col-sm-12" },
+                    [
+                      _c("div", { staticClass: "leftLine  " }, [
+                        _c("h4", { staticClass: "sectionSubTitle" }, [
+                          _vm._v("FrontEnd")
+                        ]),
+                        _vm._v(" "),
+                        _c("div", [
+                          _c(
+                            "ul",
+                            {
+                              staticClass:
+                                "list-group list-group-flush tagList skillsList"
+                            },
+                            [
+                              _c("li", { staticClass: "skillsItem " }, [
+                                _c("div", { staticClass: "d-flex m-0" }, [
+                                  _c("h5", [_vm._v("html")])
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("li", { staticClass: "skillsItem " }, [
+                                _c("div", { staticClass: "d-flex m-0" }, [
+                                  _c("h5", [_vm._v("css")])
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("li", { staticClass: "skillsItem " }, [
+                                _c("div", { staticClass: "d-flex m-0" }, [
+                                  _c("h5", [_vm._v("js/jquery")])
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("li", { staticClass: "skillsItem " }, [
+                                _c("div", { staticClass: "d-flex m-0" }, [
+                                  _c("h5", [_vm._v("VueJs")])
+                                ])
+                              ]),
+                              _c("li", { staticClass: "skillsItem " }, [
+                                _c("div", { staticClass: "d-flex m-0" }, [
+                                  _c("h5", [_vm._v("Bootstarp")])
+                                ])
+                              ])
+                            ]
+                          )
+                        ])
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "px-0 col-lg-6 col-md-6 col-sm-12" },
+                    [
+                      _c("div", { staticClass: "leftLine  " }, [
+                        _c("h4", { staticClass: "sectionSubTitle" }, [
+                          _vm._v("backEnd")
+                        ]),
+                        _vm._v(" "),
+                        _c("div", [
+                          _c(
+                            "ul",
+                            {
+                              staticClass:
+                                "list-group list-group-flush tagList skillsList"
+                            },
+                            [
+                              _c("li", { staticClass: "skillsItem " }, [
+                                _c("div", { staticClass: "d-flex m-0" }, [
+                                  _c("h5", [_vm._v(".NET framework")])
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("li", { staticClass: "skillsItem " }, [
+                                _c("div", { staticClass: "d-flex m-0" }, [
+                                  _c("h5", [_vm._v("php ( laravel )")])
+                                ])
+                              ])
+                            ]
+                          )
+                        ])
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "pr-0 col-lg-6 col-md-6 col-sm-12" },
+                    [
+                      _c("div", { staticClass: "leftLine  " }, [
+                        _c("h4", { staticClass: "sectionSubTitle" }, [
+                          _vm._v("Design")
+                        ]),
+                        _vm._v(" "),
+                        _c("div", [
+                          _c(
+                            "ul",
+                            {
+                              staticClass:
+                                "list-group list-group-flush tagList skillsList"
+                            },
+                            [
+                              _c("li", { staticClass: "skillsItem " }, [
+                                _c("div", { staticClass: "d-flex m-0" }, [
+                                  _c("h5", [_vm._v("Adobe Illustrator")])
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("li", { staticClass: "skillsItem" }, [
+                                _c("div", { staticClass: "d-flex m-0" }, [
+                                  _c("h5", [_vm._v("Adobe Xd")])
+                                ])
+                              ])
+                            ]
+                          )
+                        ])
+                      ])
+                    ]
+                  )
+                ]
+              )
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-lg-6 col-md-12 col-sm-12" }, [
+          _c("div", {}, [
+            _c("h2", { staticClass: "sectionTitle mb-4" }, [
+              _vm._v("Education and diplomats :")
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "ml-2" }, [
+              _c("ul", { staticClass: "list-group list-group-flush tagList" }, [
+                _c("li", { staticClass: "diplomatsItem leftLine  " }, [
+                  _c("div", { staticClass: "d-flex m-0" }, [
+                    _c("h5", { staticClass: "sectionSubTitle" }, [
+                      _vm._v("2020")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", {}, [
+                    _c("div", { staticClass: "d-flex m-0" }, [
+                      _c("h5", [
+                        _vm._v("Bachlor in economic and legal siences")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "d-flex m-0" }, [
+                      _c("h6", [_vm._v("Ibn zohr university - Morocco")])
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("li", { staticClass: "diplomatsItem leftLine  " }, [
+                  _c("div", { staticClass: "d-flex m-0" }, [
+                    _c("h5", { staticClass: "sectionSubTitle" }, [
+                      _vm._v("2019")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", {}, [
+                    _c("div", { staticClass: "d-flex m-0" }, [
+                      _c("h5", [_vm._v("Associate's degree in development")])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "d-flex m-0" }, [
+                      _c("h6", [
+                        _vm._v(
+                          "Higher Institute of Applied Technologies - Morocco"
+                        )
+                      ])
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("li", { staticClass: "diplomatsItem leftLine  " }, [
+                  _c("div", { staticClass: "d-flex m-0" }, [
+                    _c("h5", { staticClass: "sectionSubTitle" }, [
+                      _vm._v("2017")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", {}, [
+                    _c("div", { staticClass: "d-flex m-0" }, [
+                      _c("h5", [
+                        _vm._v(
+                          "Technician's certificate in informatique maintenance and networking"
+                        )
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "d-flex m-0" }, [
+                      _c("h6", [
+                        _vm._v(
+                          "Higher Institute of Applied Technologies - Morocco"
+                        )
+                      ])
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("li", { staticClass: "diplomatsItem leftLine  " }, [
+                  _c("div", { staticClass: "d-flex m-0" }, [
+                    _c("h5", { staticClass: "sectionSubTitle" }, [
+                      _vm._v("2015")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", {}, [
+                    _c("div", { staticClass: "d-flex m-0" }, [
+                      _c("h5", [_vm._v("Baccalaureate in phisics siences")])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "d-flex m-0" }, [
+                      _c("h6", [_vm._v("Hassan the 2nd, high school- Morocco")])
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ])
+      ])
     ])
   }
 ]
@@ -54665,41 +55083,26 @@ var prjRoutes = [{
   component: _components_ProjectDetailsComponent_vue__WEBPACK_IMPORTED_MODULE_5__["default"]
 }];
 
-function slotNumber() {
-  $(".slotChild.isNumber h3").animate({
-    top: '-35px',
-    color: 'rgb(22, 19, 19)',
-    opacity: '0.5'
-  }, "slow");
-  $(".slotChild.isNumber h3").animate({
-    top: '0px',
-    color: 'white',
-    opacity: '1'
-  }, "slow");
-  $(".slotChild.isNumber h3").animate({
-    top: '35px',
-    color: 'rgb(22, 19, 19)',
-    opacity: '0.5'
-  }, "slow");
-  $(".slotChild.isNumber h3").animate({
-    top: '70px',
-    color: 'rgb(22, 19, 19)',
-    opacity: '0'
-  }, "slow");
+function coverPage() {
+  $("body").css("overflow", "hidden");
+  alert("done");
 }
 
-; // slotNumber();
-// function resolveAfter2Seconds(x) { 
-//     return new Promise(resolve => {
-//         setTimeout(() => {
-//         resolve(x);
-//         }, 2000);
-//     });
-// }
-// async function f1() {
-//     var x = await resolveAfter2Seconds(10);
-//     console.log(x); // 10
-// }
+;
+$(document).ready(function () {
+  $("#home").on("click", function () {
+    $("body").css("overflow", "hidden");
+  });
+  $("#contactMe").on("click", function () {
+    $("body").css("overflow", "hidden");
+  });
+  $("#projects").on("click", function () {
+    $("body").css("overflow", "auto");
+  });
+  $("#whoAmI").on("click", function () {
+    $("body").css("overflow", "auto");
+  });
+});
 
 /***/ }),
 

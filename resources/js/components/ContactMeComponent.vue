@@ -1,5 +1,5 @@
 <template>
-    <div class="">
+    <div class="container">
         <div class="row justify-content-center align-items-center coverPage">
             <div class="ml-auto col-lg-5 col-md-5 col-sm-12">
                 <div class="row align-items-center">

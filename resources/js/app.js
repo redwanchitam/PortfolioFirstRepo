@@ -42,27 +42,26 @@ const prjRoutes =[
         path : '/projectDetails',
         component : ProjectDetails
     }
-]
+];
 
-
-function slotNumber(){
-    $(".slotChild.isNumber h3").animate({top: '-35px',color: 'rgb(22, 19, 19)', opacity : '0.5'}, "slow");
-    $(".slotChild.isNumber h3").animate({top: '0px',color: 'white', opacity : '1'}, "slow");
-    $(".slotChild.isNumber h3").animate({top: '35px',color: 'rgb(22, 19, 19)', opacity : '0.5'}, "slow");
-    $(".slotChild.isNumber h3").animate({top: '70px',color: 'rgb(22, 19, 19)', opacity : '0'}, "slow");
+function coverPage(){
+    $("body").css("overflow","hidden");
+    alert("done");
 };
 
+$(document).ready(function(){
+    $("#home").on("click",function(){
+        $("body").css("overflow","hidden");
+    });
+    $("#contactMe").on("click",function(){
+        $("body").css("overflow","hidden");
+    });
+    $("#projects").on("click",function(){
+        $("body").css("overflow","auto");
+    });
+    $("#whoAmI").on("click",function(){
+        $("body").css("overflow","auto");
+    });
 
-// slotNumber();
+});
 
-// function resolveAfter2Seconds(x) { 
-//     return new Promise(resolve => {
-//         setTimeout(() => {
-//         resolve(x);
-//         }, 2000);
-//     });
-// }
-// async function f1() {
-//     var x = await resolveAfter2Seconds(10);
-//     console.log(x); // 10
-// }
