@@ -56,7 +56,7 @@ a{
     height: 1px;
     width: 0%;
     background-color: $text;
-    border-radius:  calc(0.7rem - 1px);;
+    border-radius:  calc(0.7rem - 1px);
     display: block;
     opacity: 0;
     transition: ease all 500ms;
@@ -397,14 +397,13 @@ a:hover .dot{
     text-decoration: none;
 }
 .tagShadow{
-    border-radius: calc(0.7rem - 1px);
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     transition: .7s ease;
 }
 .tagShadow:hover{
     background-color: $shadow;
-    box-shadow: 0 0 6px $transBg;
+    box-shadow: -6px 0 $transBg;
     transition: .7s ease;
 }
 .diplomatsItem{
@@ -412,8 +411,104 @@ a:hover .dot{
     margin-bottom: 2rem;
 }
 .skillsList{
-    margin-bottom: 2rem;
+    // margin-bottom: 2rem;
 }
 .skillsItem{
     text-decoration: none;
+}
+////proficiency
+.proficiencyBox{
+    position: relative;
+    height: 1.125rem;
+    width: 90%;
+    background-color: $bg;
+    display: inline-flex;
+    transition: ease all 500ms;
+}
+.proficiency{
+    height: 100%;
+    width: 0%;
+    transition: ease all 500ms;
+}
+.colorDash{
+    height: 0rem;
+    width: 0rem   !important;
+    border-radius: 50%;
+    transition: ease all 500ms;
+}
+.profMsg{
+    position: absolute;
+}
+////skillSections hover
+.skillSection:hover .colorDash{
+    margin-right: 0.5rem;
+    height: 1.125rem;
+    width: 1.125rem   !important;
+    transition: ease all 500ms;
+}
+.skillSection:hover .profMsg{
+    display: none;
+    transition: none;
+}
+.skillSection:hover .leftLine{
+    box-shadow: -3px 0px 6px $text;
+    transition: .7s ease;
+}
+////skillSections coloring
+//////frontend
+.skillSection:hover .profHTML{
+    width: 27%;
+    background-color:rgb(223, 87, 57);
+    transition: ease all 500ms;
+}
+.skillSection:hover .profCSS{
+    width: 24%;
+    background-color:rgb(10, 87, 230);
+    transition: ease all 500ms;
+}
+.skillSection:hover .profJsJquery{
+    width: 14%;
+    background-color:rgb(204, 198, 14);
+    transition: ease all 500ms;
+}
+.skillSection:hover .profVueJs{
+    width: 14%;
+    background-color:rgb(49, 194, 114);
+    transition: ease all 500ms;
+}
+.skillSection:hover .profBootstrap{
+    width: 21%;
+    background-color:rgb(66, 16, 167);
+    transition: ease all 500ms;
+}
+//////backend
+.skillSection:hover .profLaravel{
+    width: 55%;
+    background-color:rgb(211, 14, 14);
+}
+.skillSection:hover .profDotNet{
+    width: 45%;
+    background-color:rgb(70, 22, 167);
+}
+//////design
+.skillSection:hover .profAI{
+    width: 65%;
+    background-color:rgb(195, 81, 14);
+}
+.skillSection:hover .profAXD{
+    width: 35%;
+    background-color:rgb(141, 26, 148);
+}
+//////database
+.skillSection:hover .profSQL{
+    width: 45%;
+    background-color:rgb(245, 195, 29);
+}
+.skillSection:hover .profMySQL{
+    width: 40%;
+    background-color:rgb(34, 146, 232);
+}
+.skillSection:hover .profSQLLite{
+    width: 15%;
+    background-color:rgb(18, 62, 128);
 }

@@ -16,73 +16,126 @@
                     <div class="d-flex">
                         <div class="ml-2 w-100 row justify-content-around">
                             <div class="px-0 col-lg-6 col-md-6 col-sm-12">
-                                <div class="leftLine  ">
+                                <div class="leftLine mb-5 skillSection">
                                     <h4 class="sectionSubTitle">FrontEnd</h4>
-                                    <div>
-                                        <ul class="list-group list-group-flush tagList skillsList">
-                                            <li class="skillsItem ">
-                                                <div class="d-flex m-0">
-                                                    <h5>html</h5>
-                                                </div>
-                                            </li>
-                                            <li class="skillsItem ">
-                                                <div class="d-flex m-0">
-                                                    <h5>css</h5>
-                                                </div>
-                                            </li>
-                                            <li class="skillsItem ">
-                                                <div class="d-flex m-0">
-                                                    <h5>js/jquery</h5>
-                                                </div>
-                                            </li>
-                                            <li class="skillsItem ">
-                                                <div class="d-flex m-0">
-                                                    <h5>VueJs</h5>
-                                                </div>
-                                            </li><li class="skillsItem ">
-                                                <div class="d-flex m-0">
-                                                    <h5>Bootstarp</h5>
-                                                </div>
-                                            </li>
-                                        </ul>
+                                    <ul class="list-group list-group-flush tagList skillsList">
+                                        <li class="skillsItem ">
+                                            <div class="d-flex m-0">
+                                                <span class="colorDash profHTML"></span>
+                                                <h5>HTML</h5>
+                                            </div>
+                                        </li>
+                                        <li class="skillsItem">
+                                            <div class="d-flex m-0">
+                                                <span class="colorDash profCSS"></span>
+                                                <h5>CSS</h5>
+                                            </div>
+                                        </li>
+                                        <li class="skillsItem">
+                                            <div class="d-flex m-0">
+                                                <span class="colorDash profBootstrap"></span>
+                                                <h5>Bootstrap</h5>
+                                            </div>
+                                        </li>
+                                        <li class="skillsItem">
+                                            <div class="d-flex m-0">
+                                                <span class="colorDash profJsJquery"></span>
+                                                <h5>Js/Jquery</h5>
+                                            </div>
+                                        </li>
+                                        <li class="skillsItem">
+                                            <div class="d-flex m-0">
+                                                <span class="colorDash profVueJs"></span>
+                                                <h5>Vue.Js</h5>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="proficiencyBox">
+                                        <h6 class="profMsg twinkle">hover on here !</h6>
+                                        <div class="proficiency profHTML"></div>
+                                        <div class="proficiency profCSS"></div>
+                                        <div class="proficiency profBootstrap"></div>
+                                        <div class="proficiency profJsJquery"></div>
+                                        <div class="proficiency profVueJs"></div>
                                     </div>
                                 </div>
                             </div>
                             <div class="px-0 col-lg-6 col-md-6 col-sm-12">
-                                <div class="leftLine  ">
+                                <div class="leftLine mb-5 skillSection">
                                     <h4 class="sectionSubTitle">backEnd</h4>
-                                    <div>
-                                        <ul class="list-group list-group-flush tagList skillsList">
-                                            <li class="skillsItem ">
-                                                <div class="d-flex m-0">
-                                                    <h5>.NET framework</h5>
-                                                </div>
-                                            </li>
-                                            <li class="skillsItem ">
-                                                <div class="d-flex m-0">
-                                                    <h5>php ( laravel )</h5>
-                                                </div>
-                                            </li>
-                                        </ul>
+                                    <ul class="list-group list-group-flush tagList skillsList">
+                                        <li class="skillsItem ">
+                                            <div class="d-flex m-0">
+                                                <span class="colorDash profLaravel"></span>
+                                                <h5>Laravel</h5>
+                                            </div>
+                                        </li>
+                                        <li class="skillsItem">
+                                            <div class="d-flex m-0">
+                                                <span class="colorDash profDotNet"></span>
+                                                <h5>.Net framework</h5>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="proficiencyBox">
+                                        <h6 class="profMsg twinkle">hover on here !</h6>
+                                        <div class="proficiency profLaravel"></div>
+                                        <div class="proficiency profDotNet"></div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="pr-0 col-lg-6 col-md-6 col-sm-12">
-                                <div class="leftLine  ">
+                            <div class="px-0 col-lg-6 col-md-6 col-sm-12">
+                                <div class="leftLine mb-5 skillSection">
+                                    <h4 class="sectionSubTitle">DataBase</h4>
+                                    <ul class="list-group list-group-flush tagList skillsList">
+                                        <li class="skillsItem ">
+                                            <div class="d-flex m-0">
+                                                <span class="colorDash profSQL"></span>
+                                                <h5>SQL</h5>
+                                            </div>
+                                        </li>
+                                        <li class="skillsItem">
+                                            <div class="d-flex m-0">
+                                                <span class="colorDash profMySQL"></span>
+                                                <h5>MySQL</h5>
+                                            </div>
+                                        </li>
+                                        <li class="skillsItem">
+                                            <div class="d-flex m-0">
+                                                <span class="colorDash profSQLLite"></span>
+                                                <h5>SQLLite</h5>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="proficiencyBox">
+                                        <h6 class="profMsg twinkle">hover on here !</h6>
+                                        <div class="proficiency profSQL"></div>
+                                        <div class="proficiency profMySQL"></div>
+                                        <div class="proficiency profSQLLite"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="px-0 col-lg-6 col-md-6 col-sm-12">
+                                <div class="leftLine mb-5 skillSection">
                                     <h4 class="sectionSubTitle">Design</h4>
-                                    <div>
-                                        <ul class="list-group list-group-flush tagList skillsList">
-                                            <li class="skillsItem ">
-                                                <div class="d-flex m-0">
-                                                    <h5>Adobe Illustrator</h5>
-                                                </div>
-                                            </li>
-                                            <li class="skillsItem">
-                                                <div class="d-flex m-0">
-                                                    <h5>Adobe Xd</h5>
-                                                </div>
-                                            </li>
-                                        </ul>
+                                    <ul class="list-group list-group-flush tagList skillsList">
+                                        <li class="skillsItem ">
+                                            <div class="d-flex m-0">
+                                                <span class="colorDash profAI"></span>
+                                                <h5>Adobe Illustrator</h5>
+                                            </div>
+                                        </li>
+                                        <li class="skillsItem">
+                                            <div class="d-flex m-0">
+                                                <span class="colorDash profAXD"></span>
+                                                <h5>Adobe Xd</h5>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="proficiencyBox">
+                                        <h6 class="profMsg twinkle">hover on here !</h6>
+                                        <div class="proficiency profAI"></div>
+                                        <div class="proficiency profAXD"></div>
                                     </div>
                                 </div>
                             </div>

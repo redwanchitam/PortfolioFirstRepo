@@ -2608,6 +2608,59 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -39574,49 +39627,88 @@ var staticRenderFns = [
                     "div",
                     { staticClass: "px-0 col-lg-6 col-md-6 col-sm-12" },
                     [
-                      _c("div", { staticClass: "leftLine  " }, [
+                      _c("div", { staticClass: "leftLine mb-5 skillSection" }, [
                         _c("h4", { staticClass: "sectionSubTitle" }, [
                           _vm._v("FrontEnd")
                         ]),
                         _vm._v(" "),
-                        _c("div", [
-                          _c(
-                            "ul",
-                            {
-                              staticClass:
-                                "list-group list-group-flush tagList skillsList"
-                            },
-                            [
-                              _c("li", { staticClass: "skillsItem " }, [
-                                _c("div", { staticClass: "d-flex m-0" }, [
-                                  _c("h5", [_vm._v("html")])
-                                ])
-                              ]),
-                              _vm._v(" "),
-                              _c("li", { staticClass: "skillsItem " }, [
-                                _c("div", { staticClass: "d-flex m-0" }, [
-                                  _c("h5", [_vm._v("css")])
-                                ])
-                              ]),
-                              _vm._v(" "),
-                              _c("li", { staticClass: "skillsItem " }, [
-                                _c("div", { staticClass: "d-flex m-0" }, [
-                                  _c("h5", [_vm._v("js/jquery")])
-                                ])
-                              ]),
-                              _vm._v(" "),
-                              _c("li", { staticClass: "skillsItem " }, [
-                                _c("div", { staticClass: "d-flex m-0" }, [
-                                  _c("h5", [_vm._v("VueJs")])
-                                ])
-                              ]),
-                              _c("li", { staticClass: "skillsItem " }, [
-                                _c("div", { staticClass: "d-flex m-0" }, [
-                                  _c("h5", [_vm._v("Bootstarp")])
-                                ])
+                        _c(
+                          "ul",
+                          {
+                            staticClass:
+                              "list-group list-group-flush tagList skillsList"
+                          },
+                          [
+                            _c("li", { staticClass: "skillsItem " }, [
+                              _c("div", { staticClass: "d-flex m-0" }, [
+                                _c("span", {
+                                  staticClass: "colorDash profHTML"
+                                }),
+                                _vm._v(" "),
+                                _c("h5", [_vm._v("HTML")])
                               ])
-                            ]
-                          )
+                            ]),
+                            _vm._v(" "),
+                            _c("li", { staticClass: "skillsItem" }, [
+                              _c("div", { staticClass: "d-flex m-0" }, [
+                                _c("span", {
+                                  staticClass: "colorDash profCSS"
+                                }),
+                                _vm._v(" "),
+                                _c("h5", [_vm._v("CSS")])
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("li", { staticClass: "skillsItem" }, [
+                              _c("div", { staticClass: "d-flex m-0" }, [
+                                _c("span", {
+                                  staticClass: "colorDash profBootstrap"
+                                }),
+                                _vm._v(" "),
+                                _c("h5", [_vm._v("Bootstrap")])
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("li", { staticClass: "skillsItem" }, [
+                              _c("div", { staticClass: "d-flex m-0" }, [
+                                _c("span", {
+                                  staticClass: "colorDash profJsJquery"
+                                }),
+                                _vm._v(" "),
+                                _c("h5", [_vm._v("Js/Jquery")])
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("li", { staticClass: "skillsItem" }, [
+                              _c("div", { staticClass: "d-flex m-0" }, [
+                                _c("span", {
+                                  staticClass: "colorDash profVueJs"
+                                }),
+                                _vm._v(" "),
+                                _c("h5", [_vm._v("Vue.Js")])
+                              ])
+                            ])
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "proficiencyBox" }, [
+                          _c("h6", { staticClass: "profMsg twinkle" }, [
+                            _vm._v("hover on here !")
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "proficiency profHTML" }),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "proficiency profCSS" }),
+                          _vm._v(" "),
+                          _c("div", {
+                            staticClass: "proficiency profBootstrap"
+                          }),
+                          _vm._v(" "),
+                          _c("div", {
+                            staticClass: "proficiency profJsJquery"
+                          }),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "proficiency profVueJs" })
                         ])
                       ])
                     ]
@@ -39626,32 +39718,48 @@ var staticRenderFns = [
                     "div",
                     { staticClass: "px-0 col-lg-6 col-md-6 col-sm-12" },
                     [
-                      _c("div", { staticClass: "leftLine  " }, [
+                      _c("div", { staticClass: "leftLine mb-5 skillSection" }, [
                         _c("h4", { staticClass: "sectionSubTitle" }, [
                           _vm._v("backEnd")
                         ]),
                         _vm._v(" "),
-                        _c("div", [
-                          _c(
-                            "ul",
-                            {
-                              staticClass:
-                                "list-group list-group-flush tagList skillsList"
-                            },
-                            [
-                              _c("li", { staticClass: "skillsItem " }, [
-                                _c("div", { staticClass: "d-flex m-0" }, [
-                                  _c("h5", [_vm._v(".NET framework")])
-                                ])
-                              ]),
-                              _vm._v(" "),
-                              _c("li", { staticClass: "skillsItem " }, [
-                                _c("div", { staticClass: "d-flex m-0" }, [
-                                  _c("h5", [_vm._v("php ( laravel )")])
-                                ])
+                        _c(
+                          "ul",
+                          {
+                            staticClass:
+                              "list-group list-group-flush tagList skillsList"
+                          },
+                          [
+                            _c("li", { staticClass: "skillsItem " }, [
+                              _c("div", { staticClass: "d-flex m-0" }, [
+                                _c("span", {
+                                  staticClass: "colorDash profLaravel"
+                                }),
+                                _vm._v(" "),
+                                _c("h5", [_vm._v("Laravel")])
                               ])
-                            ]
-                          )
+                            ]),
+                            _vm._v(" "),
+                            _c("li", { staticClass: "skillsItem" }, [
+                              _c("div", { staticClass: "d-flex m-0" }, [
+                                _c("span", {
+                                  staticClass: "colorDash profDotNet"
+                                }),
+                                _vm._v(" "),
+                                _c("h5", [_vm._v(".Net framework")])
+                              ])
+                            ])
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "proficiencyBox" }, [
+                          _c("h6", { staticClass: "profMsg twinkle" }, [
+                            _vm._v("hover on here !")
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "proficiency profLaravel" }),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "proficiency profDotNet" })
                         ])
                       ])
                     ]
@@ -39659,34 +39767,111 @@ var staticRenderFns = [
                   _vm._v(" "),
                   _c(
                     "div",
-                    { staticClass: "pr-0 col-lg-6 col-md-6 col-sm-12" },
+                    { staticClass: "px-0 col-lg-6 col-md-6 col-sm-12" },
                     [
-                      _c("div", { staticClass: "leftLine  " }, [
+                      _c("div", { staticClass: "leftLine mb-5 skillSection" }, [
+                        _c("h4", { staticClass: "sectionSubTitle" }, [
+                          _vm._v("DataBase")
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "ul",
+                          {
+                            staticClass:
+                              "list-group list-group-flush tagList skillsList"
+                          },
+                          [
+                            _c("li", { staticClass: "skillsItem " }, [
+                              _c("div", { staticClass: "d-flex m-0" }, [
+                                _c("span", {
+                                  staticClass: "colorDash profSQL"
+                                }),
+                                _vm._v(" "),
+                                _c("h5", [_vm._v("SQL")])
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("li", { staticClass: "skillsItem" }, [
+                              _c("div", { staticClass: "d-flex m-0" }, [
+                                _c("span", {
+                                  staticClass: "colorDash profMySQL"
+                                }),
+                                _vm._v(" "),
+                                _c("h5", [_vm._v("MySQL")])
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("li", { staticClass: "skillsItem" }, [
+                              _c("div", { staticClass: "d-flex m-0" }, [
+                                _c("span", {
+                                  staticClass: "colorDash profSQLLite"
+                                }),
+                                _vm._v(" "),
+                                _c("h5", [_vm._v("SQLLite")])
+                              ])
+                            ])
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "proficiencyBox" }, [
+                          _c("h6", { staticClass: "profMsg twinkle" }, [
+                            _vm._v("hover on here !")
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "proficiency profSQL" }),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "proficiency profMySQL" }),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "proficiency profSQLLite" })
+                        ])
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "px-0 col-lg-6 col-md-6 col-sm-12" },
+                    [
+                      _c("div", { staticClass: "leftLine mb-5 skillSection" }, [
                         _c("h4", { staticClass: "sectionSubTitle" }, [
                           _vm._v("Design")
                         ]),
                         _vm._v(" "),
-                        _c("div", [
-                          _c(
-                            "ul",
-                            {
-                              staticClass:
-                                "list-group list-group-flush tagList skillsList"
-                            },
-                            [
-                              _c("li", { staticClass: "skillsItem " }, [
-                                _c("div", { staticClass: "d-flex m-0" }, [
-                                  _c("h5", [_vm._v("Adobe Illustrator")])
-                                ])
-                              ]),
-                              _vm._v(" "),
-                              _c("li", { staticClass: "skillsItem" }, [
-                                _c("div", { staticClass: "d-flex m-0" }, [
-                                  _c("h5", [_vm._v("Adobe Xd")])
-                                ])
+                        _c(
+                          "ul",
+                          {
+                            staticClass:
+                              "list-group list-group-flush tagList skillsList"
+                          },
+                          [
+                            _c("li", { staticClass: "skillsItem " }, [
+                              _c("div", { staticClass: "d-flex m-0" }, [
+                                _c("span", { staticClass: "colorDash profAI" }),
+                                _vm._v(" "),
+                                _c("h5", [_vm._v("Adobe Illustrator")])
                               ])
-                            ]
-                          )
+                            ]),
+                            _vm._v(" "),
+                            _c("li", { staticClass: "skillsItem" }, [
+                              _c("div", { staticClass: "d-flex m-0" }, [
+                                _c("span", {
+                                  staticClass: "colorDash profAXD"
+                                }),
+                                _vm._v(" "),
+                                _c("h5", [_vm._v("Adobe Xd")])
+                              ])
+                            ])
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "proficiencyBox" }, [
+                          _c("h6", { staticClass: "profMsg twinkle" }, [
+                            _vm._v("hover on here !")
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "proficiency profAI" }),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "proficiency profAXD" })
                         ])
                       ])
                     ]
