@@ -2661,6 +2661,62 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -39591,7 +39647,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "pt-5 row" }, [
+      _c("div", { staticClass: "pt-5 row whoAmISection" }, [
         _c("div", { staticClass: "col-lg-6 col-md-12 col-sm-12" }, [
           _c("div", {}, [
             _c("h2", { staticClass: "sectionTitle mb-4" }, [
@@ -39625,90 +39681,215 @@ var staticRenderFns = [
                 [
                   _c(
                     "div",
-                    { staticClass: "px-0 col-lg-6 col-md-6 col-sm-12" },
+                    {
+                      staticClass: "px-0 col-xl-6 col-lg-6 col-md-6 col-sm-12"
+                    },
                     [
-                      _c("div", { staticClass: "leftLine mb-5 skillSection" }, [
-                        _c("h4", { staticClass: "sectionSubTitle" }, [
-                          _vm._v("FrontEnd")
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "ul",
-                          {
-                            staticClass:
-                              "list-group list-group-flush tagList skillsList"
-                          },
-                          [
-                            _c("li", { staticClass: "skillsItem " }, [
-                              _c("div", { staticClass: "d-flex m-0" }, [
-                                _c("span", {
-                                  staticClass: "colorDash profHTML"
-                                }),
-                                _vm._v(" "),
-                                _c("h5", [_vm._v("HTML")])
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("li", { staticClass: "skillsItem" }, [
-                              _c("div", { staticClass: "d-flex m-0" }, [
-                                _c("span", {
-                                  staticClass: "colorDash profCSS"
-                                }),
-                                _vm._v(" "),
-                                _c("h5", [_vm._v("CSS")])
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("li", { staticClass: "skillsItem" }, [
-                              _c("div", { staticClass: "d-flex m-0" }, [
-                                _c("span", {
-                                  staticClass: "colorDash profBootstrap"
-                                }),
-                                _vm._v(" "),
-                                _c("h5", [_vm._v("Bootstrap")])
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("li", { staticClass: "skillsItem" }, [
-                              _c("div", { staticClass: "d-flex m-0" }, [
-                                _c("span", {
-                                  staticClass: "colorDash profJsJquery"
-                                }),
-                                _vm._v(" "),
-                                _c("h5", [_vm._v("Js/Jquery")])
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("li", { staticClass: "skillsItem" }, [
-                              _c("div", { staticClass: "d-flex m-0" }, [
-                                _c("span", {
-                                  staticClass: "colorDash profVueJs"
-                                }),
-                                _vm._v(" "),
-                                _c("h5", [_vm._v("Vue.Js")])
-                              ])
-                            ])
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "proficiencyBox" }, [
-                          _c("h6", { staticClass: "profMsg twinkle" }, [
-                            _vm._v("hover on here !")
+                      _c("div", { staticClass: "mb-3" }, [
+                        _c("div", { staticClass: "tagShadow skillSection" }, [
+                          _c("h4", { staticClass: "sectionSubTitle" }, [
+                            _vm._v("FrontEnd")
                           ]),
                           _vm._v(" "),
-                          _c("div", { staticClass: "proficiency profHTML" }),
+                          _c(
+                            "ul",
+                            {
+                              staticClass:
+                                "list-group list-group-flush tagList skillsList"
+                            },
+                            [
+                              _c("li", { staticClass: "skillsItem " }, [
+                                _c("div", { staticClass: "d-flex m-0" }, [
+                                  _c("span", {
+                                    staticClass: "colorDash profHTML"
+                                  }),
+                                  _vm._v(" "),
+                                  _c("h5", [_vm._v("HTML")])
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("li", { staticClass: "skillsItem" }, [
+                                _c("div", { staticClass: "d-flex m-0" }, [
+                                  _c("span", {
+                                    staticClass: "colorDash profCSS"
+                                  }),
+                                  _vm._v(" "),
+                                  _c("h5", [_vm._v("CSS")])
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("li", { staticClass: "skillsItem" }, [
+                                _c("div", { staticClass: "d-flex m-0" }, [
+                                  _c("span", {
+                                    staticClass: "colorDash profBootstrap"
+                                  }),
+                                  _vm._v(" "),
+                                  _c("h5", [_vm._v("Bootstrap")])
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("li", { staticClass: "skillsItem" }, [
+                                _c("div", { staticClass: "d-flex m-0" }, [
+                                  _c("span", {
+                                    staticClass: "colorDash profJsJquery"
+                                  }),
+                                  _vm._v(" "),
+                                  _c("h5", [_vm._v("Js/Jquery")])
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("li", { staticClass: "skillsItem" }, [
+                                _c("div", { staticClass: "d-flex m-0" }, [
+                                  _c("span", {
+                                    staticClass: "colorDash profVueJs"
+                                  }),
+                                  _vm._v(" "),
+                                  _c("h5", [_vm._v("Vue.Js")])
+                                ])
+                              ])
+                            ]
+                          ),
                           _vm._v(" "),
-                          _c("div", { staticClass: "proficiency profCSS" }),
-                          _vm._v(" "),
-                          _c("div", {
-                            staticClass: "proficiency profBootstrap"
-                          }),
-                          _vm._v(" "),
-                          _c("div", {
-                            staticClass: "proficiency profJsJquery"
-                          }),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "proficiency profVueJs" })
+                          _c("div", { staticClass: "proficiencyBox" }, [
+                            _c("h6", { staticClass: "profMsg twinkle" }, [
+                              _vm._v("hover on here !")
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "proficiency profHTML d-flex justify-content-center"
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "profPercentageBox d-flex justify-content-center align-items-center"
+                                  },
+                                  [
+                                    _c(
+                                      "h6",
+                                      {
+                                        staticClass:
+                                          "profPercentage d-flex align-items-center"
+                                      },
+                                      [_vm._v("32%")]
+                                    )
+                                  ]
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "proficiency profCSS d-flex justify-content-center"
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "profPercentageBox d-flex justify-content-center align-items-center"
+                                  },
+                                  [
+                                    _c(
+                                      "h6",
+                                      {
+                                        staticClass:
+                                          "profPercentage d-flex align-items-center"
+                                      },
+                                      [_vm._v("32%")]
+                                    )
+                                  ]
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "proficiency profBootstrap d-flex justify-content-center"
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "profPercentageBox d-flex justify-content-center align-items-center"
+                                  },
+                                  [
+                                    _c(
+                                      "h6",
+                                      {
+                                        staticClass:
+                                          "profPercentage d-flex align-items-center"
+                                      },
+                                      [_vm._v("32%")]
+                                    )
+                                  ]
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "proficiency profJsJquery d-flex justify-content-center"
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "profPercentageBox d-flex justify-content-center align-items-center"
+                                  },
+                                  [
+                                    _c(
+                                      "h6",
+                                      {
+                                        staticClass:
+                                          "profPercentage d-flex align-items-center"
+                                      },
+                                      [_vm._v("32%")]
+                                    )
+                                  ]
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "proficiency profVueJs d-flex justify-content-center"
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "profPercentageBox d-flex justify-content-center align-items-center"
+                                  },
+                                  [
+                                    _c(
+                                      "h6",
+                                      {
+                                        staticClass:
+                                          "profPercentage d-flex align-items-center"
+                                      },
+                                      [_vm._v("32%")]
+                                    )
+                                  ]
+                                )
+                              ]
+                            )
+                          ])
                         ])
                       ])
                     ]
@@ -39716,50 +39897,104 @@ var staticRenderFns = [
                   _vm._v(" "),
                   _c(
                     "div",
-                    { staticClass: "px-0 col-lg-6 col-md-6 col-sm-12" },
+                    {
+                      staticClass: "px-0 col-xl-6 col-lg-6 col-md-6 col-sm-12"
+                    },
                     [
-                      _c("div", { staticClass: "leftLine mb-5 skillSection" }, [
-                        _c("h4", { staticClass: "sectionSubTitle" }, [
-                          _vm._v("backEnd")
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "ul",
-                          {
-                            staticClass:
-                              "list-group list-group-flush tagList skillsList"
-                          },
-                          [
-                            _c("li", { staticClass: "skillsItem " }, [
-                              _c("div", { staticClass: "d-flex m-0" }, [
-                                _c("span", {
-                                  staticClass: "colorDash profLaravel"
-                                }),
-                                _vm._v(" "),
-                                _c("h5", [_vm._v("Laravel")])
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("li", { staticClass: "skillsItem" }, [
-                              _c("div", { staticClass: "d-flex m-0" }, [
-                                _c("span", {
-                                  staticClass: "colorDash profDotNet"
-                                }),
-                                _vm._v(" "),
-                                _c("h5", [_vm._v(".Net framework")])
-                              ])
-                            ])
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "proficiencyBox" }, [
-                          _c("h6", { staticClass: "profMsg twinkle" }, [
-                            _vm._v("hover on here !")
+                      _c("div", { staticClass: "mb-3" }, [
+                        _c("div", { staticClass: "tagShadow skillSection" }, [
+                          _c("h4", { staticClass: "sectionSubTitle" }, [
+                            _vm._v("backEnd")
                           ]),
                           _vm._v(" "),
-                          _c("div", { staticClass: "proficiency profLaravel" }),
+                          _c(
+                            "ul",
+                            {
+                              staticClass:
+                                "list-group list-group-flush tagList skillsList"
+                            },
+                            [
+                              _c("li", { staticClass: "skillsItem " }, [
+                                _c("div", { staticClass: "d-flex m-0" }, [
+                                  _c("span", {
+                                    staticClass: "colorDash profLaravel"
+                                  }),
+                                  _vm._v(" "),
+                                  _c("h5", [_vm._v("Laravel")])
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("li", { staticClass: "skillsItem" }, [
+                                _c("div", { staticClass: "d-flex m-0" }, [
+                                  _c("span", {
+                                    staticClass: "colorDash profDotNet"
+                                  }),
+                                  _vm._v(" "),
+                                  _c("h5", [_vm._v(".Net framework")])
+                                ])
+                              ])
+                            ]
+                          ),
                           _vm._v(" "),
-                          _c("div", { staticClass: "proficiency profDotNet" })
+                          _c("div", { staticClass: "proficiencyBox" }, [
+                            _c("h6", { staticClass: "profMsg twinkle" }, [
+                              _vm._v("hover on here !")
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "proficiency profLaravel d-flex justify-content-center"
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "profPercentageBox d-flex justify-content-center align-items-center"
+                                  },
+                                  [
+                                    _c(
+                                      "h6",
+                                      {
+                                        staticClass:
+                                          "profPercentage d-flex align-items-center"
+                                      },
+                                      [_vm._v("32%")]
+                                    )
+                                  ]
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "proficiency profDotNet d-flex justify-content-center"
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "profPercentageBox d-flex justify-content-center align-items-center"
+                                  },
+                                  [
+                                    _c(
+                                      "h6",
+                                      {
+                                        staticClass:
+                                          "profPercentage d-flex align-items-center"
+                                      },
+                                      [_vm._v("32%")]
+                                    )
+                                  ]
+                                )
+                              ]
+                            )
+                          ])
                         ])
                       ])
                     ]
@@ -39767,62 +40002,141 @@ var staticRenderFns = [
                   _vm._v(" "),
                   _c(
                     "div",
-                    { staticClass: "px-0 col-lg-6 col-md-6 col-sm-12" },
+                    {
+                      staticClass: "px-0 col-xl-6 col-lg-6 col-md-6 col-sm-12"
+                    },
                     [
-                      _c("div", { staticClass: "leftLine mb-5 skillSection" }, [
-                        _c("h4", { staticClass: "sectionSubTitle" }, [
-                          _vm._v("DataBase")
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "ul",
-                          {
-                            staticClass:
-                              "list-group list-group-flush tagList skillsList"
-                          },
-                          [
-                            _c("li", { staticClass: "skillsItem " }, [
-                              _c("div", { staticClass: "d-flex m-0" }, [
-                                _c("span", {
-                                  staticClass: "colorDash profSQL"
-                                }),
-                                _vm._v(" "),
-                                _c("h5", [_vm._v("SQL")])
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("li", { staticClass: "skillsItem" }, [
-                              _c("div", { staticClass: "d-flex m-0" }, [
-                                _c("span", {
-                                  staticClass: "colorDash profMySQL"
-                                }),
-                                _vm._v(" "),
-                                _c("h5", [_vm._v("MySQL")])
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("li", { staticClass: "skillsItem" }, [
-                              _c("div", { staticClass: "d-flex m-0" }, [
-                                _c("span", {
-                                  staticClass: "colorDash profSQLLite"
-                                }),
-                                _vm._v(" "),
-                                _c("h5", [_vm._v("SQLLite")])
-                              ])
-                            ])
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "proficiencyBox" }, [
-                          _c("h6", { staticClass: "profMsg twinkle" }, [
-                            _vm._v("hover on here !")
+                      _c("div", { staticClass: "mb-3" }, [
+                        _c("div", { staticClass: "tagShadow skillSection" }, [
+                          _c("h4", { staticClass: "sectionSubTitle" }, [
+                            _vm._v("DataBase")
                           ]),
                           _vm._v(" "),
-                          _c("div", { staticClass: "proficiency profSQL" }),
+                          _c(
+                            "ul",
+                            {
+                              staticClass:
+                                "list-group list-group-flush tagList skillsList"
+                            },
+                            [
+                              _c("li", { staticClass: "skillsItem " }, [
+                                _c("div", { staticClass: "d-flex m-0" }, [
+                                  _c("span", {
+                                    staticClass: "colorDash profSQL"
+                                  }),
+                                  _vm._v(" "),
+                                  _c("h5", [_vm._v("SQL")])
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("li", { staticClass: "skillsItem" }, [
+                                _c("div", { staticClass: "d-flex m-0" }, [
+                                  _c("span", {
+                                    staticClass: "colorDash profMySQL"
+                                  }),
+                                  _vm._v(" "),
+                                  _c("h5", [_vm._v("MySQL")])
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("li", { staticClass: "skillsItem" }, [
+                                _c("div", { staticClass: "d-flex m-0" }, [
+                                  _c("span", {
+                                    staticClass: "colorDash profSQLLite"
+                                  }),
+                                  _vm._v(" "),
+                                  _c("h5", [_vm._v("SQLLite")])
+                                ])
+                              ])
+                            ]
+                          ),
                           _vm._v(" "),
-                          _c("div", { staticClass: "proficiency profMySQL" }),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "proficiency profSQLLite" })
+                          _c("div", { staticClass: "proficiencyBox" }, [
+                            _c("h6", { staticClass: "profMsg twinkle" }, [
+                              _vm._v("hover on here !")
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "proficiency profSQL d-flex justify-content-center"
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "profPercentageBox d-flex justify-content-center align-items-center"
+                                  },
+                                  [
+                                    _c(
+                                      "h6",
+                                      {
+                                        staticClass:
+                                          "profPercentage d-flex align-items-center"
+                                      },
+                                      [_vm._v("32%")]
+                                    )
+                                  ]
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "proficiency profMySQL d-flex justify-content-center"
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "profPercentageBox d-flex justify-content-center align-items-center"
+                                  },
+                                  [
+                                    _c(
+                                      "h6",
+                                      {
+                                        staticClass:
+                                          "profPercentage d-flex align-items-center"
+                                      },
+                                      [_vm._v("32%")]
+                                    )
+                                  ]
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "proficiency profSQLLite d-flex justify-content-center"
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "profPercentageBox d-flex justify-content-center align-items-center"
+                                  },
+                                  [
+                                    _c(
+                                      "h6",
+                                      {
+                                        staticClass:
+                                          "profPercentage d-flex align-items-center"
+                                      },
+                                      [_vm._v("32%")]
+                                    )
+                                  ]
+                                )
+                              ]
+                            )
+                          ])
                         ])
                       ])
                     ]
@@ -39830,48 +40144,104 @@ var staticRenderFns = [
                   _vm._v(" "),
                   _c(
                     "div",
-                    { staticClass: "px-0 col-lg-6 col-md-6 col-sm-12" },
+                    {
+                      staticClass: "px-0 col-xl-6 col-lg-6 col-md-6 col-sm-12"
+                    },
                     [
-                      _c("div", { staticClass: "leftLine mb-5 skillSection" }, [
-                        _c("h4", { staticClass: "sectionSubTitle" }, [
-                          _vm._v("Design")
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "ul",
-                          {
-                            staticClass:
-                              "list-group list-group-flush tagList skillsList"
-                          },
-                          [
-                            _c("li", { staticClass: "skillsItem " }, [
-                              _c("div", { staticClass: "d-flex m-0" }, [
-                                _c("span", { staticClass: "colorDash profAI" }),
-                                _vm._v(" "),
-                                _c("h5", [_vm._v("Adobe Illustrator")])
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("li", { staticClass: "skillsItem" }, [
-                              _c("div", { staticClass: "d-flex m-0" }, [
-                                _c("span", {
-                                  staticClass: "colorDash profAXD"
-                                }),
-                                _vm._v(" "),
-                                _c("h5", [_vm._v("Adobe Xd")])
-                              ])
-                            ])
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "proficiencyBox" }, [
-                          _c("h6", { staticClass: "profMsg twinkle" }, [
-                            _vm._v("hover on here !")
+                      _c("div", { staticClass: "mb-3" }, [
+                        _c("div", { staticClass: "tagShadow skillSection" }, [
+                          _c("h4", { staticClass: "sectionSubTitle" }, [
+                            _vm._v("Design")
                           ]),
                           _vm._v(" "),
-                          _c("div", { staticClass: "proficiency profAI" }),
+                          _c(
+                            "ul",
+                            {
+                              staticClass:
+                                "list-group list-group-flush tagList skillsList"
+                            },
+                            [
+                              _c("li", { staticClass: "skillsItem " }, [
+                                _c("div", { staticClass: "d-flex m-0" }, [
+                                  _c("span", {
+                                    staticClass: "colorDash profAI"
+                                  }),
+                                  _vm._v(" "),
+                                  _c("h5", [_vm._v("Adobe Illustrator")])
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("li", { staticClass: "skillsItem" }, [
+                                _c("div", { staticClass: "d-flex m-0" }, [
+                                  _c("span", {
+                                    staticClass: "colorDash profAXD"
+                                  }),
+                                  _vm._v(" "),
+                                  _c("h5", [_vm._v("Adobe Xd")])
+                                ])
+                              ])
+                            ]
+                          ),
                           _vm._v(" "),
-                          _c("div", { staticClass: "proficiency profAXD" })
+                          _c("div", { staticClass: "proficiencyBox" }, [
+                            _c("h6", { staticClass: "profMsg twinkle" }, [
+                              _vm._v("hover on here !")
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "proficiency profAI d-flex justify-content-center"
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "profPercentageBox d-flex justify-content-center align-items-center"
+                                  },
+                                  [
+                                    _c(
+                                      "h6",
+                                      {
+                                        staticClass:
+                                          "profPercentage d-flex align-items-center"
+                                      },
+                                      [_vm._v("32%")]
+                                    )
+                                  ]
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "proficiency profAXD d-flex justify-content-center"
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "profPercentageBox d-flex justify-content-center align-items-center"
+                                  },
+                                  [
+                                    _c(
+                                      "h6",
+                                      {
+                                        staticClass:
+                                          "profPercentage d-flex align-items-center"
+                                      },
+                                      [_vm._v("32%")]
+                                    )
+                                  ]
+                                )
+                              ]
+                            )
+                          ])
                         ])
                       ])
                     ]
@@ -39890,91 +40260,109 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("div", { staticClass: "ml-2" }, [
               _c("ul", { staticClass: "list-group list-group-flush tagList" }, [
-                _c("li", { staticClass: "diplomatsItem leftLine  " }, [
-                  _c("div", { staticClass: "d-flex m-0" }, [
-                    _c("h5", { staticClass: "sectionSubTitle" }, [
-                      _vm._v("2020")
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", {}, [
-                    _c("div", { staticClass: "d-flex m-0" }, [
-                      _c("h5", [
-                        _vm._v("Bachlor in economic and legal siences")
+                _c(
+                  "li",
+                  { staticClass: "mb-4 leftLine diplomatItem tagShadow" },
+                  [
+                    _c("div", { staticClass: "d-flex m-0 " }, [
+                      _c("h5", { staticClass: "sectionSubTitle" }, [
+                        _vm._v("2020")
                       ])
                     ]),
                     _vm._v(" "),
-                    _c("div", { staticClass: "d-flex m-0" }, [
-                      _c("h6", [_vm._v("Ibn zohr university - Morocco")])
+                    _c("div", {}, [
+                      _c("div", { staticClass: "d-flex m-0" }, [
+                        _c("h5", [
+                          _vm._v("Bachlor in economic and legal siences")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "d-flex m-0" }, [
+                        _c("h6", [_vm._v("Ibn zohr university - Morocco")])
+                      ])
                     ])
-                  ])
-                ]),
+                  ]
+                ),
                 _vm._v(" "),
-                _c("li", { staticClass: "diplomatsItem leftLine  " }, [
-                  _c("div", { staticClass: "d-flex m-0" }, [
-                    _c("h5", { staticClass: "sectionSubTitle" }, [
-                      _vm._v("2019")
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", {}, [
+                _c(
+                  "li",
+                  { staticClass: "mb-4 leftLine diplomatItem tagShadow" },
+                  [
                     _c("div", { staticClass: "d-flex m-0" }, [
-                      _c("h5", [_vm._v("Associate's degree in development")])
+                      _c("h5", { staticClass: "sectionSubTitle" }, [
+                        _vm._v("2019")
+                      ])
                     ]),
                     _vm._v(" "),
-                    _c("div", { staticClass: "d-flex m-0" }, [
-                      _c("h6", [
-                        _vm._v(
-                          "Higher Institute of Applied Technologies - Morocco"
-                        )
+                    _c("div", {}, [
+                      _c("div", { staticClass: "d-flex m-0" }, [
+                        _c("h5", [_vm._v("Associate's degree in development")])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "d-flex m-0" }, [
+                        _c("h6", [
+                          _vm._v(
+                            "Higher Institute of Applied Technologies - Morocco"
+                          )
+                        ])
                       ])
                     ])
-                  ])
-                ]),
+                  ]
+                ),
                 _vm._v(" "),
-                _c("li", { staticClass: "diplomatsItem leftLine  " }, [
-                  _c("div", { staticClass: "d-flex m-0" }, [
-                    _c("h5", { staticClass: "sectionSubTitle" }, [
-                      _vm._v("2017")
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", {}, [
+                _c(
+                  "li",
+                  { staticClass: "mb-4 leftLine diplomatItem tagShadow" },
+                  [
                     _c("div", { staticClass: "d-flex m-0" }, [
-                      _c("h5", [
-                        _vm._v(
-                          "Technician's certificate in informatique maintenance and networking"
-                        )
+                      _c("h5", { staticClass: "sectionSubTitle" }, [
+                        _vm._v("2017")
                       ])
                     ]),
                     _vm._v(" "),
-                    _c("div", { staticClass: "d-flex m-0" }, [
-                      _c("h6", [
-                        _vm._v(
-                          "Higher Institute of Applied Technologies - Morocco"
-                        )
+                    _c("div", {}, [
+                      _c("div", { staticClass: "d-flex m-0" }, [
+                        _c("h5", [
+                          _vm._v(
+                            "Technician's certificate in informatique maintenance and networking"
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "d-flex m-0" }, [
+                        _c("h6", [
+                          _vm._v(
+                            "Higher Institute of Applied Technologies - Morocco"
+                          )
+                        ])
                       ])
                     ])
-                  ])
-                ]),
+                  ]
+                ),
                 _vm._v(" "),
-                _c("li", { staticClass: "diplomatsItem leftLine  " }, [
-                  _c("div", { staticClass: "d-flex m-0" }, [
-                    _c("h5", { staticClass: "sectionSubTitle" }, [
-                      _vm._v("2015")
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", {}, [
+                _c(
+                  "li",
+                  { staticClass: "mb-4 leftLine diplomatItem tagShadow" },
+                  [
                     _c("div", { staticClass: "d-flex m-0" }, [
-                      _c("h5", [_vm._v("Baccalaureate in phisics siences")])
+                      _c("h5", { staticClass: "sectionSubTitle" }, [
+                        _vm._v("2015")
+                      ])
                     ]),
                     _vm._v(" "),
-                    _c("div", { staticClass: "d-flex m-0" }, [
-                      _c("h6", [_vm._v("Hassan the 2nd, high school- Morocco")])
+                    _c("div", {}, [
+                      _c("div", { staticClass: "d-flex m-0" }, [
+                        _c("h5", [_vm._v("Baccalaureate in phisics siences")])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "d-flex m-0" }, [
+                        _c("h6", [
+                          _vm._v("Hassan the 2nd, high school- Morocco")
+                        ])
+                      ])
                     ])
-                  ])
-                ])
+                  ]
+                )
               ])
             ])
           ])
@@ -55286,7 +55674,14 @@ $(document).ready(function () {
   });
   $("#whoAmI").on("click", function () {
     $("body").css("overflow", "auto");
-  });
+  }); // $(".proficiency").on("mouseenter",function(){
+  //     var proficiencyID = $( ".proficiency" ).attr('id');
+  //     var colorDash = $( ".colorDash" ).$("[class~="+proficiencyID+"]");
+  //     var profPercentage = $( colorDash +" h6");
+  //     colorDash.css("width","fit-content");
+  //     profPercentage.css("diplay","unset");
+  //     alert("profPercentage");
+  // })
 });
 
 /***/ }),

@@ -62,6 +62,15 @@ $(document).ready(function(){
     $("#whoAmI").on("click",function(){
         $("body").css("overflow","auto");
     });
+    // $(".proficiency").on("mouseenter",function(){
+    //     var proficiencyID = $( ".proficiency" ).attr('id');
+    //     var colorDash = $( ".colorDash" ).$("[class~="+proficiencyID+"]");
+    //     var profPercentage = $( colorDash +" h6");
 
+    //     colorDash.css("width","fit-content");
+    //     profPercentage.css("diplay","unset");
+    //     alert("profPercentage");
+
+    // })
 });
 

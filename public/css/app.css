@@ -11551,46 +11551,82 @@ a:hover .dot {
 }
 
 .tagShadow {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  transition: 0.7s ease;
+  border-radius: calc(0.7rem - 1px);
+  box-shadow: none;
+  transition: ease all 0.7s;
 }
 
 .tagShadow:hover {
-  background-color: #6b6b6b;
-  box-shadow: -6px 0 rgba(26, 24, 22, 0.7);
-  transition: 0.7s ease;
-}
-
-.diplomatsItem {
-  text-decoration: none;
-  margin-bottom: 2rem;
+  box-shadow: 0px 0px 4px #6b6b6b;
+  transition: ease all 0.7s;
 }
 
 .skillsItem {
   text-decoration: none;
 }
 
+.diplomatItem {
+  cursor: default;
+  width: 90%;
+  padding: 1rem;
+  text-decoration: none;
+  border-top-left-radius: unset;
+  border-bottom-left-radius: unset;
+}
+
+.skillSection {
+  cursor: default;
+  width: 90%;
+  padding: 1rem;
+}
+
 .proficiencyBox {
   position: relative;
   height: 1.125rem;
-  width: 90%;
-  background-color: #0c0c0c;
+  width: 100%;
   display: inline-flex;
-  transition: ease all 500ms;
+  transition: ease all 0.7s;
 }
 
 .proficiency {
+  cursor: default;
+  position: relative;
   height: 100%;
   width: 0%;
-  transition: ease all 500ms;
+  justify-content: center;
+  align-content: center;
+  transition: ease all 0.7s;
 }
 
 .colorDash {
+  cursor: default;
+  width: 0rem;
+  height: 0rem;
+  border-radius: calc(0.7rem - 1px);
+  padding-left: 0rem;
+  padding-right: 0rem;
+  transition: ease all 0.7s;
+}
+
+.profPercentageBox {
+  cursor: default;
+  margin-top: 0rem;
+  position: absolute;
   height: 0rem;
   width: 0rem !important;
   border-radius: 50%;
-  transition: ease all 500ms;
+  background-color: #f0f0f0;
+  opacity: 0;
+  transition: ease all 0.7s;
+}
+
+.profPercentage {
+  cursor: default;
+  opacity: 0;
+  margin: 0;
+  color: #0c0c0c;
+  font-size: 0rem;
+  transition: ease all 0.7s;
 }
 
 .profMsg {
@@ -11601,7 +11637,7 @@ a:hover .dot {
   margin-right: 0.5rem;
   height: 1.125rem;
   width: 1.125rem !important;
-  transition: ease all 500ms;
+  transition: ease all 0.7s;
 }
 
 .skillSection:hover .profMsg {
@@ -11609,39 +11645,43 @@ a:hover .dot {
   transition: none;
 }
 
-.skillSection:hover .leftLine {
-  box-shadow: -3px 0px 6px #f0f0f0;
-  transition: 0.7s ease;
+.proficiency:hover .profPercentageBox {
+  margin-top: 1.5rem;
+  height: 2.75rem;
+  width: 2.75rem !important;
+  opacity: 1;
+  transition: ease all 0.7s;
+}
+
+.proficiency:hover .profPercentage {
+  opacity: 1;
+  font-size: unset;
+  transition: ease all 0.7s;
 }
 
 .skillSection:hover .profHTML {
   width: 27%;
   background-color: #df5739;
-  transition: ease all 500ms;
 }
 
 .skillSection:hover .profCSS {
   width: 24%;
   background-color: #0a57e6;
-  transition: ease all 500ms;
 }
 
 .skillSection:hover .profJsJquery {
   width: 14%;
   background-color: #ccc60e;
-  transition: ease all 500ms;
 }
 
 .skillSection:hover .profVueJs {
   width: 14%;
   background-color: #31c272;
-  transition: ease all 500ms;
 }
 
 .skillSection:hover .profBootstrap {
   width: 21%;
   background-color: #4210a7;
-  transition: ease all 500ms;
 }
 
 .skillSection:hover .profLaravel {
