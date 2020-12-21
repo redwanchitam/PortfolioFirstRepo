@@ -205,10 +205,8 @@
                     <div class="aboutMeSection">
                         <ul class="list-group list-group-flush tagList">
                             <li class="mb-4 w-100 leftLine diplomatItem tagShadow ">
-                                <div class="wave"></div>
-                                <div class="emptyWave emptyWave1"></div>
-                                <div class="emptyWave emptyWave2"></div>
-                                <div class="onWave">
+                                <div class="ball"></div>
+                                <div class="onWave ">
                                     <div class="d-flex m-0 ">
                                         <h5 class="sectionSubTitle">2020</h5>
                                     </div>

@@ -2729,8 +2729,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -40266,13 +40264,9 @@ var staticRenderFns = [
                     staticClass: "mb-4 w-100 leftLine diplomatItem tagShadow "
                   },
                   [
-                    _c("div", { staticClass: "wave" }),
+                    _c("div", { staticClass: "ball" }),
                     _vm._v(" "),
-                    _c("div", { staticClass: "emptyWave emptyWave1" }),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "emptyWave emptyWave2" }),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "onWave" }, [
+                    _c("div", { staticClass: "onWave " }, [
                       _c("div", { staticClass: "d-flex m-0 " }, [
                         _c("h5", { staticClass: "sectionSubTitle" }, [
                           _vm._v("2020")
@@ -55698,14 +55692,39 @@ $(document).ready(function () {
   });
   $("#whoAmI").on("click", function () {
     $("body").css("overflow", "auto");
-  }); // $(".proficiency").on("mouseenter",function(){
-  //     var proficiencyID = $( ".proficiency" ).attr('id');
-  //     var colorDash = $( ".colorDash" ).$("[class~="+proficiencyID+"]");
-  //     var profPercentage = $( colorDash +" h6");
-  //     colorDash.css("width","fit-content");
-  //     profPercentage.css("diplay","unset");
-  //     alert("profPercentage");
-  // })
+  });
+  var flightPath = {
+    curviness: 1.25,
+    autoRotate: true,
+    values: [{
+      x: 200,
+      y: 150
+    }, {
+      x: 500,
+      y: 100
+    }, {
+      x: 300,
+      y: 50
+    }, {
+      x: 150,
+      y: 100
+    }, {
+      x: 0,
+      y: 0
+    }]
+  };
+  var tween = new TimelineLite();
+  tween.add(TweenLite.to(".ball", 2, {
+    bezier: flightPath,
+    ease: Power1.easeInOut
+  }));
+  var controller = new ScrollMagic.Controller();
+  var scene = new ScrollMagic.Scene({
+    triggerElement: '.ball',
+    duration: 1000,
+    triggerHook: 1
+  }).setTween(tween).addIndicators() // .setPin(".ball")
+  .addTo(controller);
 });
 
 /***/ }),

@@ -62,15 +62,40 @@ $(document).ready(function(){
     $("#whoAmI").on("click",function(){
         $("body").css("overflow","auto");
     });
-    // $(".proficiency").on("mouseenter",function(){
-    //     var proficiencyID = $( ".proficiency" ).attr('id');
-    //     var colorDash = $( ".colorDash" ).$("[class~="+proficiencyID+"]");
-    //     var profPercentage = $( colorDash +" h6");
+    
+    const flightPath = {
+        curviness: 1.25,
+        autoRotate: true,
+        values: [
+            {x: 200, y:150},
+            {x: 500, y:100},
+            {x: 300, y:50},
+            {x: 150, y:100},
+            {x: 0, y:0},
+        ]
+    };
 
-    //     colorDash.css("width","fit-content");
-    //     profPercentage.css("diplay","unset");
-    //     alert("profPercentage");
+    const tween = new TimelineLite();
 
-    // })
+    tween.add(
+        TweenLite.to(".ball", 2, {
+            bezier: flightPath,
+            ease: Power1.easeInOut
+        })
+    );
+    
+    const controller = new ScrollMagic.Controller();
+    const scene = new ScrollMagic.Scene({
+        triggerElement: '.ball',
+        duration: 1000,
+        triggerHook: 1
+    })
+    .setTween(tween)
+    .addIndicators()
+    // .setPin(".ball")
+    .addTo(controller);
+
+
+
 });
 
