@@ -4,7 +4,7 @@
             <div class="col-lg-6 col-md-12 col-sm-12">
                 <div class="">
                     <h2 class="sectionTitle mb-4">About Me :</h2>
-                    <div class="ml-2 ">
+                    <div class="aboutMeSection tagShadow">
                         <p>i'm Redwan, a fullstack web developer, with an innate attraction for therms of art and simplicity.
                         <br>i'm interested in building responsive apps and design illustrations</p>
                     </div>
@@ -13,8 +13,8 @@
             <div class="col-lg-6 col-md-12 col-sm-12">
                 <div class="">
                     <h2 class="sectionTitle mb-4">Skills :</h2>
-                    <div class="d-flex">
-                        <div class="ml-2 w-100 row justify-content-around">
+                    <div class="aboutMeSection d-flex">
+                        <div class="w-100 row justify-content-around">
                             <div class="px-0 col-xl-6 col-lg-6 col-md-6 col-sm-12">
                                 <div class="mb-3">
                                     <div class="tagShadow skillSection">  
@@ -202,57 +202,71 @@
             <div class="col-lg-6 col-md-12 col-sm-12">
                 <div class="">
                     <h2 class="sectionTitle mb-4">Education and diplomats :</h2>
-                    <div class="ml-2">
+                    <div class="aboutMeSection">
                         <ul class="list-group list-group-flush tagList">
-                            <li class="mb-4 leftLine diplomatItem tagShadow">
-                                <div class="d-flex m-0 ">
-                                    <h5 class="sectionSubTitle">2020</h5>
-                                </div>
-                                <div class="">
-                                    <div class="d-flex m-0">
-                                        <h5>Bachlor in economic and legal siences</h5>
+                            <li class="mb-4 w-100 leftLine diplomatItem tagShadow ">
+                                <div class="wave"></div>
+                                <div class="emptyWave emptyWave1"></div>
+                                <div class="emptyWave emptyWave2"></div>
+                                <div class="onWave">
+                                    <div class="d-flex m-0 ">
+                                        <h5 class="sectionSubTitle">2020</h5>
                                     </div>
-                                    <div class="d-flex m-0">
-                                        <h6>Ibn zohr university - Morocco</h6>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="mb-4 leftLine diplomatItem tagShadow">
-                                <div class="d-flex m-0">
-                                    <h5 class="sectionSubTitle">2019</h5>
-                                </div>
-                                <div class="">
-                                    <div class="d-flex m-0">
-                                        <h5>Associate's degree in development</h5>
-                                    </div>
-                                    <div class="d-flex m-0">
-                                        <h6>Higher Institute of Applied Technologies - Morocco</h6>
+                                    <div class=" ">
+                                        <div class="d-flex m-0">
+                                            <h5>Bachlor in economic and legal siences</h5>
+                                        </div>
+                                        <div class="d-flex m-0">
+                                            <h6>Ibn zohr university - Morocco</h6>
+                                        </div>
                                     </div>
                                 </div>
                             </li>
                             <li class="mb-4 leftLine diplomatItem tagShadow">
-                                <div class="d-flex m-0">
-                                    <h5 class="sectionSubTitle">2017</h5>
-                                </div>
-                                <div class="">
+                                <div class="wave"></div>
+                                <div class="onWave">
                                     <div class="d-flex m-0">
-                                        <h5>Technician's certificate in informatique maintenance and networking</h5>
+                                        <h5 class="sectionSubTitle">2019</h5>
                                     </div>
-                                    <div class="d-flex m-0">
-                                        <h6>Higher Institute of Applied Technologies - Morocco</h6>
+                                    <div class="">
+                                        <div class="d-flex m-0">
+                                            <h5>Associate's degree in development</h5>
+                                        </div>
+                                        <div class="d-flex m-0">
+                                            <h6>Higher Institute of Applied Technologies - Morocco</h6>
+                                        </div>
                                     </div>
                                 </div>
                             </li>
                             <li class="mb-4 leftLine diplomatItem tagShadow">
-                                <div class="d-flex m-0">
-                                    <h5 class="sectionSubTitle">2015</h5>
-                                </div>
-                                <div class="">
+                                <div class="wave"></div>
+                                <div class="onWave">
                                     <div class="d-flex m-0">
-                                        <h5>Baccalaureate in phisics siences</h5>
+                                        <h5 class="sectionSubTitle">2017</h5>
                                     </div>
+                                    <div class="">
+                                        <div class="d-flex m-0">
+                                            <h5>Technician's certificate in informatique maintenance and networking</h5>
+                                        </div>
+                                        <div class="d-flex m-0">
+                                            <h6>Higher Institute of Applied Technologies - Morocco</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="mb-4 leftLine diplomatItem tagShadow">
+                                <div class="wave"></div>
+                                <div class="onWave">
                                     <div class="d-flex m-0">
-                                        <h6>Hassan the 2nd, high school- Morocco</h6>
+                                        <h5 class="sectionSubTitle">2015</h5>
+                                    </div>
+                                    <div class="">
+                                        <div class="d-flex m-0">
+                                            <h5>Baccalaureate in phisics siences</h5>
+                                        </div>
+                                        <div class="d-flex m-0">
+                                            <h6>Hassan the 2nd, high school- Morocco</h6>
+                                        </div>
                                     </div>
                                 </div>
                             </li>
