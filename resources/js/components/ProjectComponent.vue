@@ -18,30 +18,9 @@
 </template>
 
 <script>
-    import projectDetails from './ProjectDetailsComponent';
     export default {
-        components : {
-            projectDetails
-        },
-        data() {
-            return {
-                projectDetails: [
-                     { id: 3, imgPath: "img/projectImg3.jpg", title: "WORK 3", category: "category 3", description: "Cerasa is composed of an established team of Italian master craftsmen that produces and puts up bathrooms undisputed of exceptional  Made in Italy quality. Cerasa collections are designed to satisfy the most diverse housing styles, fit the style of the house and its inhabitants.",builtWith:["UsedTech1","UsedTech2","UsedTech3"]},
-                ],
-                showModal: false,
-                iniScrollTop : 0
-            }
-        },
-        methods: {
-            getModal: function (event) {
-                this.showModal = true;
-                this.iniScrollTop = $("html").scrollTop();
-                $("html").scrollTop(0);
-            },
-            killModal: function() {
-                this.showModal = false;
-                $("html").scrollTop(this.iniScrollTop);
-            }
+        mounted() {
+            console.log('Component mounted.')
         },
         props: ['title','category','imgPath']
     }

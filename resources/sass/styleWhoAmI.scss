@@ -55,6 +55,9 @@
 .skillSection:hover{
     border: 1px solid $text;
 }
+.skillSection:hover .proficiencyBox{
+    width: 100%;
+}
 .skillSection:hover .colorDash{
     margin-right: 0.5rem;
     height: 1.125rem;
@@ -66,59 +69,6 @@
     display: none;
     transition: none;
 }
-//skillSections coloring
-////frontend
-.skillSection:hover .profHTML{
-    width: 27%;
-    background-color:rgb(223, 87, 57);
-}
-.skillSection:hover .profCSS{
-    width: 24%;
-    background-color:rgb(10, 87, 230);
-}
-.skillSection:hover .profJsJquery{
-    width: 14%;
-    background-color:rgb(204, 198, 14);
-}
-.skillSection:hover .profVueJs{
-    width: 14%;
-    background-color:rgb(49, 194, 114);
-}
-.skillSection:hover .profBootstrap{
-    width: 21%;
-    background-color:rgb(66, 16, 167);
-}
-//////backend
-.skillSection:hover .profLaravel{
-    width: 55%;
-    background-color:rgb(211, 14, 14);
-}
-.skillSection:hover .profDotNet{
-    width: 45%;
-    background-color:rgb(70, 22, 167);
-}
-//////design
-.skillSection:hover .profAI{
-    width: 65%;
-    background-color:rgb(195, 81, 14);
-}
-.skillSection:hover .profAXD{
-    width: 35%;
-    background-color:rgb(141, 26, 148);
-}
-//////database
-.skillSection:hover .profSQL{
-    width: 45%;
-    background-color:rgb(245, 195, 29);
-}
-.skillSection:hover .profMySQL{
-    width: 40%;
-    background-color:rgb(34, 146, 232);
-}
-.skillSection:hover .profSQLLite{
-    width: 15%;
-    background-color:rgb(18, 62, 128);
-}
 ////proficiency
 .colorDash{
     cursor: default;
@@ -127,12 +77,21 @@
     border-radius: calc(0.7rem - 1px);
     padding-left: 0rem;
     padding-right: 0rem;
+    border: none !important;
     transition: ease all .7s;
 }
-.proficiencyBox{
+.proficiencyBoxOut{
     position: relative;
     height: 1.125rem;
     width: 100%;
+    display: inline-flex;
+    transition: ease all .7s;
+}
+.proficiencyBox{
+    position: absolute;
+    z-index: 2;
+    height: 1.125rem;
+    width: 0%;
     display: inline-flex;
     transition: ease all .7s;
 }
@@ -154,6 +113,7 @@
     border-radius: 50%;
     background-color: $text;
     opacity: 0;
+    box-shadow: 0px 20px 28px $shadow;
     transition: ease all .7s;
 }
 .profPercentage{
@@ -166,6 +126,7 @@
 }
 .profMsg{
     position: absolute;
+    z-index: 1;
 }
 .proficiency:hover .profPercentageBox{
     margin-top: 1.5rem;

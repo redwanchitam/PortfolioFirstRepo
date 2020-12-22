@@ -1,0 +1,180 @@
+<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <div class="mb-4">
+                                    <div class="tagShadow skillSection">  
+                                        <h4 class="sectionSubTitle">FrontEnd</h4>
+                                        <ul class="list-group list-group-flush tagList skillsList">
+                                            <li class="skillsItem ">
+                                                <div class="d-flex m-0">
+                                                    <span class="colorDash profHTML"></span>
+                                                    <h5>HTML</h5>
+                                                </div>
+                                            </li>
+                                            <li class="skillsItem">
+                                                <div class="d-flex m-0">
+                                                    <span class="colorDash profCSS"></span>
+                                                    <h5>CSS</h5>
+                                                </div>
+                                            </li>
+                                            <li class="skillsItem">
+                                                <div class="d-flex m-0">
+                                                    <span class="colorDash profBootstrap"></span>
+                                                    <h5>Bootstrap</h5>
+                                                </div>
+                                            </li>
+                                            <li class="skillsItem">
+                                                <div class="d-flex m-0">
+                                                    <span class="colorDash profJsJquery"></span>
+                                                    <h5>Js/Jquery</h5>
+                                                </div>
+                                            </li>
+                                            <li class="skillsItem">
+                                                <div class="d-flex m-0">
+                                                    <span class="colorDash profVueJs"></span>
+                                                    <h5>Vue.Js</h5>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="proficiencyBox">
+                                            <h6 class="profMsg twinkle">hover on here !</h6>
+                                            <div class="proficiency profHTML d-flex justify-content-center">
+                                                <div class="profPercentageBox d-flex justify-content-center align-items-center">
+                                                    <h6 class="profPercentage d-flex align-items-center">32%</h6>
+                                                </div>
+                                            </div>
+                                            <div class="proficiency profCSS d-flex justify-content-center">
+                                                <div class="profPercentageBox d-flex justify-content-center align-items-center">
+                                                    <h6 class="profPercentage d-flex align-items-center">32%</h6>
+                                                </div>
+                                            </div>
+                                            <div class="proficiency profBootstrap d-flex justify-content-center">
+                                                <div class="profPercentageBox d-flex justify-content-center align-items-center">
+                                                    <h6 class="profPercentage d-flex align-items-center">32%</h6>
+                                                </div>
+                                            </div>
+                                            <div class="proficiency profJsJquery d-flex justify-content-center">
+                                                <div class="profPercentageBox d-flex justify-content-center align-items-center">
+                                                    <h6 class="profPercentage d-flex align-items-center">32%</h6>
+                                                </div>
+                                            </div>
+                                            <div class="proficiency profVueJs d-flex justify-content-center">
+                                                <div class="profPercentageBox d-flex justify-content-center align-items-center">
+                                                    <h6 class="profPercentage d-flex align-items-center">32%</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <div class="mb-4">
+                                    <div class="tagShadow skillSection">    
+                                        <h4 class="sectionSubTitle">backEnd</h4>
+                                        <ul class="list-group list-group-flush tagList skillsList">
+                                            <li class="skillsItem ">
+                                                <div class="d-flex m-0">
+                                                    <span class="colorDash profLaravel"></span>
+                                                    <h5>Laravel</h5>
+                                                </div>
+                                            </li>
+                                            <li class="skillsItem">
+                                                <div class="d-flex m-0">
+                                                    <span class="colorDash profDotNetFramework"></span>
+                                                    <h5>.Net framework</h5>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="proficiencyBox">
+                                            <h6 class="profMsg twinkle">hover on here !</h6>
+                                            <div class="proficiency profLaravel d-flex justify-content-center">
+                                                <div class="profPercentageBox d-flex justify-content-center align-items-center">
+                                                    <h6 class="profPercentage d-flex align-items-center">32%</h6>
+                                                </div>
+                                            </div>
+                                            <div class="proficiency profDotNet d-flex justify-content-center">
+                                                <div class="profPercentageBox d-flex justify-content-center align-items-center">
+                                                    <h6 class="profPercentage d-flex align-items-center">32%</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <div class="mb-4">
+                                    <div class="tagShadow skillSection">   
+                                        <h4 class="sectionSubTitle">DataBase</h4>
+                                        <ul class="list-group list-group-flush tagList skillsList">
+                                            <li class="skillsItem ">
+                                                <div class="d-flex m-0">
+                                                    <span class="colorDash profSQL"></span>
+                                                    <h5>SQL</h5>
+                                                </div>
+                                            </li>
+                                            <li class="skillsItem">
+                                                <div class="d-flex m-0">
+                                                    <span class="colorDash profMySQL"></span>
+                                                    <h5>MySQL</h5>
+                                                </div>
+                                            </li>
+                                            <li class="skillsItem">
+                                                <div class="d-flex m-0">
+                                                    <span class="colorDash profSQLLite"></span>
+                                                    <h5>SQLLite</h5>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="proficiencyBox">
+                                            <h6 class="profMsg twinkle">hover on here !</h6>
+                                            <div class="proficiency profSQL d-flex justify-content-center">
+                                                <div class="profPercentageBox d-flex justify-content-center align-items-center">
+                                                    <h6 class="profPercentage d-flex align-items-center">32%</h6>
+                                                </div>
+                                            </div>
+                                            <div class="proficiency profMySQL d-flex justify-content-center">
+                                                <div class="profPercentageBox d-flex justify-content-center align-items-center">
+                                                    <h6 class="profPercentage d-flex align-items-center">32%</h6>
+                                                </div>
+                                            </div>
+                                            <div class="proficiency profSQLLite d-flex justify-content-center">
+                                                <div class="profPercentageBox d-flex justify-content-center align-items-center">
+                                                    <h6 class="profPercentage d-flex align-items-center">32%</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <div class="mb-4">
+                                    <div class="tagShadow skillSection">    
+                                        <h4 class="sectionSubTitle">Design</h4>
+                                        <ul class="list-group list-group-flush tagList skillsList">
+                                            <li class="skillsItem ">
+                                                <div class="d-flex m-0">
+                                                    <span class="colorDash profAI"></span>
+                                                    <h5>Adobe Illustrator</h5>
+                                                </div>
+                                            </li>
+                                            <li class="skillsItem">
+                                                <div class="d-flex m-0">
+                                                    <span class="colorDash profAXD"></span>
+                                                    <h5>Adobe Xd</h5>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="proficiencyBox">
+                                            <h6 class="profMsg twinkle">hover on here !</h6>
+                                            <div class="proficiency profAI d-flex justify-content-center">
+                                                <div class="profPercentageBox d-flex justify-content-center align-items-center">
+                                                    <h6 class="profPercentage d-flex align-items-center">32%</h6>
+                                                </div>
+                                            </div>
+                                            <div class="proficiency profAXD d-flex justify-content-center">
+                                                <div class="profPercentageBox d-flex justify-content-center align-items-center">
+                                                    <h6 class="profPercentage d-flex align-items-center">32%</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
