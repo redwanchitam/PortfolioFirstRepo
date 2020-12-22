@@ -5,6 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Portfolio</title>
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/styleProjectDetails.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/styleProjects.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/styleWhoAmI.css') }}">
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Open+Sans&display=swap" rel="stylesheet">
     </head>
     <body class="antialiased">

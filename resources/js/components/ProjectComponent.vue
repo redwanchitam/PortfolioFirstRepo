@@ -2,7 +2,9 @@
     <div class="my-3 d-flex col-lg-4 col-md-4 col-sm-10 ">
         <div class=" d-flex flex-column prj">
             <div class="" tag="button" @click="getModal">
-                <img v-bind:src="'img/' + imgPath" class="prjImg" v-bind:alt="title">
+                <div style="position:relative;">
+                    <img v-bind:src="'img/' + imgPath" class="prjImg" v-bind:alt="title">
+                </div>
                 <div class="overlay">
                     <div class="py-2 d-flex flex-column align-items-center justify-content-center prjBody">
                         <p class="prjButton" >Go on, take a look</p>

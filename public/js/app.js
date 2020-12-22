@@ -1967,6 +1967,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
+  },
+  methodes: {
+    removeScroll: function removeScroll() {
+      $("html").scrollTop(0);
+      $("body").css("overflow", "hidden");
+    }
   }
 });
 
@@ -1982,6 +1988,8 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ProjectDetailsComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ProjectDetailsComponent */ "./resources/js/components/ProjectDetailsComponent.vue");
+//
+//
 //
 //
 //
@@ -2201,13 +2209,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         setTimeout(function () {
           resolve(x);
         }, delay);
-      });
-    },
-    glish: function glish(x) {
-      return new Promise(function (resolve) {
-        setTimeout(function () {
-          resolve(x);
-        }, 100);
       });
     },
     affect: function () {
@@ -39194,10 +39195,12 @@ var render = function() {
         { staticClass: " d-flex flex-column prj" },
         [
           _c("div", { attrs: { tag: "button" }, on: { click: _vm.getModal } }, [
-            _c("img", {
-              staticClass: "prjImg",
-              attrs: { src: "img/" + _vm.imgPath, alt: _vm.title }
-            }),
+            _c("div", { staticStyle: { position: "relative" } }, [
+              _c("img", {
+                staticClass: "prjImg",
+                attrs: { src: "img/" + _vm.imgPath, alt: _vm.title }
+              })
+            ]),
             _vm._v(" "),
             _vm._m(0)
           ]),
@@ -39659,14 +39662,14 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "pt-5 row whoAmISection" }, [
-        _c("div", { staticClass: "col-lg-6 col-md-12 col-sm-12" }, [
-          _c("div", {}, [
+      _c("div", { staticClass: "pt-5 row" }, [
+        _c("div", { staticClass: "col-lg-6 col-md-12 col-sm-12 p-2" }, [
+          _c("div", { staticClass: "whoAmISection" }, [
             _c("h2", { staticClass: "sectionTitle mb-4" }, [
               _vm._v("About Me :")
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "aboutMeSection tagShadow" }, [
+            _c("div", { staticClass: "tagShadow aboutMeSection" }, [
               _c("p", [
                 _vm._v(
                   "i'm Redwan, a fullstack web developer, with an innate attraction for therms of art and simplicity.\n                    "
@@ -39680,19 +39683,19 @@ var staticRenderFns = [
           ])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-lg-6 col-md-12 col-sm-12" }, [
-          _c("div", {}, [
+        _c("div", { staticClass: "col-lg-6 col-md-12 col-sm-12 p-2" }, [
+          _c("div", { staticClass: "whoAmISection" }, [
             _c("h2", { staticClass: "sectionTitle mb-4" }, [
               _vm._v("Skills :")
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "aboutMeSection d-flex" }, [
+            _c("div", { staticClass: "d-flex" }, [
               _c("div", { staticClass: "w-100 row justify-content-around" }, [
                 _c(
                   "div",
-                  { staticClass: "px-0 col-xl-6 col-lg-6 col-md-6 col-sm-12" },
+                  { staticClass: "col-xl-6 col-lg-6 col-md-6 col-sm-12" },
                   [
-                    _c("div", { staticClass: "mb-3" }, [
+                    _c("div", { staticClass: "mb-4" }, [
                       _c("div", { staticClass: "tagShadow skillSection" }, [
                         _c("h4", { staticClass: "sectionSubTitle" }, [
                           _vm._v("FrontEnd")
@@ -39904,9 +39907,9 @@ var staticRenderFns = [
                 _vm._v(" "),
                 _c(
                   "div",
-                  { staticClass: "px-0 col-xl-6 col-lg-6 col-md-6 col-sm-12" },
+                  { staticClass: "col-xl-6 col-lg-6 col-md-6 col-sm-12" },
                   [
-                    _c("div", { staticClass: "mb-3" }, [
+                    _c("div", { staticClass: "mb-4" }, [
                       _c("div", { staticClass: "tagShadow skillSection" }, [
                         _c("h4", { staticClass: "sectionSubTitle" }, [
                           _vm._v("backEnd")
@@ -40007,9 +40010,9 @@ var staticRenderFns = [
                 _vm._v(" "),
                 _c(
                   "div",
-                  { staticClass: "px-0 col-xl-6 col-lg-6 col-md-6 col-sm-12" },
+                  { staticClass: "col-xl-6 col-lg-6 col-md-6 col-sm-12" },
                   [
-                    _c("div", { staticClass: "mb-3" }, [
+                    _c("div", { staticClass: "mb-4" }, [
                       _c("div", { staticClass: "tagShadow skillSection" }, [
                         _c("h4", { staticClass: "sectionSubTitle" }, [
                           _vm._v("DataBase")
@@ -40147,9 +40150,9 @@ var staticRenderFns = [
                 _vm._v(" "),
                 _c(
                   "div",
-                  { staticClass: "px-0 col-xl-6 col-lg-6 col-md-6 col-sm-12" },
+                  { staticClass: "col-xl-6 col-lg-6 col-md-6 col-sm-12" },
                   [
-                    _c("div", { staticClass: "mb-3" }, [
+                    _c("div", { staticClass: "mb-4" }, [
                       _c("div", { staticClass: "tagShadow skillSection" }, [
                         _c("h4", { staticClass: "sectionSubTitle" }, [
                           _vm._v("Design")
@@ -40250,137 +40253,115 @@ var staticRenderFns = [
           ])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-lg-6 col-md-12 col-sm-12" }, [
-          _c("div", {}, [
+        _c("div", { staticClass: "col-lg-6 col-md-12 col-sm-12 p-2" }, [
+          _c("div", { staticClass: " whoAmISection" }, [
             _c("h2", { staticClass: "sectionTitle mb-4" }, [
               _vm._v("Education and diplomats :")
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "aboutMeSection" }, [
+            _c("div", {}, [
               _c("ul", { staticClass: "list-group list-group-flush tagList" }, [
-                _c(
-                  "li",
-                  {
-                    staticClass: "mb-4 w-100 leftLine diplomatItem tagShadow "
-                  },
-                  [
-                    _c("div", { staticClass: "ball" }),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "onWave " }, [
-                      _c("div", { staticClass: "d-flex m-0 " }, [
-                        _c("h5", { staticClass: "sectionSubTitle" }, [
-                          _vm._v("2020")
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: " " }, [
-                        _c("div", { staticClass: "d-flex m-0" }, [
-                          _c("h5", [
-                            _vm._v("Bachlor in economic and legal siences")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "d-flex m-0" }, [
-                          _c("h6", [_vm._v("Ibn zohr university - Morocco")])
-                        ])
+                _c("li", { staticClass: "leftLine tagShadow diplomatItem" }, [
+                  _c("div", { staticClass: "onWave " }, [
+                    _c("div", { staticClass: "d-flex m-0 " }, [
+                      _c("h5", { staticClass: "sectionSubTitle" }, [
+                        _vm._v("2020")
                       ])
-                    ])
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "li",
-                  { staticClass: "mb-4 leftLine diplomatItem tagShadow" },
-                  [
-                    _c("div", { staticClass: "wave" }),
+                    ]),
                     _vm._v(" "),
-                    _c("div", { staticClass: "onWave" }, [
+                    _c("div", {}, [
                       _c("div", { staticClass: "d-flex m-0" }, [
-                        _c("h5", { staticClass: "sectionSubTitle" }, [
-                          _vm._v("2019")
+                        _c("h5", [
+                          _vm._v("Bachlor in economic and legal siences")
                         ])
                       ]),
                       _vm._v(" "),
-                      _c("div", {}, [
-                        _c("div", { staticClass: "d-flex m-0" }, [
-                          _c("h5", [
-                            _vm._v("Associate's degree in development")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "d-flex m-0" }, [
-                          _c("h6", [
-                            _vm._v(
-                              "Higher Institute of Applied Technologies - Morocco"
-                            )
-                          ])
-                        ])
-                      ])
-                    ])
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "li",
-                  { staticClass: "mb-4 leftLine diplomatItem tagShadow" },
-                  [
-                    _c("div", { staticClass: "wave" }),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "onWave" }, [
                       _c("div", { staticClass: "d-flex m-0" }, [
-                        _c("h5", { staticClass: "sectionSubTitle" }, [
-                          _vm._v("2017")
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", {}, [
-                        _c("div", { staticClass: "d-flex m-0" }, [
-                          _c("h5", [
-                            _vm._v(
-                              "Technician's certificate in informatique maintenance and networking"
-                            )
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "d-flex m-0" }, [
-                          _c("h6", [
-                            _vm._v(
-                              "Higher Institute of Applied Technologies - Morocco"
-                            )
-                          ])
-                        ])
+                        _c("h6", [_vm._v("Ibn zohr university - Morocco")])
                       ])
                     ])
-                  ]
-                ),
+                  ])
+                ]),
                 _vm._v(" "),
-                _c(
-                  "li",
-                  { staticClass: "mb-4 leftLine diplomatItem tagShadow" },
-                  [
-                    _c("div", { staticClass: "wave" }),
+                _c("li", { staticClass: "leftLine tagShadow diplomatItem " }, [
+                  _c("div", { staticClass: "wave" }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "onWave" }, [
+                    _c("div", { staticClass: "d-flex m-0" }, [
+                      _c("h5", { staticClass: "sectionSubTitle" }, [
+                        _vm._v("2019")
+                      ])
+                    ]),
                     _vm._v(" "),
-                    _c("div", { staticClass: "onWave" }, [
+                    _c("div", {}, [
                       _c("div", { staticClass: "d-flex m-0" }, [
-                        _c("h5", { staticClass: "sectionSubTitle" }, [
-                          _vm._v("2015")
-                        ])
+                        _c("h5", [_vm._v("Associate's degree in development")])
                       ]),
                       _vm._v(" "),
-                      _c("div", {}, [
-                        _c("div", { staticClass: "d-flex m-0" }, [
-                          _c("h5", [_vm._v("Baccalaureate in phisics siences")])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "d-flex m-0" }, [
-                          _c("h6", [
-                            _vm._v("Hassan the 2nd, high school- Morocco")
-                          ])
+                      _c("div", { staticClass: "d-flex m-0" }, [
+                        _c("h6", [
+                          _vm._v(
+                            "Higher Institute of Applied Technologies - Morocco"
+                          )
                         ])
                       ])
                     ])
-                  ]
-                )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("li", { staticClass: "leftLine tagShadow diplomatItem " }, [
+                  _c("div", { staticClass: "wave" }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "onWave" }, [
+                    _c("div", { staticClass: "d-flex m-0" }, [
+                      _c("h5", { staticClass: "sectionSubTitle" }, [
+                        _vm._v("2017")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", {}, [
+                      _c("div", { staticClass: "d-flex m-0" }, [
+                        _c("h5", [
+                          _vm._v(
+                            "Technician's certificate in informatique maintenance and networking"
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "d-flex m-0" }, [
+                        _c("h6", [
+                          _vm._v(
+                            "Higher Institute of Applied Technologies - Morocco"
+                          )
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("li", { staticClass: "leftLine tagShadow diplomatItem " }, [
+                  _c("div", { staticClass: "wave" }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "onWave" }, [
+                    _c("div", { staticClass: "d-flex m-0" }, [
+                      _c("h5", { staticClass: "sectionSubTitle" }, [
+                        _vm._v("2015")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", {}, [
+                      _c("div", { staticClass: "d-flex m-0" }, [
+                        _c("h5", [_vm._v("Baccalaureate in phisics siences")])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "d-flex m-0" }, [
+                        _c("h6", [
+                          _vm._v("Hassan the 2nd, high school- Morocco")
+                        ])
+                      ])
+                    ])
+                  ])
+                ])
               ])
             ])
           ])
@@ -55682,9 +55663,11 @@ function coverPage() {
 ;
 $(document).ready(function () {
   $("#home").on("click", function () {
+    $("html").scrollTop(0);
     $("body").css("overflow", "hidden");
   });
   $("#contactMe").on("click", function () {
+    $("html").scrollTop(0);
     $("body").css("overflow", "hidden");
   });
   $("#projects").on("click", function () {
@@ -55693,39 +55676,35 @@ $(document).ready(function () {
   $("#whoAmI").on("click", function () {
     $("body").css("overflow", "auto");
   });
-  var flightPath = {
-    curviness: 1.25,
-    autoRotate: true,
-    values: [{
-      x: 200,
-      y: 150
-    }, {
-      x: 500,
-      y: 100
-    }, {
-      x: 300,
-      y: 50
-    }, {
-      x: 150,
-      y: 100
-    }, {
-      x: 0,
-      y: 0
-    }]
-  };
-  var tween = new TimelineLite();
-  tween.add(TweenLite.to(".ball", 2, {
-    bezier: flightPath,
-    ease: Power1.easeInOut
-  }));
-  var controller = new ScrollMagic.Controller();
-  var scene = new ScrollMagic.Scene({
-    triggerElement: '.ball',
-    duration: 1000,
-    triggerHook: 1
-  }).setTween(tween).addIndicators() // .setPin(".ball")
-  .addTo(controller);
-});
+}); ////moveTheBall
+// const flightPath = {
+//     curviness: 1.25,
+//     autoRotate: true,
+//     values: [
+//         {x: 200, y:150},
+//         {x: 500, y:100},
+//         {x: 300, y:50},
+//         {x: 150, y:100},
+//         {x: 0, y:0},
+//     ]
+// };
+// const tween = new TimelineLite();
+// tween.add(
+//     TweenLite.to(".ball", 2, {
+//         bezier: flightPath,
+//         ease: Power1.easeInOut
+//     })
+// );
+// const controller = new ScrollMagic.Controller();
+// const scene = new ScrollMagic.Scene({
+//     triggerElement: '.ball',
+//     duration: 1000,
+//     triggerHook: 1
+// })
+// .setTween(tween)
+// .addIndicators()
+// // .setPin(".ball")
+// .addTo(controller);
 
 /***/ }),
 
@@ -56199,15 +56178,51 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/sass/styleProjectDetails.scss":
+/*!*************************************************!*\
+  !*** ./resources/sass/styleProjectDetails.scss ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/styleProjects.scss":
+/*!*******************************************!*\
+  !*** ./resources/sass/styleProjects.scss ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/styleWhoAmI.scss":
+/*!*****************************************!*\
+  !*** ./resources/sass/styleWhoAmI.scss ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ 0:
-/*!*************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ***!
-  \*************************************************************/
+/*!*****************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/styleProjectDetails.scss ./resources/sass/styleProjects.scss ./resources/sass/styleWhoAmI.scss ***!
+  \*****************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! C:\xampp\htdocs\portfolio\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\portfolio\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\xampp\htdocs\portfolio\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\xampp\htdocs\portfolio\resources\sass\styleProjectDetails.scss */"./resources/sass/styleProjectDetails.scss");
+__webpack_require__(/*! C:\xampp\htdocs\portfolio\resources\sass\styleProjects.scss */"./resources/sass/styleProjects.scss");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\portfolio\resources\sass\styleWhoAmI.scss */"./resources/sass/styleWhoAmI.scss");
 
 
 /***/ })

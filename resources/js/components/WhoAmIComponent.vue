@@ -1,22 +1,22 @@
 <template>
     <div class="container">
-        <div class="pt-5 row whoAmISection">
-            <div class="col-lg-6 col-md-12 col-sm-12">
-                <div class="">
+        <div class="pt-5 row">
+            <div class="col-lg-6 col-md-12 col-sm-12 p-2">
+                <div class="whoAmISection">
                     <h2 class="sectionTitle mb-4">About Me :</h2>
-                    <div class="aboutMeSection tagShadow">
+                    <div class="tagShadow aboutMeSection">
                         <p>i'm Redwan, a fullstack web developer, with an innate attraction for therms of art and simplicity.
                         <br>i'm interested in building responsive apps and design illustrations</p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-12 col-sm-12">
-                <div class="">
+            <div class="col-lg-6 col-md-12 col-sm-12 p-2">
+                <div class="whoAmISection">
                     <h2 class="sectionTitle mb-4">Skills :</h2>
-                    <div class="aboutMeSection d-flex">
+                    <div class="d-flex">
                         <div class="w-100 row justify-content-around">
-                            <div class="px-0 col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                                <div class="mb-3">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <div class="mb-4">
                                     <div class="tagShadow skillSection">  
                                         <h4 class="sectionSubTitle">FrontEnd</h4>
                                         <ul class="list-group list-group-flush tagList skillsList">
@@ -82,8 +82,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="px-0 col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                                <div class="mb-3">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <div class="mb-4">
                                     <div class="tagShadow skillSection">    
                                         <h4 class="sectionSubTitle">backEnd</h4>
                                         <ul class="list-group list-group-flush tagList skillsList">
@@ -116,8 +116,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="px-0 col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                                <div class="mb-3">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <div class="mb-4">
                                     <div class="tagShadow skillSection">   
                                         <h4 class="sectionSubTitle">DataBase</h4>
                                         <ul class="list-group list-group-flush tagList skillsList">
@@ -161,8 +161,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="px-0 col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                                <div class="mb-3">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <div class="mb-4">
                                     <div class="tagShadow skillSection">    
                                         <h4 class="sectionSubTitle">Design</h4>
                                         <ul class="list-group list-group-flush tagList skillsList">
@@ -199,18 +199,18 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-12 col-sm-12">
-                <div class="">
+            <div class="col-lg-6 col-md-12 col-sm-12 p-2">
+                <div class=" whoAmISection">
                     <h2 class="sectionTitle mb-4">Education and diplomats :</h2>
-                    <div class="aboutMeSection">
+                    <div class="">
                         <ul class="list-group list-group-flush tagList">
-                            <li class="mb-4 w-100 leftLine diplomatItem tagShadow ">
-                                <div class="ball"></div>
+                            <li class="leftLine tagShadow diplomatItem">
+                                <!-- <div class="ball"></div> -->
                                 <div class="onWave ">
                                     <div class="d-flex m-0 ">
                                         <h5 class="sectionSubTitle">2020</h5>
                                     </div>
-                                    <div class=" ">
+                                    <div class="">
                                         <div class="d-flex m-0">
                                             <h5>Bachlor in economic and legal siences</h5>
                                         </div>
@@ -220,7 +220,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="mb-4 leftLine diplomatItem tagShadow">
+                            <li class="leftLine tagShadow diplomatItem ">
                                 <div class="wave"></div>
                                 <div class="onWave">
                                     <div class="d-flex m-0">
@@ -236,7 +236,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="mb-4 leftLine diplomatItem tagShadow">
+                            <li class="leftLine tagShadow diplomatItem ">
                                 <div class="wave"></div>
                                 <div class="onWave">
                                     <div class="d-flex m-0">
@@ -252,7 +252,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="mb-4 leftLine diplomatItem tagShadow">
+                            <li class="leftLine tagShadow diplomatItem ">
                                 <div class="wave"></div>
                                 <div class="onWave">
                                     <div class="d-flex m-0">

@@ -1,0 +1,211 @@
+// Variables
+@import 'variables';
+
+// ProjectDetails PopUp
+.blur{
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+.projectDetailsBg{
+    z-index: 9998;
+    background-color:$transBg;
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+} 
+.projectDetails{
+    z-index: 9999;
+    background-color: $bg;
+    width: 80%;
+    height: 95%;
+    border-radius: calc(0.7rem - 1px);
+}
+//// ProjectDetails Header
+.projectDetailsHeader{
+    position:sticky;
+    background-color: $text;
+    border-top-left-radius: calc(0.7rem - 1px);
+    border-top-right-radius: calc(0.7rem - 1px);
+}
+.projectDetailsHeader .prjTitle{
+    color: $bg;
+    font-size: 3.5rem ;
+    margin-bottom: 0rem;
+}
+.projectDetailsHeader .prjCateg{
+    font-size: 1.3rem;
+    color: $bg;
+    margin-bottom: 0rem;
+}
+.projectDetailsHeader span{
+    color: $bg;
+    margin-bottom: 0rem;
+}
+//// ProjectDetails Body
+.projectDetailsBody{
+    width: 100%;
+    overflow-y: scroll;
+}
+.projectDeatilsBody *{
+    font-size: 1.3rem;
+}
+.prjDetImg{
+    overflow: hidden;
+    width: 100%;
+    height: 80%;
+}
+.descriptionSection{
+    // color: $text;
+    // background-color: $bg;
+    // border-radius: calc(0.7rem - 1px);
+}
+.sectionTitle{
+    width: fit-content;
+    border-bottom: $text 1px solid;
+    padding-bottom: 0.5rem;
+    padding-right: 0.5rem;
+    font-weight: bold;
+}
+.sectionSubTitle{
+    width: fit-content;
+    border-bottom: $text 1px solid;
+    padding-bottom: 0.25rem;
+    padding-right: 0.25rem;
+}
+.leftLine{
+    border-left:$text 1px solid;
+    padding-left: 1rem;
+}
+.builtWithList{
+    text-decoration: none;
+    list-style: none;
+}
+.builtWithItem{
+    font-size: 20.8px;
+}
+.commentProfilName{
+    font-weight: bold;
+}
+.commentProfilP{
+    margin-bottom: 0px ;
+}
+.commentProfilPic{
+    max-width: 3rem;
+    height: 3rem;
+    overflow: hidden;
+    border-radius: calc(0.7rem - 1px);
+}
+////// ProjectDetails Footer
+.projectDetailsFooter{
+    position:sticky;
+    height: fit-content;
+    background-color: $text;
+    border-bottom-left-radius: calc(0.7rem - 1px);
+    border-bottom-right-radius: calc(0.7rem - 1px);
+}
+.projectDetailsFooter .tagButton{
+    background-color: $text;
+}
+.projectDetailsFooter span{
+    font-size: 1.3rem;
+    color: $bg;
+    margin-bottom: 0rem;
+}
+.projectDetailsFooter .row{
+    margin: 0% !important;
+}
+.projectDetailsFooter .tagInput{
+    color: $bg;
+    background-color: $text;
+    border: 1px $bg solid;
+}
+.commentInputCont{
+    width: 80%;
+    height: 2.5rem;
+}
+.commentInput{
+    width: 100%;
+    height: 100%;
+    text-align: justify;
+    font-size: 1.3rem;
+    line-height: initial;
+}
+.commentButton{
+    width: 20%;
+}
+
+////////////////////
+.box{
+    border:2px $text solid;
+    border-radius: calc(0.7rem - 1px);
+    position:relative;
+    width: 5rem;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+.ratingSlot{
+    position:relative;
+    width: 4.25rem;
+    height: 2.25rem;
+    justify-content: center;
+    align-items: center;
+}
+.slotChild{
+    position:relative;
+    justify-content: center;
+    align-items: center;
+    border-radius: calc(0.7rem - 1px);
+}
+.slotChild.isNotNumber{
+    width:0.75rem ;
+    height: 2.25rem;
+    color: $text;
+    background-color: $bg;
+}
+.slotChild.isNotNumber h3{
+    color: $text;
+}
+.slotChild.isNumber{
+    width: 1.75rem ;
+    height: 2.25rem;
+    border-radius: calc(0.7rem - 1px);
+    color: $bg;
+    background-color: $text;
+}
+.slotChild.isNumber h3{
+    position: absolute;
+    width: fit-content;
+    margin: 0%;
+    color: $bg;
+}
+.slotNumberAnimate{
+    animation: load 350ms ease-in-out infinite;
+}
+@keyframes load {
+    0%{top: -30px;opacity: 0;}
+    5%{top: -26px;opacity: 0;}
+    10%{top: -22px;opacity: 0.2;}
+    15%{top: -18px;opacity: 0.4;}
+    20%{top: -14px;opacity: 0.6;}
+    25%{top: -10px;opacity: 0.8;}
+    30%{top: -4px;opacity: 1;}
+    35%{top: -3px;opacity: 1;}
+    40%{top: -2px;opacity: 1;}
+    45%{top: 0px;opacity: 1;}
+    50%{top: 0px;opacity: 1;}
+    55%{top: 0px;opacity: 1;}
+    60%{top: 2px;opacity: 1;}
+    65%{top: 3px;opacity: 1;}
+    70%{top: 4px;opacity: 1;}
+    75%{top: 10px;opacity: 0.8;}
+    80%{top: 14px;opacity: 0.6;}
+    85%{top: 18px;opacity: 0.4;}
+    90%{top: 22px;opacity: 0.2;}
+    95%{top: 26px;opacity: 0;}
+    100%{top: 30px;opacity: 0;}
+}
+

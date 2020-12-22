@@ -51,9 +51,11 @@ function coverPage(){
 
 $(document).ready(function(){
     $("#home").on("click",function(){
+        $("html").scrollTop(0);
         $("body").css("overflow","hidden");
     });
     $("#contactMe").on("click",function(){
+        $("html").scrollTop(0);
         $("body").css("overflow","hidden");
     });
     $("#projects").on("click",function(){
@@ -63,39 +65,39 @@ $(document).ready(function(){
         $("body").css("overflow","auto");
     });
     
-    const flightPath = {
-        curviness: 1.25,
-        autoRotate: true,
-        values: [
-            {x: 200, y:150},
-            {x: 500, y:100},
-            {x: 300, y:50},
-            {x: 150, y:100},
-            {x: 0, y:0},
-        ]
-    };
-
-    const tween = new TimelineLite();
-
-    tween.add(
-        TweenLite.to(".ball", 2, {
-            bezier: flightPath,
-            ease: Power1.easeInOut
-        })
-    );
-    
-    const controller = new ScrollMagic.Controller();
-    const scene = new ScrollMagic.Scene({
-        triggerElement: '.ball',
-        duration: 1000,
-        triggerHook: 1
-    })
-    .setTween(tween)
-    .addIndicators()
-    // .setPin(".ball")
-    .addTo(controller);
-
-
 
 });
+
+////moveTheBall
+// const flightPath = {
+//     curviness: 1.25,
+//     autoRotate: true,
+//     values: [
+//         {x: 200, y:150},
+//         {x: 500, y:100},
+//         {x: 300, y:50},
+//         {x: 150, y:100},
+//         {x: 0, y:0},
+//     ]
+// };
+
+// const tween = new TimelineLite();
+
+// tween.add(
+//     TweenLite.to(".ball", 2, {
+//         bezier: flightPath,
+//         ease: Power1.easeInOut
+//     })
+// );
+
+// const controller = new ScrollMagic.Controller();
+// const scene = new ScrollMagic.Scene({
+//     triggerElement: '.ball',
+//     duration: 1000,
+//     triggerHook: 1
+// })
+// .setTween(tween)
+// .addIndicators()
+// // .setPin(".ball")
+// .addTo(controller);
 

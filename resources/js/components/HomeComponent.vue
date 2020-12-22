@@ -16,6 +16,12 @@
     export default {
         mounted() {
             console.log('Component mounted.')
+        },
+        methodes: {
+            removeScroll: function(){
+                $("html").scrollTop(0);
+                $("body").css("overflow","hidden");
+            }
         }
     }
 </script>

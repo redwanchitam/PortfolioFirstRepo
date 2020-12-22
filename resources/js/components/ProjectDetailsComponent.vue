@@ -152,14 +152,6 @@
                     }, delay);
                 });
             },
-                
-            glish(x) { 
-                return new Promise(resolve => {
-                    setTimeout(() => {
-                    resolve(x);
-                    }, 100);
-                });
-            },
 
             affect: async function (value,leftORright,delay) {
                 let tours=-1;

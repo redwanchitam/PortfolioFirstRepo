@@ -1,0 +1,241 @@
+.whoAmISection {
+  cursor: default;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  transition: ease all 0.7s;
+}
+
+.whoAmISection:hover {
+  transition: ease all 0.7s;
+}
+
+.tagList {
+  text-decoration: none;
+  list-style: none;
+}
+
+.tagItem {
+  text-decoration: none;
+}
+
+.tagShadow {
+  border-radius: calc(0.7rem - 1px);
+  box-shadow: none;
+  transition: ease all 0.7s;
+}
+
+.tagShadow:hover {
+  box-shadow: 0px 0px 8px #6b6b6b;
+  transition: ease all 0.7s;
+}
+
+.aboutMeSection {
+  cursor: default;
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #6b6b6b;
+  transition: ease all 0.7s;
+}
+
+.aboutMeSection:hover {
+  border: 1px solid #f0f0f0;
+}
+
+.skillsItem {
+  text-decoration: none;
+}
+
+.skillSection {
+  cursor: default;
+  width: 100%;
+  padding: 1rem;
+  border-radius: calc(0.7rem - 1px);
+  border: 1px solid #6b6b6b;
+  transition: ease all 0.7s;
+}
+
+.skillSection:hover {
+  border: 1px solid #f0f0f0;
+}
+
+.skillSection:hover .colorDash {
+  margin-right: 0.5rem;
+  height: 1.125rem;
+  width: 1.125rem !important;
+  border: 1px solid #f0f0f0;
+  transition: ease all 0.7s;
+}
+
+.skillSection:hover .profMsg {
+  display: none;
+  transition: none;
+}
+
+.skillSection:hover .profHTML {
+  width: 27%;
+  background-color: #df5739;
+}
+
+.skillSection:hover .profCSS {
+  width: 24%;
+  background-color: #0a57e6;
+}
+
+.skillSection:hover .profJsJquery {
+  width: 14%;
+  background-color: #ccc60e;
+}
+
+.skillSection:hover .profVueJs {
+  width: 14%;
+  background-color: #31c272;
+}
+
+.skillSection:hover .profBootstrap {
+  width: 21%;
+  background-color: #4210a7;
+}
+
+.skillSection:hover .profLaravel {
+  width: 55%;
+  background-color: #d30e0e;
+}
+
+.skillSection:hover .profDotNet {
+  width: 45%;
+  background-color: #4616a7;
+}
+
+.skillSection:hover .profAI {
+  width: 65%;
+  background-color: #c3510e;
+}
+
+.skillSection:hover .profAXD {
+  width: 35%;
+  background-color: #8d1a94;
+}
+
+.skillSection:hover .profSQL {
+  width: 45%;
+  background-color: #f5c31d;
+}
+
+.skillSection:hover .profMySQL {
+  width: 40%;
+  background-color: #2292e8;
+}
+
+.skillSection:hover .profSQLLite {
+  width: 15%;
+  background-color: #123e80;
+}
+
+.colorDash {
+  cursor: default;
+  width: 0rem;
+  height: 0rem;
+  border-radius: calc(0.7rem - 1px);
+  padding-left: 0rem;
+  padding-right: 0rem;
+  transition: ease all 0.7s;
+}
+
+.proficiencyBox {
+  position: relative;
+  height: 1.125rem;
+  width: 100%;
+  display: inline-flex;
+  transition: ease all 0.7s;
+}
+
+.proficiency {
+  cursor: default;
+  position: relative;
+  height: 100%;
+  width: 0%;
+  justify-content: center;
+  align-content: center;
+  transition: ease all 0.7s;
+}
+
+.profPercentageBox {
+  cursor: default;
+  margin-top: 0rem;
+  position: absolute;
+  height: 0rem;
+  width: 0rem !important;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  opacity: 0;
+  transition: ease all 0.7s;
+}
+
+.profPercentage {
+  cursor: default;
+  opacity: 0;
+  margin: 0;
+  color: #0c0c0c;
+  font-size: 0rem;
+  transition: ease all 0.7s;
+}
+
+.profMsg {
+  position: absolute;
+}
+
+.proficiency:hover .profPercentageBox {
+  margin-top: 1.5rem;
+  height: 2.75rem;
+  width: 2.75rem !important;
+  opacity: 1;
+  transition: ease all 0.7s;
+}
+
+.proficiency:hover .profPercentage {
+  opacity: 1;
+  font-size: unset;
+  font-weight: bold;
+  transition: ease all 0.7s;
+}
+
+.diplomatSection {
+  cursor: default;
+  width: 100%;
+  padding: 1rem;
+  transition: ease all 0.7s;
+}
+
+.diplomatItem {
+  cursor: default;
+  position: relative;
+  display: inline-grid;
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  text-decoration: none;
+  border-top-left-radius: unset;
+  border-bottom-left-radius: unset;
+  border: 1px solid #6b6b6b;
+}
+
+.diplomatItem:hover {
+  border: 1px solid #f0f0f0;
+}
+
+.ball {
+  background-color: #47a1c2;
+  height: 3rem;
+  width: 3rem;
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 0px 0px 4px #6b6b6b;
+  z-index: 0;
+  margin-left: -3rem;
+}
+
+.onWave {
+  position: relative;
+  z-index: 2;
+}
+
