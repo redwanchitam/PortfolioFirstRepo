@@ -246,3 +246,46 @@
                                     </div>
                                 </div>
                             </li>
+
+
+
+
+
+                            
+                                        <div class="my-3 d-flex align-items-start">
+                                            <div class="commentProfilPic">
+                                                <img src="img/lanaDelRey.jpg" class="prjImg" alt="">
+                                            </div>
+                                            <div class="ml-3">
+                                                <h4 class="commentProfilName">Lana Del Rey</h4>
+                                                <p class="commentP leftLine">heaven is a place on earth with you.</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="my-3 d-flex align-items-start">
+                                            <div class="commentProfilPic">
+                                                <img src="img/jonSnow.jpg" class="prjImg" alt="">
+                                            </div>
+                                            <div class="ml-3">
+                                                <h4 class="commentProfilName">Jon Snow</h4>
+                                                <p class="commentP leftLine">winter is coming ..</p>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="my-3 d-flex align-items-start">
+                                            <div class="commentProfilPic">
+                                                <img src="img/jonas.jpg" class="prjImg" alt="">
+                                            </div>
+                                            <div class="ml-3">
+                                                <h4 class="commentProfilName">Jonas Kahnwald</h4>
+                                                <p class="commentP leftLine">Sic mundus creatus est.</p>
+                                            </div>
+                                        </div> -->
+                                        <div class="my-3 d-flex align-items-start">
+                                            <div class="commentProfilPic">
+                                                <img src="img/rafiqBoubker.jpg" class="prjImg" alt="">
+                                            </div>
+                                            <div class="ml-3">
+                                                <h4 class="commentProfilName">Rafiq Boubker</h4>
+                                                <p class="commentP leftLine">hi, i'm Rafiq Boubker and you know ..</p>
+                                            </div>
+                                        </div>

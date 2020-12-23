@@ -46,42 +46,13 @@
                                 <div class="col-12 col-xl-8 col-lg-8">
                                     <div class="m-2 p-3 descriptionSection">
                                         <h2 class="sectionTitle">Comments</h2>
-                                        <div class="my-3 d-flex align-items-start">
-                                            <div class="commentProfilPic">
-                                                <img src="img/lanaDelRey.jpg" class="prjImg" alt="">
-                                            </div>
-                                            <div class="ml-3">
-                                                <h4 class="commentProfilName">Lana Del Rey</h4>
-                                                <p class="commentP leftLine">heaven is a place on earth with you.</p>
-                                            </div>
-                                        </div>
-                                        <div class="my-3 d-flex align-items-start">
-                                            <div class="commentProfilPic">
-                                                <img src="img/jonSnow.jpg" class="prjImg" alt="">
-                                            </div>
-                                            <div class="ml-3">
-                                                <h4 class="commentProfilName">Jon Snow</h4>
-                                                <p class="commentP leftLine">winter is coming ..</p>
-                                            </div>
-                                        </div>
-                                        <!-- <div class="my-3 d-flex align-items-start">
-                                            <div class="commentProfilPic">
-                                                <img src="img/jonas.jpg" class="prjImg" alt="">
-                                            </div>
-                                            <div class="ml-3">
-                                                <h4 class="commentProfilName">Jonas Kahnwald</h4>
-                                                <p class="commentP leftLine">Sic mundus creatus est.</p>
-                                            </div>
-                                        </div> -->
-                                        <div class="my-3 d-flex align-items-start">
-                                            <div class="commentProfilPic">
-                                                <img src="img/rafiqBoubker.jpg" class="prjImg" alt="">
-                                            </div>
-                                            <div class="ml-3">
-                                                <h4 class="commentProfilName">Rafiq Boubker</h4>
-                                                <p class="commentP leftLine">hi, i'm Rafiq Boubker and you know ..</p>
-                                            </div>
-                                        </div>
+                                        <ul class="list-group list-group-flush tagList">
+                                            <comment v-for="(comment, index) in comments"
+                                                    v-bind:comment="comment"
+                                                    v-bind:index="index"
+                                                    v-bind:key="comment.id">
+                                            </comment>
+                                        </ul>
                                     </div>
                                 </div>
                                 <!-- projectDetails Rating-->
@@ -138,13 +109,16 @@
 </template>
 
 <script>
+    import comment from './CommentComponent';
     export default {
+        components : {
+            comment
+        },
         mounted() {
             console.log('Component mounted.')
         },
         props: ['project-details'],
         methods: {
-            
             wait(x,delay) { 
                 return new Promise(resolve => {
                     setTimeout(() => {
@@ -152,7 +126,6 @@
                     }, delay);
                 });
             },
-
             affect: async function (value,leftORright,delay) {
                 let tours=-1;
                 let currentTour;
@@ -193,11 +166,9 @@
                     currentTour++;
                 } while (currentTour!=tours+2 && !shouldBreak);
             },
-
             affectRightDigit(value,delay){
                 this.affect(value,"r",delay)
             },
-
             affectLeftDigit(value,delay){
                 this.affect(value,"l",delay);
             },
@@ -205,6 +176,48 @@
                 let leftORright="";
                 this.affectLeftDigit(Math.floor(Math.random()*10),delay);
                 this.affectRightDigit(Math.floor(Math.random()*10),delay);
+            }
+        },
+        data() {
+            return{
+                comments: [
+                    {
+                        id: 1,
+                        date: "13/11/2020",
+                        text: "heaven is a place on earth with you.",
+                        profil: {
+                            id: 1,
+                            name: "Lana Del Rey",
+                            picPath: "img/lanaDelRey.jpg",
+                            email: "",
+                            password: ""
+                        }
+                    },
+                    {
+                        id: 2,
+                        date: "21/11/2020",
+                        text: "winter is coming ..",
+                        profil: {
+                            id: 2,
+                            name: "Jon Snow",
+                            picPath: "img/jonSnow.jpg",
+                            email: "",
+                            password: ""
+                        }
+                    },
+                    {
+                        id: 3,
+                        date: "18/12/2020",
+                        text: "hi, i'm Rafiq Boubker and you know ..",
+                        profil: {
+                            id: 3,
+                            name: "Rafiq Boubker",
+                            picPath: "img/rafiqBoubker.jpg",
+                            email: "",
+                            password: ""
+                        }
+                    }
+                ]
             }
         }
     }

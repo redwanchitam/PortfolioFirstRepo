@@ -43,8 +43,8 @@
 </template>
 
 <script>
-   import skill from './SkillComponent';
-   import diplomat from './DiplomatComponent';
+    import skill from './SkillComponent';
+    import diplomat from './DiplomatComponent';
     export default {
         components : {
             skill,
