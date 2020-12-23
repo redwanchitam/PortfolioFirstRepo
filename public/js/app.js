@@ -1941,6 +1941,46 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/DiplomatComponent.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/DiplomatComponent.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  mounted: function mounted() {
+    console.log('Component mounted.');
+  },
+  props: ['diplomat']
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/HomeComponent.vue?vue&type=script&lang=js&":
 /*!************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/HomeComponent.vue?vue&type=script&lang=js& ***!
@@ -2478,67 +2518,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _SkillComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./SkillComponent */ "./resources/js/components/SkillComponent.vue");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* harmony import */ var _DiplomatComponent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DiplomatComponent */ "./resources/js/components/DiplomatComponent.vue");
 //
 //
 //
@@ -2584,9 +2564,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    skill: _SkillComponent__WEBPACK_IMPORTED_MODULE_0__["default"]
+    skill: _SkillComponent__WEBPACK_IMPORTED_MODULE_0__["default"],
+    diplomat: _DiplomatComponent__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -2657,6 +2639,39 @@ __webpack_require__.r(__webpack_exports__);
           color: "rgb(141, 26, 148)",
           proficiency: "35%"
         }]
+      }],
+      diplomats: [{
+        id: 1,
+        designation: "Bachlor in economic and legal siences",
+        date: "2020",
+        institution: {
+          name: "Ibn zohr universityHigher Institute of Applied Technologies",
+          location: "Morocco"
+        }
+      }, {
+        id: 2,
+        designation: "Associate's degree in development",
+        date: "2019",
+        institution: {
+          name: "Higher Institute of Applied Technologies",
+          location: "Morocco"
+        }
+      }, {
+        id: 3,
+        designation: "Technician's certificate in informatique maintenance and networking",
+        date: "2017",
+        institution: {
+          name: "Higher Institute of Applied Technologies",
+          location: "Morocco"
+        }
+      }, {
+        id: 4,
+        designation: "Baccalaureate in physics siences",
+        date: "2015",
+        institution: {
+          name: "Hassan the 2nd, high school",
+          location: "Morocco"
+        }
       }]
     };
   }
@@ -39037,6 +39052,56 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/DiplomatComponent.vue?vue&type=template&id=9112ad20&":
+/*!********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/DiplomatComponent.vue?vue&type=template&id=9112ad20& ***!
+  \********************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("li", { staticClass: "leftLine tagShadow diplomatItem" }, [
+      _c("div", { staticClass: "onWave " }, [
+        _c("div", { staticClass: "d-flex m-0 " }, [
+          _c("h5", { staticClass: "sectionSubTitle" }, [
+            _vm._v(_vm._s(_vm.diplomat.date))
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", {}, [
+          _c("div", { staticClass: "d-flex m-0" }, [
+            _c("h5", [_vm._v(_vm._s(_vm.diplomat.designation))])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "d-flex m-0" }, [
+            _c("h6", [
+              _vm._v(
+                _vm._s(_vm.diplomat.institution.name) +
+                  " - " +
+                  _vm._s(_vm.diplomat.institution.location)
+              )
+            ])
+          ])
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/HomeComponent.vue?vue&type=template&id=782dcf83&":
 /*!****************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/HomeComponent.vue?vue&type=template&id=782dcf83& ***!
@@ -39700,7 +39765,27 @@ var render = function() {
         ])
       ]),
       _vm._v(" "),
-      _vm._m(1)
+      _c("div", { staticClass: "col-lg-6 col-md-12 col-sm-12 p-2" }, [
+        _c("div", { staticClass: " whoAmISection" }, [
+          _c("h2", { staticClass: "sectionTitle mb-4" }, [
+            _vm._v("Education and diplomats :")
+          ]),
+          _vm._v(" "),
+          _c("div", {}, [
+            _c(
+              "ul",
+              { staticClass: "list-group list-group-flush tagList" },
+              _vm._l(_vm.diplomats, function(diplomat, index) {
+                return _c("diplomat", {
+                  key: diplomat.id,
+                  attrs: { diplomat: diplomat, index: index }
+                })
+              }),
+              1
+            )
+          ])
+        ])
+      ])
     ])
   ])
 }
@@ -39722,112 +39807,6 @@ var staticRenderFns = [
             _vm._v(
               "i'm interested in building responsive apps and design illustrations"
             )
-          ])
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-lg-6 col-md-12 col-sm-12 p-2" }, [
-      _c("div", { staticClass: " whoAmISection" }, [
-        _c("h2", { staticClass: "sectionTitle mb-4" }, [
-          _vm._v("Education and diplomats :")
-        ]),
-        _vm._v(" "),
-        _c("div", {}, [
-          _c("ul", { staticClass: "list-group list-group-flush tagList" }, [
-            _c("li", { staticClass: "leftLine tagShadow diplomatItem" }, [
-              _c("div", { staticClass: "onWave " }, [
-                _c("div", { staticClass: "d-flex m-0 " }, [
-                  _c("h5", { staticClass: "sectionSubTitle" }, [_vm._v("2020")])
-                ]),
-                _vm._v(" "),
-                _c("div", {}, [
-                  _c("div", { staticClass: "d-flex m-0" }, [
-                    _c("h5", [_vm._v("Bachlor in economic and legal siences")])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "d-flex m-0" }, [
-                    _c("h6", [_vm._v("Ibn zohr university - Morocco")])
-                  ])
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", { staticClass: "leftLine tagShadow diplomatItem " }, [
-              _c("div", { staticClass: "wave" }),
-              _vm._v(" "),
-              _c("div", { staticClass: "onWave" }, [
-                _c("div", { staticClass: "d-flex m-0" }, [
-                  _c("h5", { staticClass: "sectionSubTitle" }, [_vm._v("2019")])
-                ]),
-                _vm._v(" "),
-                _c("div", {}, [
-                  _c("div", { staticClass: "d-flex m-0" }, [
-                    _c("h5", [_vm._v("Associate's degree in development")])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "d-flex m-0" }, [
-                    _c("h6", [
-                      _vm._v(
-                        "Higher Institute of Applied Technologies - Morocco"
-                      )
-                    ])
-                  ])
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", { staticClass: "leftLine tagShadow diplomatItem " }, [
-              _c("div", { staticClass: "wave" }),
-              _vm._v(" "),
-              _c("div", { staticClass: "onWave" }, [
-                _c("div", { staticClass: "d-flex m-0" }, [
-                  _c("h5", { staticClass: "sectionSubTitle" }, [_vm._v("2017")])
-                ]),
-                _vm._v(" "),
-                _c("div", {}, [
-                  _c("div", { staticClass: "d-flex m-0" }, [
-                    _c("h5", [
-                      _vm._v(
-                        "Technician's certificate in informatique maintenance and networking"
-                      )
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "d-flex m-0" }, [
-                    _c("h6", [
-                      _vm._v(
-                        "Higher Institute of Applied Technologies - Morocco"
-                      )
-                    ])
-                  ])
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", { staticClass: "leftLine tagShadow diplomatItem " }, [
-              _c("div", { staticClass: "wave" }),
-              _vm._v(" "),
-              _c("div", { staticClass: "onWave" }, [
-                _c("div", { staticClass: "d-flex m-0" }, [
-                  _c("h5", { staticClass: "sectionSubTitle" }, [_vm._v("2015")])
-                ]),
-                _vm._v(" "),
-                _c("div", {}, [
-                  _c("div", { staticClass: "d-flex m-0" }, [
-                    _c("h5", [_vm._v("Baccalaureate in phisics siences")])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "d-flex m-0" }, [
-                    _c("h6", [_vm._v("Hassan the 2nd, high school- Morocco")])
-                  ])
-                ])
-              ])
-            ])
           ])
         ])
       ])
@@ -55281,6 +55260,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ContactMeComponent_vue_vue_type_template_id_5fc90930___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ContactMeComponent_vue_vue_type_template_id_5fc90930___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/DiplomatComponent.vue":
+/*!*******************************************************!*\
+  !*** ./resources/js/components/DiplomatComponent.vue ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _DiplomatComponent_vue_vue_type_template_id_9112ad20___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DiplomatComponent.vue?vue&type=template&id=9112ad20& */ "./resources/js/components/DiplomatComponent.vue?vue&type=template&id=9112ad20&");
+/* harmony import */ var _DiplomatComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DiplomatComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/DiplomatComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _DiplomatComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _DiplomatComponent_vue_vue_type_template_id_9112ad20___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _DiplomatComponent_vue_vue_type_template_id_9112ad20___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/DiplomatComponent.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/DiplomatComponent.vue?vue&type=script&lang=js&":
+/*!********************************************************************************!*\
+  !*** ./resources/js/components/DiplomatComponent.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_DiplomatComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./DiplomatComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/DiplomatComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_DiplomatComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/DiplomatComponent.vue?vue&type=template&id=9112ad20&":
+/*!**************************************************************************************!*\
+  !*** ./resources/js/components/DiplomatComponent.vue?vue&type=template&id=9112ad20& ***!
+  \**************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DiplomatComponent_vue_vue_type_template_id_9112ad20___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./DiplomatComponent.vue?vue&type=template&id=9112ad20& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/DiplomatComponent.vue?vue&type=template&id=9112ad20&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DiplomatComponent_vue_vue_type_template_id_9112ad20___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DiplomatComponent_vue_vue_type_template_id_9112ad20___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

@@ -29,72 +29,11 @@
                     <h2 class="sectionTitle mb-4">Education and diplomats :</h2>
                     <div class="">
                         <ul class="list-group list-group-flush tagList">
-                            
-                            <li class="leftLine tagShadow diplomatItem">
-                                <!-- <div class="ball"></div> -->
-                                <div class="onWave ">
-                                    <div class="d-flex m-0 ">
-                                        <h5 class="sectionSubTitle">2020</h5>
-                                    </div>
-                                    <div class="">
-                                        <div class="d-flex m-0">
-                                            <h5>Bachlor in economic and legal siences</h5>
-                                        </div>
-                                        <div class="d-flex m-0">
-                                            <h6>Ibn zohr university - Morocco</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="leftLine tagShadow diplomatItem ">
-                                <div class="wave"></div>
-                                <div class="onWave">
-                                    <div class="d-flex m-0">
-                                        <h5 class="sectionSubTitle">2019</h5>
-                                    </div>
-                                    <div class="">
-                                        <div class="d-flex m-0">
-                                            <h5>Associate's degree in development</h5>
-                                        </div>
-                                        <div class="d-flex m-0">
-                                            <h6>Higher Institute of Applied Technologies - Morocco</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="leftLine tagShadow diplomatItem ">
-                                <div class="wave"></div>
-                                <div class="onWave">
-                                    <div class="d-flex m-0">
-                                        <h5 class="sectionSubTitle">2017</h5>
-                                    </div>
-                                    <div class="">
-                                        <div class="d-flex m-0">
-                                            <h5>Technician's certificate in informatique maintenance and networking</h5>
-                                        </div>
-                                        <div class="d-flex m-0">
-                                            <h6>Higher Institute of Applied Technologies - Morocco</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="leftLine tagShadow diplomatItem ">
-                                <div class="wave"></div>
-                                <div class="onWave">
-                                    <div class="d-flex m-0">
-                                        <h5 class="sectionSubTitle">2015</h5>
-                                    </div>
-                                    <div class="">
-                                        <div class="d-flex m-0">
-                                            <h5>Baccalaureate in phisics siences</h5>
-                                        </div>
-                                        <div class="d-flex m-0">
-                                            <h6>Hassan the 2nd, high school- Morocco</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        
+                            <diplomat v-for="(diplomat, index) in diplomats"
+                                    v-bind:diplomat="diplomat"
+                                    v-bind:index="index"
+                                    v-bind:key="diplomat.id">
+                            </diplomat>
                         </ul>
                     </div>
                 </div>
@@ -105,9 +44,11 @@
 
 <script>
    import skill from './SkillComponent';
+   import diplomat from './DiplomatComponent';
     export default {
         components : {
-            skill
+            skill,
+            diplomat
         },
         mounted() {
             console.log('Component mounted.')
@@ -184,6 +125,48 @@
                         ]
                     },
                     
+                ],
+                diplomats: [
+                    {
+                        id: 1,
+                        designation: "Bachlor in economic and legal siences",
+                        date: "2020",
+                        institution: {
+                            name: "Ibn zohr universityHigher Institute of Applied Technologies",
+                            location: "Morocco"
+                        }
+
+                    },
+                    {
+                        id: 2,
+                        designation: "Associate's degree in development",
+                        date: "2019",
+                        institution: {
+                            name: "Higher Institute of Applied Technologies",
+                            location: "Morocco"
+                        }
+
+                    },
+                    {
+                        id: 3,
+                        designation: "Technician's certificate in informatique maintenance and networking",
+                        date: "2017",
+                        institution: {
+                            name: "Higher Institute of Applied Technologies",
+                            location: "Morocco"
+                        }
+
+                    },
+                    {
+                        id: 4,
+                        designation: "Baccalaureate in physics siences",
+                        date: "2015",
+                        institution: {
+                            name: "Hassan the 2nd, high school",
+                            location: "Morocco"
+                        }
+
+                    }
                 ]
             }
         }
