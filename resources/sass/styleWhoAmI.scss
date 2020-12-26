@@ -1,5 +1,6 @@
 // Variables
 @import 'variables';
+@import 'app';
 
 //whoAmI
 .whoAmISection{
@@ -70,16 +71,6 @@
     transition: none;
 }
 ////proficiency
-.colorDash{
-    cursor: default;
-    width: 0rem;
-    height: 0rem;
-    border-radius: calc(0.7rem - 1px);
-    padding-left: 0rem;
-    padding-right: 0rem;
-    border: none !important;
-    transition: ease all .7s;
-}
 .proficiencyBoxOut{
     position: relative;
     height: 1.125rem;

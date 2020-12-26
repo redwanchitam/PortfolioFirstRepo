@@ -59,23 +59,28 @@
                     {   id: 1,  
                         title: "FrontEnd",
                         skillItems:[
-                            {   name: "HTML",
+                            {   id: 1,
+                                name: "HTML",
                                 color: "rgb(223, 87, 57)",
                                 proficiency:"27%"
                             },
-                            {   name: "CSS",
+                            {   id: 2,
+                                name: "CSS",
                                 color: "rgb(10, 87, 230)",
                                 proficiency:"24%"
                             },
-                            {   name: "Bootstrap",
+                            {   id: 3,
+                                name: "Bootstrap",
                                 color: "rgb(66, 16, 167)",
                                 proficiency:"21%"
                             },
-                            {   name: "Js/Jquery",
+                            {   id: 4,
+                                name: "Js/Jquery",
                                 color: "rgb(204, 198, 14)",
                                 proficiency:"14%"
                             },
-                            {   name: "VueJs",
+                            {   id: 5,
+                                name: "VueJs",
                                 color: "rgb(49, 194, 114)",
                                 proficiency:"14%"
                             },
@@ -84,11 +89,13 @@
                     {   id: 2,  
                         title: "BackEnd",
                         skillItems:[
-                            {   name: "Laravel",
+                            {   id: 6,
+                                name: "Laravel",
                                 color: "rgb(211, 14, 14)",
                                 proficiency:"55%"
                             },
-                            {   name: "DotNetFramework",
+                            {   id: 7,
+                                name: "DotNetFramework",
                                 color: "rgb(70, 22, 167)",
                                 proficiency:"45%"
                             },
@@ -97,15 +104,18 @@
                     {   id: 3,  
                         title: "DataBase",
                         skillItems:[
-                            {   name: "SQL",
+                            {   id: 8,
+                                name: "SQL",
                                 color: "rgb(245, 195, 29)",
                                 proficiency:"45%"
                             },
-                            {   name: "MySQL",
+                            {   id: 9,
+                                name: "MySQL",
                                 color: "rgb(34, 146, 232)",
                                 proficiency:"40%"
                             },
-                            {   name: "SQLLite",
+                            {   id: 10,
+                                name: "SQLLite",
                                 color: "rgb(18, 62, 128)",
                                 proficiency:"15%"
                             },
@@ -114,11 +124,13 @@
                     {   id: 4,  
                         title: "Design",
                         skillItems:[
-                            {   name: "Adobe Illustrator",
+                            {   id: 11,
+                                name: "Adobe Illustrator",
                                 color: "rgb(195, 81, 14)",
                                 proficiency:"65%"
                             },
-                            {   name: "Adobe Xd",
+                            {   id: 12,
+                                name: "Adobe Xd",
                                 color: "rgb(141, 26, 148)",
                                 proficiency:"35%"
                             },

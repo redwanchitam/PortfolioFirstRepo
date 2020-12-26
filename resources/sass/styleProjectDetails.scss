@@ -1,5 +1,6 @@
 // Variables
 @import 'variables';
+@import 'app';
 
 // ProjectDetails PopUp
 .blur{
@@ -57,11 +58,6 @@
     width: 100%;
     height: 80%;
 }
-.descriptionSection{
-    // color: $text;
-    // background-color: $bg;
-    // border-radius: calc(0.7rem - 1px);
-}
 .sectionTitle{
     width: fit-content;
     border-bottom: $text 1px solid;
@@ -86,6 +82,12 @@
 .builtWithItem{
     font-size: 20.8px;
 }
+.builtWithItem .colorDash{
+    margin-right: 0.5rem;
+    height: 1.125rem;
+    width: 1.125rem !important;
+    transition: ease all .7s;
+}
 .commentProfilName{
     font-weight: bold;
 }
@@ -100,7 +102,7 @@
 }
 ////// ProjectDetails Footer
 .projectDetailsFooter{
-    position:sticky;
+    position:sticky !important;
     height: fit-content;
     background-color: $text;
     border-bottom-left-radius: calc(0.7rem - 1px);

@@ -11031,3 +11031,14 @@ a:hover .dot {
   font-weight: bold;
 }
 
+.colorDash {
+  cursor: default;
+  width: 0rem;
+  height: 0rem;
+  border-radius: calc(0.7rem - 1px);
+  padding-left: 0rem;
+  padding-right: 0rem;
+  border: none !important;
+  transition: ease all 0.7s;
+}
+

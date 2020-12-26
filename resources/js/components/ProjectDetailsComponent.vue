@@ -5,8 +5,8 @@
             <div class="px-3 sticky-top w-100 d-flex align-items-baseline projectDetailsHeader">
                 <!-- projectDetails Title & Category-->
                 <div class="ml-2 my-2 d-flex flex-column">
-                    <h1 class="prjTitle">&lt; {{ projectDetails[0].title}} &gt;</h1>
-                    <h3 class="prjCateg"><span>&bull; </span>{{projectDetails[0].category}}</h3>
+                    <h1 class="prjTitle">&lt; {{ projectDetails.title}} &gt;</h1>
+                    <h3 class="prjCateg"><span>&bull; </span>{{projectDetails.category}}</h3>
                 </div>
                 <button type="button" class="ml-auto close" @click="$emit('close')"> <span>x</span></button>
             </div>
@@ -15,7 +15,7 @@
                 <div class="m-3">
                     <!-- projectDetails Image-->
                     <div class="prjDetImg">
-                        <img v-bind:src="'img/' + projectDetails[0].imgPath" class="prjImg" alt="project1">
+                        <img v-bind:src="projectDetails.imgPath" class="prjImg" v-bind:alt="projectDetails.imgPath">
                     </div>
                     <!-- projectDetails Text-->
                     <div class="px-2">
@@ -26,17 +26,22 @@
                                 <div class="col-12 col-xl-8 col-lg-8">
                                     <div class="m-2 p-3 descriptionSection">
                                         <h2 class="sectionTitle">About Work</h2>
-                                        <p>{{projectDetails[0].description}}</p>
+                                        <p>{{projectDetails.description}}</p>
                                     </div>
                                 </div>
                                 <!-- projectDetails BuiltWith-->
                                 <div class="col-12 col-xl-4 col-lg-4">
                                     <div class="m-2 p-3 descriptionSection">
                                         <h2 class="sectionTitle">BuiltWith</h2>
-                                        <ul class="list-group list-group-flush builtWithList">
+                                        <ul class="list-group list-group-flush tagList skillsList">
                                             <li class="builtWithItem"
-                                            v-for="builtWith in projectDetails[0].builtWith"
-                                            v-bind:key="builtWith"><span>&bull; </span>{{builtWith}}</li>
+                                                v-for="builtWithItem in projectDetails.builtWithItems"
+                                                v-bind:key="builtWithItem.id">
+                                                <div class="d-flex m-0">
+                                                    <span class="colorDash" v-bind:style="'background-color:'+ builtWithItem.color +';'"></span>
+                                                    <h5>{{builtWithItem.name}}</h5>
+                                                </div>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -117,7 +122,7 @@
         mounted() {
             console.log('Component mounted.')
         },
-        props: ['project-details'],
+        props: ['projectDetails'],
         methods: {
             wait(x,delay) { 
                 return new Promise(resolve => {

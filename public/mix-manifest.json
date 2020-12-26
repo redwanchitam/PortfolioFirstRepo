@@ -3,5 +3,6 @@
     "/css/app.css": "/css/app.css",
     "/css/styleProjectDetails.css": "/css/styleProjectDetails.css",
     "/css/styleProjects.css": "/css/styleProjects.css",
-    "/css/styleWhoAmI.css": "/css/styleWhoAmI.css"
+    "/css/styleWhoAmI.css": "/css/styleWhoAmI.css",
+    "/js/store.js": "/js/store.js"
 }
