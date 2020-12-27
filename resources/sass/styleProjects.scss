@@ -70,14 +70,27 @@
     background-color: $text !important;
     color: $bg !important;
 }
-.prj:hover .overlay{
+.prjHeader{
+    position:relative;
+}
+.prjHeader:hover .overlay{
     opacity: 0.7;
 }
 
-.prj:hover .text{
+.prjHeader:hover .text{
     opacity: 1;
 }
 
 .projects{
     position: relative;
+}
+
+.prjFooter{
+    margin-top: 0.5rem;
+}
+.prjFooter *{
+    margin:0;
+}
+.prjFooter *:hover{
+    text-decoration: underline;
 }

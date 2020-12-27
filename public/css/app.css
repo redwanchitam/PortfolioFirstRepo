@@ -10901,8 +10901,8 @@ a.text-dark:focus {
 
 body {
   font-family: "Poiret One", cursive;
-  color: #f0f0f0 !important;
-  background-color: #0c0c0c !important;
+  color: #0c0c0c !important;
+  background-color: #f0f0f0 !important;
   font-weight: bold !important;
 }
 
@@ -10937,7 +10937,7 @@ p {
 }
 
 nav {
-  background-color: #0c0c0c;
+  background-color: #f0f0f0;
 }
 
 .navLink {
@@ -10958,7 +10958,7 @@ a {
   margin-top: 4px;
   height: 1px;
   width: 0%;
-  background-color: #f0f0f0;
+  background-color: #0c0c0c;
   border-radius: calc(0.7rem - 1px);
   display: block;
   opacity: 0;
@@ -10966,7 +10966,7 @@ a {
 }
 
 a:hover {
-  color: #f0f0f0;
+  color: #0c0c0c;
 }
 
 a:hover .dot {
@@ -10991,7 +10991,7 @@ a:hover .dot {
   }
 
   50% {
-    color: #f0f0f0;
+    color: #0c0c0c;
   }
 
   100% {
@@ -11005,7 +11005,7 @@ a:hover .dot {
   }
 
   50% {
-    color: #f0f0f0;
+    color: #0c0c0c;
   }
 
   100% {

@@ -2080,8 +2080,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   methods: {
     getModal: function getModal() {
@@ -2428,14 +2426,169 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
 
 
 
 
+vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_3__["default"]);
+var store = new vuex__WEBPACK_IMPORTED_MODULE_3__["default"].Store({
+  state: {
+    showModal: false,
+    clickedProject: null,
+    iniScrollTop: 0,
+    projects: [{
+      id: 2,
+      imgPath: "img/projectImg2.jpg",
+      title: "WORK 2",
+      category: "category 2",
+      description: "Cerasa is composed of an established team of Italian master craftsmen that produces and puts up bathrooms undisputed of exceptional  Made in Italy quality. Cerasa collections are designed to satisfy the most diverse housing styles, fit the style of the house and its inhabitants.",
+      builtWithItems: [{
+        id: 4,
+        name: "Js/Jquery",
+        color: "rgb(204, 198, 14)",
+        proficiency: "14%"
+      }, {
+        id: 6,
+        name: "Laravel",
+        color: "rgb(211, 14, 14)",
+        proficiency: "55%"
+      }, {
+        id: 8,
+        name: "SQL",
+        color: "rgb(245, 195, 29)",
+        proficiency: "45%"
+      }]
+    }, {
+      id: 1,
+      imgPath: "img/projectImg1.jpg",
+      title: "WORK 1",
+      category: "category 1",
+      description: "Cerasa is composed of an established team of Italian master craftsmen that produces and puts up bathrooms undisputed of exceptional  Made in Italy quality. Cerasa collections are designed to satisfy the most diverse housing styles, fit the style of the house and its inhabitants.",
+      builtWithItems: [{
+        id: 4,
+        name: "Js/Jquery",
+        color: "rgb(204, 198, 14)",
+        proficiency: "14%"
+      }, {
+        id: 6,
+        name: "Laravel",
+        color: "rgb(211, 14, 14)",
+        proficiency: "55%"
+      }, {
+        id: 8,
+        name: "SQL",
+        color: "rgb(245, 195, 29)",
+        proficiency: "45%"
+      }]
+    }, {
+      id: 3,
+      imgPath: "img/projectImg3.jpg",
+      title: "WORK 3",
+      category: "category 3",
+      description: "Cerasa is composed of an established team of Italian master craftsmen that produces and puts up bathrooms undisputed of exceptional  Made in Italy quality. Cerasa collections are designed to satisfy the most diverse housing styles, fit the style of the house and its inhabitants.",
+      builtWithItems: [{
+        id: 4,
+        name: "Js/Jquery",
+        color: "rgb(204, 198, 14)",
+        proficiency: "14%"
+      }, {
+        id: 6,
+        name: "Laravel",
+        color: "rgb(211, 14, 14)",
+        proficiency: "55%"
+      }, {
+        id: 8,
+        name: "SQL",
+        color: "rgb(245, 195, 29)",
+        proficiency: "45%"
+      }]
+    }, {
+      id: 4,
+      imgPath: "img/projectImg4.jpg",
+      title: "WORK 4",
+      category: "category 4",
+      description: "Cerasa is composed of an established team of Italian master craftsmen that produces and puts up bathrooms undisputed of exceptional  Made in Italy quality. Cerasa collections are designed to satisfy the most diverse housing styles, fit the style of the house and its inhabitants.",
+      builtWithItems: [{
+        id: 4,
+        name: "Js/Jquery",
+        color: "rgb(204, 198, 14)",
+        proficiency: "14%"
+      }, {
+        id: 6,
+        name: "Laravel",
+        color: "rgb(211, 14, 14)",
+        proficiency: "55%"
+      }, {
+        id: 8,
+        name: "SQL",
+        color: "rgb(245, 195, 29)",
+        proficiency: "45%"
+      }]
+    }, {
+      id: 5,
+      imgPath: "img/projectImg5.jpg",
+      title: "WORK 5",
+      category: "category 5",
+      description: "Cerasa is composed of an established team of Italian master craftsmen that produces and puts up bathrooms undisputed of exceptional  Made in Italy quality. Cerasa collections are designed to satisfy the most diverse housing styles, fit the style of the house and its inhabitants.",
+      builtWithItems: [{
+        id: 4,
+        name: "Js/Jquery",
+        color: "rgb(204, 198, 14)",
+        proficiency: "14%"
+      }, {
+        id: 6,
+        name: "Laravel",
+        color: "rgb(211, 14, 14)",
+        proficiency: "55%"
+      }, {
+        id: 8,
+        name: "SQL",
+        color: "rgb(245, 195, 29)",
+        proficiency: "45%"
+      }]
+    }, {
+      id: 6,
+      imgPath: "img/projectImg6.jpg",
+      title: "WORK 6",
+      category: "category 6",
+      description: "Cerasa is composed of an established team of Italian master craftsmen that produces and puts up bathrooms undisputed of exceptional  Made in Italy quality. Cerasa collections are designed to satisfy the most diverse housing styles, fit the style of the house and its inhabitants.",
+      builtWithItems: [{
+        id: 4,
+        name: "Js/Jquery",
+        color: "rgb(204, 198, 14)",
+        proficiency: "14%"
+      }, {
+        id: 6,
+        name: "Laravel",
+        color: "rgb(211, 14, 14)",
+        proficiency: "55%"
+      }, {
+        id: 8,
+        name: "SQL",
+        color: "rgb(245, 195, 29)",
+        proficiency: "45%"
+      }]
+    }]
+  },
+  mutations: {
+    getModal: function getModal(state, clickedProject) {
+      state.clickedProject = clickedProject;
+      state.showModal = true;
+      state.iniScrollTop = $("html").scrollTop();
+      $("nav").addClass("blur");
+      $("#projectList").addClass("blur");
+      $("html").scrollTop(0);
+      $("body").css("overflow", "hidden");
+    },
+    killModal: function killModal(state) {
+      state.showModal = false;
+      $("html").scrollTop(state.iniScrollTop);
+      $("nav").removeClass("blur");
+      $("#projectList").removeClass("blur");
+      $("body").css("overflow", "auto");
+    }
+  }
+});
 /* harmony default export */ __webpack_exports__["default"] = ({
   store: store,
   components: {
@@ -39240,52 +39393,57 @@ var render = function() {
     "div",
     { staticClass: "my-3 d-flex col-lg-4 col-md-4 col-sm-10 " },
     [
-      _c(
-        "div",
-        {
-          staticClass: " d-flex flex-column prj",
-          on: {
-            click: function($event) {
-              return _vm.getModal()
+      _c("div", { staticClass: " d-flex flex-column prj" }, [
+        _c(
+          "div",
+          {
+            staticClass: "prjHeader",
+            on: {
+              click: function($event) {
+                return _vm.getModal()
+              }
             }
-          }
-        },
-        [
-          _c("div", {}, [
-            _c("div", { staticStyle: { position: "relative" } }, [
-              _c("img", {
-                staticClass: "prjImg",
-                attrs: { src: _vm.project.imgPath, alt: _vm.project.title }
-              })
-            ]),
+          },
+          [
+            _c("img", {
+              staticClass: "prjImg",
+              attrs: { src: _vm.project.imgPath, alt: _vm.project.title }
+            }),
             _vm._v(" "),
             _vm._m(0)
-          ]),
-          _vm._v(" "),
-          _c(
-            "router-link",
-            { staticClass: "tagButton", attrs: { to: "", tag: "button" } },
-            [
-              _c("h5", { staticClass: "mt-1 mb-0 prjTitle" }, [
-                _vm._v(_vm._s(_vm.project.title))
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "prjFooter" },
+          [
+            _c(
+              "div",
+              {
+                staticClass: "tagButton",
+                on: {
+                  click: function($event) {
+                    return _vm.getModal()
+                  }
+                }
+              },
+              [
+                _c("h5", { staticClass: "prjTitle" }, [
+                  _vm._v(_vm._s(_vm.project.title))
+                ])
+              ]
+            ),
+            _vm._v(" "),
+            _c("router-link", { staticClass: "tagButton", attrs: { to: "" } }, [
+              _c("small", { staticClass: "prjCateg" }, [
+                _vm._v(_vm._s(_vm.project.category))
               ])
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "router-link",
-            { staticClass: "tagButton", attrs: { to: "", tag: "button" } },
-            [
-              _c(
-                "small",
-                { staticClass: "my-0 prjCateg d-flex justify-content-center" },
-                [_vm._v(_vm._s(_vm.project.category))]
-              )
-            ]
-          )
-        ],
-        1
-      )
+            ])
+          ],
+          1
+        )
+      ])
     ]
   )
 }
@@ -39294,16 +39452,14 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "overlay" }, [
-      _c(
-        "div",
-        {
-          staticClass:
-            "py-2 d-flex flex-column align-items-center justify-content-center prjBody"
-        },
-        [_c("p", { staticClass: "prjButton" }, [_vm._v("Go on, take a look")])]
-      )
-    ])
+    return _c(
+      "div",
+      {
+        staticClass:
+          "overlay py-2 d-flex flex-column align-items-center justify-content-center prjBody"
+      },
+      [_c("p", { staticClass: "prjButton" }, [_vm._v("Go on, take a look")])]
+    )
   }
 ]
 render._withStripped = true
@@ -39614,32 +39770,6 @@ var render = function() {
       "div",
       { attrs: { id: "modalPD" } },
       [
-        _c(
-          "button",
-          {
-            staticClass: "tagButton mainButton",
-            on: {
-              click: function($event) {
-                return _vm.increment()
-              }
-            }
-          },
-          [_vm._v("increment")]
-        ),
-        _vm._v(" "),
-        _c(
-          "button",
-          {
-            staticClass: "tagButton mainButton",
-            on: {
-              click: function($event) {
-                return _vm.getModal(this.$store.state.projects[3])
-              }
-            }
-          },
-          [_vm._v("Show Modal")]
-        ),
-        _vm._v(" "),
         this.$store.state.showModal
           ? _c("projectDetails", {
               staticClass:
