@@ -3,16 +3,17 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Portfolio</title>
+        <title>CreDev (under development !)</title>
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <link rel="stylesheet" href="{{ asset('css/styleProjectDetails.css') }}">
         <link rel="stylesheet" href="{{ asset('css/styleProjects.css') }}">
         <link rel="stylesheet" href="{{ asset('css/styleWhoAmI.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/styleContactMe.css') }}">
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Open+Sans&display=swap" rel="stylesheet">
     </head>
     <body class="antialiased">
     <div id="main">
-        <nav class="sticky-top navbar navbar-expand-lg">
+        <nav class="mb-5 sticky-top navbar navbar-expand-lg">
             <router-link to="/" id="home" class="logo navLink">CreDev</router-link>
             <button id="menu" class="navbar-toggler tagButton navLink" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span>V</span>
@@ -52,31 +53,22 @@
         </div>
      </div>
 
-
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
-
 <script>
   // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   var firebaseConfig = {
-    apiKey: "AIzaSyDhtWQdz2sFLzNmFZcJwamOx5xgumltMqw",
-    authDomain: "portfolio-cea70.firebaseapp.com",
-    projectId: "portfolio-cea70",
-    storageBucket: "portfolio-cea70.appspot.com",
-    messagingSenderId: "774917417087",
-    appId: "1:774917417087:web:ea2aeaecf48e6e973c374a",
-    measurementId: "G-6LLPK5EMVG"
+    apiKey: "AIzaSyDut6ZAJUzDOugI91zhtmB1nBJauHoiq0Y",
+    authDomain: "credev-777b4.firebaseapp.com",
+    projectId: "credev-777b4",
+    storageBucket: "credev-777b4.appspot.com",
+    messagingSenderId: "1081742406956",
+    appId: "1:1081742406956:web:91e5628007a3388e2da889",
+    measurementId: "G-TKD7TRFD76"
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 </script>
-
      
      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
