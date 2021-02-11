@@ -20,16 +20,6 @@
 .tagItem{
     text-decoration: none;
 }
-//shadow
-.tagShadow{
-    border-radius: calc(0.7rem - 1px);
-    box-shadow: none;
-    transition: ease all .7s;
-}
-.tagShadow:hover{
-    box-shadow: 0px 0px 8px $shadow;
-    transition: ease all .7s;
-}
 //aboutMeSection
 .aboutMeSection{
     cursor: default;

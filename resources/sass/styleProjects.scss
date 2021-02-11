@@ -42,25 +42,6 @@
     text-align: center;
     border-radius: calc(0.7rem - 1px);
 }
-.tagButton{
-    width: fit-content;
-    height: fit-content;
-    text-decoration: none;
-    background-color: $bg;
-    color: $text;
-    border: none;
-    transition: ease 500ms;
-}
-.tagInput {
-    width: auto;
-    height: auto;
-    text-decoration: none;
-    background-color: $bg;
-    color: $text;
-    border: 1px $text solid;
-    line-height: 1;
-    border-radius: calc(0.7rem - 1px);
-}
 .mainButton{
     border: 1px $text solid;
     border-radius: calc(0.7rem - 1px);

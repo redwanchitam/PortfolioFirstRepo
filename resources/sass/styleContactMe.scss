@@ -1,0 +1,18 @@
+// Variables
+@import 'variables';
+@import 'app';
+
+
+.contactMeSection{
+    cursor: default;
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid $shadow;
+    transition: ease all .7s;
+}
+.contactMeSection:hover{
+    border: 1px solid $text;
+}
+.sendButton {
+    width: 50%;
+}

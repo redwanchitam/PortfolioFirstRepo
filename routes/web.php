@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers;
-use App\Http\Controllers\ProjectsController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,11 +19,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('/projects/2',[ProjectsController::class,'show']);
-
-// Route::get('/projects/2',[ProjectsController::class,'show']);
-// Route::resource('/projects',function () {
-//     dd("projectDetails");
-// });
+Route::post('/contactMe',
+    [ContactController::class,
+    'Contact']);
 
 

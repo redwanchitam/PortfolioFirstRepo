@@ -49,24 +49,27 @@ function coverPage(){
     alert("done");
 };
 
-$(document).ready(function(){
-    $("#home").on("click",function(){
-        $("html").scrollTop(0);
-        $("body").css("overflow","hidden");
-    });
-    $("#contactMe").on("click",function(){
-        $("html").scrollTop(0);
-        $("body").css("overflow","hidden");
-    });
-    $("#projects").on("click",function(){
-        $("body").css("overflow","auto");
-    });
-    $("#whoAmI").on("click",function(){
-        $("body").css("overflow","auto");
-    });
-    
+// $(document).ready(function(){
+//     $("#home").on("click",function(){
+//         $("html").scrollTop(0);
+//         $("body").css("overflow","hidden");
+//     });
+//     $("#contactMe").on("click",function(){
+//         $("html").scrollTop(0);
+//     });
+//     $("#projects").on("click",function(){
+//         $("body").css("overflow","auto");
+//     });
+//     $("#whoAmI").on("click",function(){
+//         $("body").css("overflow","auto");
+//     });
+// });
 
-});
+$.ajaxSetup({
+    headers: {
+      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+  });
 
 ////moveTheBall
 // const flightPath = {

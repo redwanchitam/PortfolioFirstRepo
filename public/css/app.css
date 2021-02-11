@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Open+Sans&display=swap);@import url(https://fonts.googleapis.com/css2?family=Poiret+One&display=swap);@charset "UTF-8";
 
 /*!
- * Bootstrap v4.5.2 (https://getbootstrap.com/)
+ * Bootstrap v4.5.3 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
@@ -233,6 +233,7 @@ caption {
 
 th {
   text-align: inherit;
+  text-align: -webkit-match-parent;
 }
 
 label {
@@ -3939,6 +3940,8 @@ input[type=button].btn-block {
   display: block;
   min-height: 1.44rem;
   padding-left: 1.5rem;
+  -webkit-print-color-adjust: exact;
+          color-adjust: exact;
 }
 
 .custom-control-inline {
@@ -5518,6 +5521,7 @@ a.badge-dark.focus {
   position: absolute;
   top: 0;
   right: 0;
+  z-index: 2;
   padding: 0.75rem 1.25rem;
   color: inherit;
 }
@@ -10786,7 +10790,7 @@ a.text-dark:focus {
 
 .text-break {
   word-break: break-word !important;
-  overflow-wrap: break-word !important;
+  word-wrap: break-word !important;
 }
 
 .text-reset {
@@ -10901,8 +10905,8 @@ a.text-dark:focus {
 
 body {
   font-family: "Poiret One", cursive;
-  color: #0c0c0c !important;
-  background-color: #f0f0f0 !important;
+  color: #f0f0f0 !important;
+  background-color: #0c0c0c !important;
   font-weight: bold !important;
 }
 
@@ -10937,7 +10941,7 @@ p {
 }
 
 nav {
-  background-color: #f0f0f0;
+  background-color: #0c0c0c;
 }
 
 .navLink {
@@ -10958,7 +10962,7 @@ a {
   margin-top: 4px;
   height: 1px;
   width: 0%;
-  background-color: #0c0c0c;
+  background-color: #f0f0f0;
   border-radius: calc(0.7rem - 1px);
   display: block;
   opacity: 0;
@@ -10966,7 +10970,7 @@ a {
 }
 
 a:hover {
-  color: #0c0c0c;
+  color: #f0f0f0;
 }
 
 a:hover .dot {
@@ -10991,7 +10995,7 @@ a:hover .dot {
   }
 
   50% {
-    color: #0c0c0c;
+    color: #f0f0f0;
   }
 
   100% {
@@ -11005,7 +11009,7 @@ a:hover .dot {
   }
 
   50% {
-    color: #0c0c0c;
+    color: #f0f0f0;
   }
 
   100% {
@@ -11039,6 +11043,57 @@ a:hover .dot {
   padding-left: 0rem;
   padding-right: 0rem;
   border: none !important;
+  transition: ease all 0.7s;
+}
+
+.tagButton {
+  outline: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-decoration: none;
+  background-color: #0c0c0c;
+  color: #f0f0f0;
+  border-radius: calc(0.7rem - 1px);
+  padding: 0.25rem;
+  transition: ease 500ms;
+}
+
+.tagButton:hover {
+  border: 1px solid #0c0c0c;
+  background-color: #f0f0f0;
+  color: #0c0c0c;
+}
+
+.tagInput {
+  font-size: 20px;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+  text-decoration: none;
+  background-color: #0c0c0c;
+  color: #f0f0f0;
+  border: 1px #6b6b6b solid;
+  line-height: 1;
+  border-radius: calc(0.7rem - 1px);
+}
+
+.tagInput:focus {
+  border: 1px #f0f0f0 solid;
+}
+
+.tagShadow {
+  border-radius: calc(0.7rem - 1px);
+  box-shadow: none;
+  transition: ease all 0.7s;
+}
+
+.tagShadow:hover {
+  box-shadow: 0px 0px 8px #6b6b6b;
   transition: ease all 0.7s;
 }
 

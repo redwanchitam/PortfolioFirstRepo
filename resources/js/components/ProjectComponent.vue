@@ -8,8 +8,8 @@
                 </div>
             </div>
             <div class="prjFooter">
-                <div class="tagButton" v-on:click="getModal()" ><h5 class="prjTitle">{{project.title}}</h5></div>
-                <router-link to="" class="tagButton"><small class="prjCateg">{{project.category}}</small></router-link>
+                <div class="" v-on:click="getModal()" ><h5 class="prjTitle">{{project.title}}</h5></div>
+                <router-link to="" class=""><small class="prjCateg">{{project.category}}</small></router-link>
             </div>
         </div>
     </div>

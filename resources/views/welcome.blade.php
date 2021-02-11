@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="{{ asset('css/styleWhoAmI.css') }}">
         <link rel="stylesheet" href="{{ asset('css/styleContactMe.css') }}">
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Open+Sans&display=swap" rel="stylesheet">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
     <body class="antialiased">
     <div id="main">

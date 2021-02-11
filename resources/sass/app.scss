@@ -6,7 +6,7 @@
 @import 'variables';
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+@import 'node_modules/bootstrap/scss/bootstrap';
 
 
 body{
@@ -58,7 +58,7 @@ a{
     height: 1px;
     width: 0%;
     background-color: $text;
-    border-radius:  calc(0.7rem - 1px);
+    border-radius: calc(0.7rem - 1px);
     display: block;
     opacity: 0;
     transition: ease all 500ms;
@@ -106,5 +106,48 @@ a:hover .dot{
     padding-left: 0rem;
     padding-right: 0rem;
     border: none !important;
+    transition: ease all .7s;
+}
+.tagButton{
+    outline: none;
+    width: fit-content;
+    height: fit-content;
+    text-decoration: none;
+    background-color: $bg;
+    color: $text;
+    border-radius :calc(0.7rem - 1px);
+    padding: 0.25rem;
+    transition: ease 500ms;
+}
+.tagButton:hover {
+    border: 1px solid $bg;
+    background-color: $text;
+    color: $bg;
+}
+.tagInput {
+    font-size: 20px;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+    text-decoration: none;
+    background-color: $bg;
+    color: $text;
+    border: 1px $shadow solid;
+    line-height: 1;
+    border-radius: calc(0.7rem - 1px);
+}
+.tagInput:focus {
+    border: 1px $text solid;
+}
+
+//shadow
+.tagShadow{
+    border-radius: calc(0.7rem - 1px);
+    box-shadow: none;
+    transition: ease all .7s;
+}
+.tagShadow:hover{
+    box-shadow: 0px 0px 8px $shadow;
     transition: ease all .7s;
 }
