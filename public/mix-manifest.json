@@ -1,8 +1,8 @@
 {
     "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css",
-    "/css/styleProjectDetails.css": "/css/styleProjectDetails.css",
-    "/css/styleProjects.css": "/css/styleProjects.css",
     "/css/styleWhoAmI.css": "/css/styleWhoAmI.css",
-    "/css/styleContactMe.css": "/css/styleContactMe.css"
+    "/css/styleProjectDetails.css": "/css/styleProjectDetails.css",
+    "/css/app.css": "/css/app.css",
+    "/css/styleContactMe.css": "/css/styleContactMe.css",
+    "/css/styleProjects.css": "/css/styleProjects.css"
 }
